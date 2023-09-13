@@ -32,7 +32,7 @@ int main() {
     std::string nick = pp1.getNickname();
     std::cout<<nick<<std::endl;
 
-
+    std::cout<<"lab2test";
 
 
     return 0;
