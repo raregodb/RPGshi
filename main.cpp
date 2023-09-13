@@ -34,20 +34,7 @@ int main() {
 
     movementCheck(nav.getChPos(), nav);
 
-    nav.move(right);
 
-    movementCheck(nav.getChPos(), nav);
-
-    nav.move(down);
-    movementCheck(nav.getChPos(), nav);
-
-    nav.move(right);
-    movementCheck(nav.getChPos(), nav);
-
-    nav.move(up);
-    movementCheck(nav.getChPos(), nav);
-    nav.move(up);
-    movementCheck(nav.getChPos(), nav);
 
     return 0;
 }
