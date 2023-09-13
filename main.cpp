@@ -32,7 +32,6 @@ int main() {
     std::string nick = pp1.getNickname();
     std::cout<<nick<<std::endl;
 
-    movementCheck(nav.getChPos(), nav);
 
 
 
