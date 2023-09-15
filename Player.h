@@ -38,6 +38,7 @@ public:
 
     int getHealth();
     void setHealth(int newHealth);
+    void addHealth(int addHealth);
 
     int getCharacterDamage();
     void setCharacterDamage(int newDamage);

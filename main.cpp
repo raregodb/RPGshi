@@ -11,29 +11,33 @@ void movementCheck(position pos, Navigation nav){
 
 
 int main() {
-    Player pp1;
+    Player player1;
 
-    Navigation nav(pp1);
+    Navigation nav(player1);
 
-    std::cout<<pp1.getHealth()<<std::endl;
-    std::cout<<pp1.getCharacterDamage()<<std::endl;
-    std::cout<<pp1.getCanBeDamaged()<<std::endl;
-    pp1.setHealth(50);
-    std::cout<<pp1.getHealth()<<std::endl;
-    pp1.takeDamage(20);
-    std::cout<<pp1.getHealth()<<std::endl;
-    std::cout<<pp1.getCanBeDamaged()<<std::endl;
-    pp1.takeDamage(100);
-    std::cout<<pp1.getHealth()<<std::endl;
-    pp1.setHealth(-2);
-    std::cout<<pp1.getIsDead()<<std::endl;
-    std::cout<<pp1.getNickname()<<std::endl;
-    pp1.setNickname("raregpd");
-    std::string nick = pp1.getNickname();
-    std::cout<<nick<<std::endl;
+    std::cout<<player1.getHealth()<<std::endl;
+    std::cout<<player1.getCharacterDamage()<<std::endl;
+    player1.setHealth(50);
+    std::cout<<player1.getHealth()<<std::endl;
+    player1.takeDamage(20);
+    std::cout<<player1.getHealth()<<std::endl;
+    player1.takeDamage(100);
+    std::cout<<player1.getHealth()<<std::endl;
+    player1.setHealth(-2);
+    std::cout<<player1.getNickname()<<std::endl;
+    player1.setNickname("TrueKing");
+    std::cout<<player1.getNickname()<<std::endl;
 
-    std::cout<<"lab2test";
-
+    movementCheck(nav.getChPos(), nav);
+    nav.move(right);
+    movementCheck(nav.getChPos(), nav);
+    nav.move(right);
+    nav.move(down);
+    movementCheck(nav.getChPos(), nav);
+    nav.move(up);
+    movementCheck(nav.getChPos(), nav);
+    nav.move(up);
+    movementCheck(nav.getChPos(), nav);
 
     return 0;
 }

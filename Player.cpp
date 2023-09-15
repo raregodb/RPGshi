@@ -14,6 +14,13 @@ void Player::setHealth(int newHealth) {
         health = newHealth;
 }
 
+void Player::addHealth(int addHealth) {
+    if (addHealth < 0 || addHealth > maxHealth || health + addHealth > maxHealth)
+        std::cout<<"badHealth"<<std::endl; //Здесь выкидывать ошибку далее
+    else
+        health += addHealth;
+}
+
 
 int Player::getCharacterDamage() {
     return damage;
