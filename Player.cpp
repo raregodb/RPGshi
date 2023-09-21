@@ -1,38 +1,42 @@
 #include "Player.h"
 
-#include <utility>
 #include "iostream"
+
+
+Player::Player(int health, int damage, int score, std::string nickname) : health(health),
+damage(damage), score(score), nickname(nickname) {
+    this->maxHealth=DEFAULT_MAX_HEALTH;
+    this->canBeDamaged = DEFAULT_CANBEDAMAGED;
+    this->isDead = DEFAULT_ISDEAD;
+}
+
 
 int Player::getHealth() {
     return health;
 }
 
 void Player::setHealth(int newHealth) {
-    if (newHealth < 0 || newHealth > maxHealth)
+    if (newHealth < 0 || newHealth > maxHealth || newHealth-health<0)
         std::cout<<"badHealth"<<std::endl; //Здесь выкидывать ошибку далее
     else
         health = newHealth;
 }
 
 void Player::addHealth(int addHealth) {
-    if (addHealth < 0 || addHealth > maxHealth || health + addHealth > maxHealth)
-        std::cout<<"badHealth"<<std::endl; //Здесь выкидывать ошибку далее
-    else
-        health += addHealth;
-}
-
-
-int Player::getCharacterDamage() {
-    return damage;
+    setHealth(health+addHealth);
 }
 
 void Player::setNickname(std::string newNickname){
     nickname = newNickname;
 }
 
+int Player::getCharacterDamage() {
+    return damage;
+}
+
 void Player::setCharacterDamage(int newDamage) {
     if (newDamage < 0)
-        std::cout<<"badDamage"; //Здесь выкидывать ошибку далее
+        std::cout<<"badDamage"<<std::endl; //Здесь выкидывать ошибку далее
     else
         damage = newDamage;
 }
@@ -48,7 +52,10 @@ void Player::takeDamage(int Damage) {
 
 
 void Player::addScore(int additionalScore) {
-    score += additionalScore;
+    if (score+additionalScore<0)
+        std::cout<<"badScore"<<std::endl; //Здесь выкидывать ошибку далее
+    else
+        score += additionalScore;
 }
 
 int Player::getScore(){
@@ -82,3 +89,6 @@ bool Player::getIsDead() {
 void Player::setIsDead(bool newState) {
     isDead = newState;
 }
+
+
+

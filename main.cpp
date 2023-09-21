@@ -12,32 +12,21 @@ void movementCheck(position pos, Navigation nav){
 
 int main() {
     Player player1;
-
     Navigation nav(player1);
-
     std::cout<<player1.getHealth()<<std::endl;
+    std::cout<<player1.getNickname()<<std::endl;
+    std::cout<<player1.getScore()<<std::endl;
     std::cout<<player1.getCharacterDamage()<<std::endl;
-    player1.setHealth(50);
+    /*
+    player1.addHealth(-90);
     std::cout<<player1.getHealth()<<std::endl;
-    player1.takeDamage(20);
-    std::cout<<player1.getHealth()<<std::endl;
-    player1.takeDamage(100);
-    std::cout<<player1.getHealth()<<std::endl;
-    player1.setHealth(-2);
-    std::cout<<player1.getNickname()<<std::endl;
-    player1.setNickname("TrueKing");
-    std::cout<<player1.getNickname()<<std::endl;
-
+    player1.setCharacterDamage(-2);
+    std::cout<<player1.getCharacterDamage()<<std::endl;
+    player1.setHealth(2);
     movementCheck(nav.getChPos(), nav);
     nav.move(right);
-    movementCheck(nav.getChPos(), nav);
     nav.move(right);
-    nav.move(down);
     movementCheck(nav.getChPos(), nav);
-    nav.move(up);
-    movementCheck(nav.getChPos(), nav);
-    nav.move(up);
-    movementCheck(nav.getChPos(), nav);
-
+     */
     return 0;
 }

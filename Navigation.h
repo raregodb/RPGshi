@@ -12,8 +12,7 @@ enum direction{
 
 class Player;
 
-class position {
-public:
+struct position {
     int x, y;
     position() {
         this->x=0;

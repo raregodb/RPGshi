@@ -25,16 +25,8 @@ private:
 
 
 public:
-    Player()
-    {
-        this->maxHealth=DEFAULT_MAX_HEALTH;
-        this->health=DEFAULT_HEALTH;
-        this->damage=DEFAULT_DAMAGE;
-        this->score=DEFAULT_SCORE;
-        this->nickname="undefined";
-        this->canBeDamaged = DEFAULT_CANBEDAMAGED;
-        this->isDead = DEFAULT_ISDEAD;
-    }
+    Player(int health = DEFAULT_HEALTH, int damage = DEFAULT_DAMAGE,
+           int score = DEFAULT_SCORE, std::string nickname = "undefined");
 
     int getHealth();
     void setHealth(int newHealth);
