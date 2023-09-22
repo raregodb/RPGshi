@@ -2,7 +2,7 @@
 #include "Navigation.h"
 #include "iostream"
 
-void Navigation::chMove(position pos) {
+void Navigation::chMove(Position pos) {
     if ((chPos.x + pos.x) < 0 || (chPos.y + pos.y) < 0) { //pos.x > МаксРазмерКарты || pos.y > МаксРазмерКарты
         std::cout<<"badPosition\n";
     }
@@ -41,11 +41,11 @@ void Navigation::move(direction dir = direction()) {
     }
 }
 
-position Navigation::getChPos() {
+Position Navigation::getChPos() {
     return chPos;
 }
 
-void Navigation::setChPos(position newChPos) {
+void Navigation::setChPos(Position newChPos) {
     if (newChPos.x < 0 || newChPos.y < 0) { //newChPos.x > МаксРазмерКарты || newChPos.y > МаксРазмерКарты
         std::cout<<"badPosition\n";
     }

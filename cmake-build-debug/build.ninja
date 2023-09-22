@@ -67,6 +67,18 @@ build CMakeFiles/lab1.dir/Navigation.cpp.o: CXX_COMPILER__lab1_Debug /Users/rare
   OBJECT_DIR = CMakeFiles/lab1.dir
   OBJECT_FILE_DIR = CMakeFiles/lab1.dir
 
+build CMakeFiles/lab1.dir/Cell.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Cell.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/Cell.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+
+build CMakeFiles/lab1.dir/Map.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Map.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/Map.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab1
@@ -75,7 +87,7 @@ build CMakeFiles/lab1.dir/Navigation.cpp.o: CXX_COMPILER__lab1_Debug /Users/rare
 #############################################
 # Link the executable lab1
 
-build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Player.cpp.o CMakeFiles/lab1.dir/Navigation.cpp.o
+build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Player.cpp.o CMakeFiles/lab1.dir/Navigation.cpp.o CMakeFiles/lab1.dir/Cell.cpp.o CMakeFiles/lab1.dir/Map.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/lab1.dir
   POST_BUILD = :

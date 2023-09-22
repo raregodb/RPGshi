@@ -2,8 +2,9 @@
 #include <string>
 #include "Player.h"
 #include "Navigation.h"
+#include "Map.h"
 
-void movementCheck(position pos, Navigation nav){
+void movementCheck(Position pos, Navigation nav){
     pos = nav.getChPos();
     std::cout<<pos.x<<"; ";
     std::cout<<pos.y<<std::endl;
@@ -13,10 +14,9 @@ void movementCheck(position pos, Navigation nav){
 int main() {
     Player player1;
     Navigation nav(player1);
-    std::cout<<player1.getHealth()<<std::endl;
-    std::cout<<player1.getNickname()<<std::endl;
-    std::cout<<player1.getScore()<<std::endl;
-    std::cout<<player1.getCharacterDamage()<<std::endl;
+    Map map(50, 40);
+    map.printMap();
+
     /*
     player1.addHealth(-90);
     std::cout<<player1.getHealth()<<std::endl;

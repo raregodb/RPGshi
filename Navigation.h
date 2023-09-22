@@ -12,9 +12,9 @@ enum direction{
 
 class Player;
 
-struct position {
+struct Position {
     int x, y;
-    position() {
+    Position() {
         this->x=0;
         this->y=0;
     }
@@ -22,22 +22,22 @@ struct position {
 
 class Navigation {
 public:
-    Navigation(Player& player) : player(player){
+    explicit Navigation(Player& player) : player(player){
         this->chPos.x=0;
         this->chPos.y=0;
         this->deltaMove.x=0;
         this->deltaMove.y=0;
     }
 
-    position getChPos();
-    void setChPos(position newChPos);
-    void chMove(position pos);
+    Position getChPos();
+    void setChPos(Position newChPos);
+    void chMove(Position pos);
     void move(direction);
 
 private:
     Player &player;
-    position chPos;
-    position deltaMove;
+    Position chPos;
+    Position deltaMove;
 };
 
 #endif //LAB1_NAVIGATION_H
