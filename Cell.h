@@ -5,19 +5,13 @@
 
 class Cell {
 public:
-    Cell(int type = 1);  //<--- конструктор
+    Cell(bool passability = true);  //<--- конструктор
 
     void setPassability(bool newPassability);
     bool getPassability();
 
-    unsigned int getCellType();
-    void setCellType(unsigned int newCellType);
-
-    void printCell();
 private:
     bool passability;
-    unsigned int cellType;
-    char texture;
 };
 
 

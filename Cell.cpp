@@ -1,20 +1,7 @@
 #include "Cell.h"
 
-Cell::Cell(int type) : cellType(type){
-    switch (cellType) {
-        case 1:
-            this->texture = '#';
-            this->passability = true;
-            break;
-        case 2:
-            this->texture = '^';
-            this->passability = false;
-            break;
-        default:
-            this->texture = '?';
-            this->passability = true;
-            break;
-    }
+Cell::Cell(bool passability) : passability(passability){
+
 }
 
 void Cell::setPassability(bool newPassability) {
@@ -23,16 +10,4 @@ void Cell::setPassability(bool newPassability) {
 
 bool Cell::getPassability() {
     return passability;
-}
-
-unsigned int Cell::getCellType() {
-    return cellType;
-}
-
-void Cell::setCellType(unsigned int newCellType) {
-    cellType = newCellType;
-}
-
-void Cell::printCell() {
-    std::cout<<texture;
 }

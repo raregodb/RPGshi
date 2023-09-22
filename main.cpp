@@ -13,11 +13,11 @@ void movementCheck(Position pos, Navigation nav){
 
 int main() {
     Player player1;
-    Navigation nav(player1);
-    Map map(50, 40);
-    map.printMap();
+    Map map;
+    Navigation nav(player1, map);
 
-    /*
+
+
     player1.addHealth(-90);
     std::cout<<player1.getHealth()<<std::endl;
     player1.setCharacterDamage(-2);
@@ -27,6 +27,6 @@ int main() {
     nav.move(right);
     nav.move(right);
     movementCheck(nav.getChPos(), nav);
-     */
+
     return 0;
 }

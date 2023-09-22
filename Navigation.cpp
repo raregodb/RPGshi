@@ -3,12 +3,17 @@
 #include "iostream"
 
 void Navigation::chMove(Position pos) {
-    if ((chPos.x + pos.x) < 0 || (chPos.y + pos.y) < 0) { //pos.x > МаксРазмерКарты || pos.y > МаксРазмерКарты
+    Position propPos;
+    propPos.x = chPos.x + pos.x;
+    propPos.y = chPos.y + pos.y;
+    if (propPos.x < 0 || propPos.y < 0
+        || !map.getCellByCords(propPos).getPassability()
+        || propPos.x > map.getMapSizeByX() || propPos.y > map.getMapSizeByY()) {
         std::cout<<"badPosition\n";
     }
     else {
-        chPos.x += pos.x;
-        chPos.y += pos.y;
+        chPos.x = propPos.x;
+        chPos.y = propPos.y;
     }
 }
 

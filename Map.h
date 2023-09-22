@@ -2,11 +2,10 @@
 #define LAB1_MAP_H
 #include "iostream"
 #include "Cell.h"
-#include "Navigation.h"
+#include "Position.h"
 
 #define DEFAULTSIZEX 20
 #define DEFAULTSIZEY 20
-
 
 class Map {
 public:
@@ -15,9 +14,16 @@ public:
     Map(const Map &oMap);   //<--- конструктор копирования
     Map(Map &&moved) noexcept ;   //<--- конструктор перемещения
 
-    void printMap();
+    Cell getCellByCords(Position cords);
 
-    ~Map();   //<--- деструктор
+    int getMapSizeByX();
+    int getMapSizeByY();
+
+    Position getPlayerStart();
+
+    Position getPlayerFinish();
+
+    ~Map();   //<--- деконструктор
 
 private:
     Cell** map;
