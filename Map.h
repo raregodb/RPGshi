@@ -6,24 +6,28 @@
 
 #define DEFAULTSIZEX 20
 #define DEFAULTSIZEY 20
+#define STARTPOSITIONX 1
+#define STARTPOSITIONY 1
+#define MAXMAPSIZE 100
 
 class Map {
 public:
-    Map(int x = DEFAULTSIZEX, int y = DEFAULTSIZEY);  //<--- конструктор
+    explicit Map(int x = DEFAULTSIZEX, int y = DEFAULTSIZEY);  //<--- конструктор
 
     Map(const Map &oMap);   //<--- конструктор копирования
-    Map(Map &&moved) noexcept ;   //<--- конструктор перемещения
+    Map& operator = (const Map &oMap);  //<--- оператор присваивания
+    Map(Map &&moved) noexcept;   //<--- конструктор перемещения
+    Map& operator=(Map &&movedMap) noexcept;  //<--- оператор присваивания
 
     Cell getCellByCords(Position cords);
 
-    int getMapSizeByX();
-    int getMapSizeByY();
+    int getMapSizeByX() const;
+    int getMapSizeByY() const;
 
     Position getPlayerStart();
-
     Position getPlayerFinish();
 
-    ~Map();   //<--- деконструктор
+    ~Map();   //<--- деструктор
 
 private:
     Cell** map;

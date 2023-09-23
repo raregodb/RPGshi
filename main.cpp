@@ -16,17 +16,5 @@ int main() {
     Map map;
     Navigation nav(player1, map);
 
-
-
-    player1.addHealth(-90);
-    std::cout<<player1.getHealth()<<std::endl;
-    player1.setCharacterDamage(-2);
-    std::cout<<player1.getCharacterDamage()<<std::endl;
-    player1.setHealth(2);
-    movementCheck(nav.getChPos(), nav);
-    nav.move(right);
-    nav.move(right);
-    movementCheck(nav.getChPos(), nav);
-
     return 0;
 }

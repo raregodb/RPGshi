@@ -1,7 +1,7 @@
 #include "Cell.h"
 
-Cell::Cell(bool passability) : passability(passability){
-
+Cell::Cell(bool passability){
+    this->passability = passability;
 }
 
 void Cell::setPassability(bool newPassability) {

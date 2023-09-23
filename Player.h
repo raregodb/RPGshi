@@ -11,8 +11,6 @@
 #define DEFAULT_CANBEDAMAGED 1
 #define DEFAULT_ISDEAD 0
 
-
-
 class Player {
 private:
     int health;
@@ -25,28 +23,28 @@ private:
 
 
 public:
-    Player(int health = DEFAULT_HEALTH, int damage = DEFAULT_DAMAGE,
+    explicit Player(int health = DEFAULT_HEALTH, int damage = DEFAULT_DAMAGE,
            int score = DEFAULT_SCORE, std::string nickname = "undefined");
 
-    int getHealth();
+    int getHealth() const;
     void setHealth(int newHealth);
     void addHealth(int addHealth);
 
-    int getCharacterDamage();
+    int getCharacterDamage() const;
     void setCharacterDamage(int newDamage);
     void takeDamage(int Damage);
 
     void addScore(int additionalScore);
-    int getScore();
+    int getScore() const;
     void setScore(int newScore);
 
-    bool getCanBeDamaged();
+    bool getCanBeDamaged() const;
     void setCanBeDamaged(bool newCanBeDamaged);
 
     std::string getNickname();
     void setNickname(std::string newNickname);
 
-    bool getIsDead();
+    bool getIsDead() const;
     void setIsDead(bool newState);
 };
 

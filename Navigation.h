@@ -16,12 +16,7 @@ class Player;
 
 class Navigation {
 public:
-    explicit Navigation(Player& player, Map& map) : player(player), map(map){
-        this->chPos.x=map.getPlayerStart().x;
-        this->chPos.y=map.getPlayerStart().y;
-        this->deltaMove.x=0;
-        this->deltaMove.y=0;
-    }
+    explicit Navigation(Player& player, Map& map);
 
     Position getChPos();
     void setChPos(Position newChPos);

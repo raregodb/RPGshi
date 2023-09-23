@@ -2,6 +2,14 @@
 #include "Navigation.h"
 #include "iostream"
 
+
+Navigation::Navigation(Player &player, Map &map) : player(player), map(map){
+    this->chPos.x=map.getPlayerStart().x;
+    this->chPos.y=map.getPlayerStart().y;
+    this->deltaMove.x=0;
+    this->deltaMove.y=0;
+}
+
 void Navigation::chMove(Position pos) {
     Position propPos;
     propPos.x = chPos.x + pos.x;
@@ -51,7 +59,9 @@ Position Navigation::getChPos() {
 }
 
 void Navigation::setChPos(Position newChPos) {
-    if (newChPos.x < 0 || newChPos.y < 0) { //newChPos.x > МаксРазмерКарты || newChPos.y > МаксРазмерКарты
+    if (newChPos.x < 0 || newChPos.y < 0
+        || !map.getCellByCords(newChPos).getPassability()
+        || newChPos.x > map.getMapSizeByX() || newChPos.y > map.getMapSizeByY()) {
         std::cout<<"badPosition\n";
     }
     else {
@@ -59,3 +69,5 @@ void Navigation::setChPos(Position newChPos) {
         chPos.y=newChPos.y;
     }
 }
+
+

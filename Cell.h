@@ -5,7 +5,7 @@
 
 class Cell {
 public:
-    Cell(bool passability = true);  //<--- конструктор
+    explicit Cell(bool passability = true);  //<--- конструктор
 
     void setPassability(bool newPassability);
     bool getPassability();

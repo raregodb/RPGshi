@@ -11,7 +11,7 @@ damage(damage), score(score), nickname(nickname) {
 }
 
 
-int Player::getHealth() {
+int Player::getHealth() const {
     return health;
 }
 
@@ -30,7 +30,7 @@ void Player::setNickname(std::string newNickname){
     nickname = newNickname;
 }
 
-int Player::getCharacterDamage() {
+int Player::getCharacterDamage() const {
     return damage;
 }
 
@@ -58,7 +58,7 @@ void Player::addScore(int additionalScore) {
         score += additionalScore;
 }
 
-int Player::getScore(){
+int Player::getScore() const{
     return score;
 }
 
@@ -70,7 +70,7 @@ void Player::setScore(int newScore){
 }
 
 
-bool Player::getCanBeDamaged() {
+bool Player::getCanBeDamaged() const {
     return canBeDamaged;
 }
 
@@ -82,13 +82,10 @@ std::string Player::getNickname() {
     return nickname;
 }
 
-bool Player::getIsDead() {
+bool Player::getIsDead() const {
     return isDead;
 }
 
 void Player::setIsDead(bool newState) {
     isDead = newState;
 }
-
-
-
