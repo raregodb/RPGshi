@@ -3,19 +3,19 @@
 Map::Map(int X, int Y) : sizeX(X), sizeY(Y) {
     std::cout<<"Construct "<<this<<std::endl;
     if (sizeX < 0 || sizeY < 0 || sizeX > MAXMAPSIZE || sizeY > MAXMAPSIZE){
-        std::cout<<"badMap\n";
+        std::cout<<"badMap. Map was created with default settings\n";
+        sizeX = DEFAULTSIZEX;
+        sizeY = DEFAULTSIZEY;
     }
-    else {
-        this->startPosition.x = STARTPOSITIONX;
-        this->startPosition.y = STARTPOSITIONY;
+    this->startPosition.x = STARTPOSITIONX;
+    this->startPosition.y = STARTPOSITIONY;
 
-        this->finishPosition.x = sizeX - 1;
-        this->finishPosition.y = sizeY - 1;
+    this->finishPosition.x = sizeX - 1;
+    this->finishPosition.y = sizeY - 1;
 
-        this->map = new Cell*[sizeX];
-        for (int i = 0; i < sizeX; i++) {
-            this->map[i] = new Cell[sizeY];
-        }
+    this->map = new Cell*[sizeX];
+    for (int i = 0; i < sizeX; i++) {
+        this->map[i] = new Cell[sizeY];
     }
 }
 
@@ -26,6 +26,9 @@ Map::Map(const Map &oMap)
     sizeY(oMap.sizeY)
 {
     std::cout<<"Copy Construct "<<this<<std::endl;
+    for (int i = 0; i < sizeX; i++) {
+        delete[] map[i];
+    }
     delete[] map;
     this->map = new Cell*[oMap.sizeX];
     for (int i = 0; i < oMap.sizeX; i++) {
@@ -39,6 +42,9 @@ Map::Map(const Map &oMap)
 Map& Map::operator=(const Map &oMap) {
     std::cout<<"Copy assignment "<<this<<std::endl;
     if (this != &oMap) {
+        for (int i = 0; i < sizeX; i++) {
+            delete[] map[i];
+        }
         delete[] map;
         this->startPosition = oMap.startPosition;
         this->finishPosition = oMap.finishPosition;
@@ -74,6 +80,9 @@ Map::Map(Map &&movedMap) noexcept
 Map& Map::operator=(Map &&movedMap)  noexcept {
     std::cout<<"Move assignment "<<this<<std::endl;
     if (this != &movedMap) {
+        for (int i = 0; i < sizeX; i++) {
+            delete[] map[i];
+        }
         delete[] map;
         this->startPosition = movedMap.startPosition;
         this->finishPosition = movedMap.finishPosition;
@@ -91,8 +100,13 @@ Map& Map::operator=(Map &&movedMap)  noexcept {
     return *this;
 }
 
-Cell Map::getCellByCords(Position cords) {
-    return map[cords.x][cords.y];
+Cell  &Map::getCellByCords(Position cords) {
+    if (0 > cords.x >= sizeX || 0 > cords.y >= sizeY){
+        std::cout<<"bad cords\n";
+        assert(0);
+    }
+    else
+        return map[cords.x][cords.y];
 }
 
 Map::~Map() {

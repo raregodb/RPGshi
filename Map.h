@@ -17,9 +17,9 @@ public:
     Map(const Map &oMap);   //<--- конструктор копирования
     Map& operator = (const Map &oMap);  //<--- оператор присваивания
     Map(Map &&moved) noexcept;   //<--- конструктор перемещения
-    Map& operator=(Map &&movedMap) noexcept;  //<--- оператор присваивания
+    Map& operator=(Map &&movedMap) noexcept;  //<--- оператор
 
-    Cell getCellByCords(Position cords);
+    Cell &getCellByCords(Position cords);
 
     int getMapSizeByX() const;
     int getMapSizeByY() const;
@@ -30,6 +30,7 @@ public:
     ~Map();   //<--- деструктор
 
 private:
+
     Cell** map;
     int sizeX;
     int sizeY;
