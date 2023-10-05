@@ -4,6 +4,8 @@
 #include "Player.h"
 #include "Map.h"
 #include "Position.h"
+#include "IEvent.h"
+#define DEFAULT_CELL_DAMAGE 50
 
 enum direction{
     right,
@@ -23,11 +25,17 @@ public:
     void chMove(Position pos);
     void move(direction);
 
+    Player& getPlayer();
+
+
 private:
-    Player &player;
     Map &map;
     Position chPos;
     Position deltaMove;
+protected:
+    Player &player;
 };
+
+
 
 #endif //LAB1_NAVIGATION_H

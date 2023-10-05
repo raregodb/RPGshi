@@ -27,6 +27,8 @@ public:
     Position getPlayerStart();
     Position getPlayerFinish();
 
+    void printMap();
+
     ~Map();   //<--- деструктор
 
 private:

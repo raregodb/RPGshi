@@ -1,7 +1,7 @@
 #include "Map.h"
 
 Map::Map(int X, int Y) : sizeX(X), sizeY(Y) {
-    std::cout<<"Construct "<<this<<std::endl;
+    //std::cout<<"Construct "<<this<<std::endl;
     if (sizeX < 0 || sizeY < 0 || sizeX > MAXMAPSIZE || sizeY > MAXMAPSIZE){
         std::cout<<"badMap. Map was created with default settings\n";
         sizeX = DEFAULTSIZEX;
@@ -10,8 +10,8 @@ Map::Map(int X, int Y) : sizeX(X), sizeY(Y) {
     this->startPosition.x = STARTPOSITIONX;
     this->startPosition.y = STARTPOSITIONY;
 
-    this->finishPosition.x = sizeX - 1;
-    this->finishPosition.y = sizeY - 1;
+    this->finishPosition.x = sizeX - 2;
+    this->finishPosition.y = sizeY - 2;
 
     this->map = new Cell*[sizeX];
     for (int i = 0; i < sizeX; i++) {
@@ -25,7 +25,7 @@ Map::Map(const Map &oMap)
     sizeX(oMap.sizeX),
     sizeY(oMap.sizeY)
 {
-    std::cout<<"Copy Construct "<<this<<std::endl;
+    //std::cout<<"Copy Construct "<<this<<std::endl;
     for (int i = 0; i < sizeX; i++) {
         delete[] map[i];
     }
@@ -40,7 +40,7 @@ Map::Map(const Map &oMap)
 }
 
 Map& Map::operator=(const Map &oMap) {
-    std::cout<<"Copy assignment "<<this<<std::endl;
+    //std::cout<<"Copy assignment "<<this<<std::endl;
     if (this != &oMap) {
         for (int i = 0; i < sizeX; i++) {
             delete[] map[i];
@@ -70,7 +70,7 @@ Map::Map(Map &&movedMap) noexcept
     sizeX(movedMap.sizeX),
     sizeY(movedMap.sizeY)
 {
-    std::cout<<"Move construct "<<this<<std::endl;
+    //std::cout<<"Move construct "<<this<<std::endl;
     movedMap.map = nullptr;
     movedMap.sizeX = movedMap.sizeY = 0;
     movedMap.startPosition.x = movedMap.finishPosition.x =
@@ -78,7 +78,7 @@ Map::Map(Map &&movedMap) noexcept
 }
 
 Map& Map::operator=(Map &&movedMap)  noexcept {
-    std::cout<<"Move assignment "<<this<<std::endl;
+    //std::cout<<"Move assignment "<<this<<std::endl;
     if (this != &movedMap) {
         for (int i = 0; i < sizeX; i++) {
             delete[] map[i];
@@ -110,7 +110,7 @@ Cell  &Map::getCellByCords(Position cords) {
 }
 
 Map::~Map() {
-    std::cout<<"Deconstruct "<<this<<std::endl;
+    //std::cout<<"Deconstruct "<<this<<std::endl;
     for (int i = 0; i < sizeX; i++) {
         delete[] map[i];
     }
@@ -132,3 +132,23 @@ Position Map::getPlayerStart() {
 Position Map::getPlayerFinish() {
     return finishPosition;
 }
+
+void Map::printMap() {
+    for (int y = 0; y < sizeY; y++) {
+        for (int x = 0; x < sizeX; x++) {
+            if (this->map[x][y].getPassability()) {
+                if (this->map[x][y].hasEvent()) {
+                    std::cout<<"e";
+                }
+                else
+                    std::cout<<" ";
+
+            }
+            else if (!this->map[x][y].getPassability())
+                std::cout<<"#";
+        }
+        std::cout<<std::endl;
+    }
+
+}
+

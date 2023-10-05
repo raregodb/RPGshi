@@ -22,6 +22,10 @@ void Navigation::chMove(Position pos) {
     else {
         chPos.x = propPos.x;
         chPos.y = propPos.y;
+        Cell some_cell = map.getCellByCords(chPos);
+        if (some_cell.hasEvent()) {
+            some_cell.getEvent().someEvent();
+        }
     }
 }
 
@@ -67,7 +71,14 @@ void Navigation::setChPos(Position newChPos) {
     else {
         chPos.x=newChPos.x;
         chPos.y=newChPos.y;
+        std::cout<<"\nteleported to " << newChPos.x << " " << newChPos.y << std::endl;
+        Cell some_cell = map.getCellByCords(chPos);
+        if (some_cell.hasEvent()) {
+            some_cell.getEvent().someEvent();
+        }
     }
 }
 
-
+Player& Navigation::getPlayer() {
+    return player;
+}
