@@ -22,11 +22,10 @@ void Navigation::chMove(Position pos) {
         std::cout<<"Вы передвинулись с "<<chPos.x<<"; "<<chPos.y<<" на "<<propPos.x<<"; "<<propPos.y<<"\n";
         chPos.x = propPos.x;
         chPos.y = propPos.y;
-        if (chPos.x == STARTPOSITIONX && chPos.y == STARTPOSITIONY){
+        if (chPos.x == map.getPlayerFinish().x && chPos.y == map.getPlayerFinish().y){
             std::cout<<"Вы прошли уровень!\n";
             exit(EXIT_SUCCESS);
         }
-
         Cell some_cell = map.getCellByCords(chPos);
         if (some_cell.hasEvent()) {
             some_cell.activateEvent();

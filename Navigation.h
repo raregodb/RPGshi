@@ -4,7 +4,6 @@
 #include "Player.h"
 #include "Map.h"
 #include "Position.h"
-#include "IEvent.h"
 
 enum direction{
     right,

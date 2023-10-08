@@ -8,7 +8,7 @@
 
 int main() {
     Player player1;
-    Map map(10, 10);
+    Map map(110, 20);
     Navigation nav(player1, map);
     MapGenerator GMap(map, nav);
     map.printMap();

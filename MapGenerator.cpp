@@ -2,9 +2,9 @@
 
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
     GenerateWalls();
-    do {
+    RandomGeneration();
+    while (!isPath())
         RandomGeneration();
-    } while (isPath() != 1);
 }
 
 void MapGenerator::GenerateWalls() {
@@ -23,14 +23,6 @@ void MapGenerator::GenerateWalls() {
         position.x = map1.getMapSizeByX()-1;
         map1.getCellByCords(position).setPassability(false);
     }
-}
-
-Map &MapGenerator::GenerateMap() {
-    GenerateWalls();
-    do {
-        RandomGeneration();
-    } while (isPath() != 1);
-    return map1;
 }
 
 void MapGenerator::RandomGeneration() {
@@ -74,19 +66,26 @@ void MapGenerator::RandomGeneration() {
 
 bool MapGenerator::isPath() {
     Position position;
-    int row = map1.getMapSizeByX()-1;
-    int col = map1.getMapSizeByY()-1;
+    int row = map1.getMapSizeByX()-2;
+    int col = map1.getMapSizeByY()-2;
     int arr[row][col];
-    for (int x = 1; x < row; x++) {
-        for (int y = 1; y < col; y++) {
-            position.x = x;
-            position.y = y;
+    for (int x = 0; x < row; x++) {
+        for (int y = 0; y < col; y++) {
+            position.x = x+1;
+            position.y = y+1;
             if (map1.getCellByCords(position).getPassability())
-                arr[x-1][y-1] = 0;
+                arr[x][y] = 0;
             else
-                arr[x-1][y-1] = -1;
+                arr[x][y] = -1;
         }
     }
+//    for (int i = 0; i < col; i++) {
+//        for (int j = 0; j < row; j++) {
+//            std::cout<<arr[j][i] << " ";
+//        }
+//        std::cout<<std::endl;
+//    }
+//    std::cout<<"\n\n";
     arr[0][0] = 1;
     for (int i = 1; i < row; i++)
         if (arr[i][0] != -1)
@@ -106,8 +105,4 @@ bool MapGenerator::isPath() {
             }
 
     return (arr[row - 1][col - 1] == 1);
-}
-
-Map &MapGenerator::getMap() {
-    return map1;
 }

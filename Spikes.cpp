@@ -1,5 +1,4 @@
 #include "Spikes.h"
-#include "Navigation.h"
 
 Spikes::Spikes(Navigation& nav) : player(nav.getPlayer()) {
 }
