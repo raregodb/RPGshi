@@ -9,11 +9,12 @@ public:
     explicit Cell(bool passability = true);  //<--- конструктор
 
     void setPassability(bool newPassability);
-    bool getPassability();
+    bool getPassability() const;
 
     void spawnEvent(IEvent* event);
-    IEvent& getEvent() const;
+    IEvent& getEvent();
     bool hasEvent();
+    void activateEvent();
 
 private:
     bool passability;

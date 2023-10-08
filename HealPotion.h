@@ -6,7 +6,7 @@
 
 class HealPotion : public IEvent{
 public:
-    HealPotion(Navigation &nav);
+    explicit HealPotion(Navigation &nav);
 
     void someEvent() override;
 private:

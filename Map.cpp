@@ -2,7 +2,7 @@
 
 Map::Map(int X, int Y) : sizeX(X), sizeY(Y) {
     //std::cout<<"Construct "<<this<<std::endl;
-    if (sizeX < 0 || sizeY < 0 || sizeX > MAXMAPSIZE || sizeY > MAXMAPSIZE){
+    if (sizeX < MINMAPSIZE || sizeY < MINMAPSIZE || sizeX > MAXMAPSIZE || sizeY > MAXMAPSIZE){
         std::cout<<"badMap. Map was created with default settings\n";
         sizeX = DEFAULTSIZEX;
         sizeY = DEFAULTSIZEY;
@@ -133,6 +133,7 @@ Position Map::getPlayerFinish() {
     return finishPosition;
 }
 
+//сделано для дебагга
 void Map::printMap() {
     for (int y = 0; y < sizeY; y++) {
         for (int x = 0; x < sizeX; x++) {
@@ -151,4 +152,3 @@ void Map::printMap() {
     }
 
 }
-

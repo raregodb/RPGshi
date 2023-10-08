@@ -8,15 +8,15 @@ void Cell::setPassability(bool newPassability) {
     passability=newPassability;
 }
 
-bool Cell::getPassability() {
+bool Cell::getPassability() const {
     return passability;
 }
 
 void Cell::spawnEvent(IEvent *newEvent) {
-    event = newEvent;
+    this->event = newEvent;
 }
 
-IEvent& Cell::getEvent() const {
+IEvent& Cell::getEvent(){
     return *event;
 }
 
@@ -25,4 +25,8 @@ bool Cell::hasEvent() {
         return true;
     else
         return false;
+}
+
+void Cell::activateEvent() {
+    this->event->someEvent();
 }

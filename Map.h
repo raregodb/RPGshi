@@ -9,6 +9,7 @@
 #define STARTPOSITIONX 1
 #define STARTPOSITIONY 1
 #define MAXMAPSIZE 100
+#define MINMAPSIZE 10
 
 class Map {
 public:
@@ -32,7 +33,6 @@ public:
     ~Map();   //<--- деструктор
 
 private:
-
     Cell** map;
     int sizeX;
     int sizeY;

@@ -45,6 +45,9 @@ void Player::takeDamage(int Damage) {
     if ((health - Damage) <= 0) {
         health = 0;
         isDead = true;
+        //временное решение
+        std::cout<<"Вы умерли :( \nИгра окончена\n";
+        exit(EXIT_SUCCESS);
     }
     else
         health -= Damage;
@@ -89,3 +92,4 @@ bool Player::getIsDead() const {
 void Player::setIsDead(bool newState) {
     isDead = newState;
 }
+

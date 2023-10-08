@@ -1,4 +1,3 @@
-
 #include "Navigation.h"
 #include "iostream"
 
@@ -20,15 +19,20 @@ void Navigation::chMove(Position pos) {
         std::cout<<"badPosition\n";
     }
     else {
+        std::cout<<"Вы передвинулись с "<<chPos.x<<"; "<<chPos.y<<" на "<<propPos.x<<"; "<<propPos.y<<"\n";
         chPos.x = propPos.x;
         chPos.y = propPos.y;
+        if (chPos.x == STARTPOSITIONX && chPos.y == STARTPOSITIONY){
+            std::cout<<"Вы прошли уровень!\n";
+            exit(EXIT_SUCCESS);
+        }
+
         Cell some_cell = map.getCellByCords(chPos);
         if (some_cell.hasEvent()) {
-            some_cell.getEvent().someEvent();
+            some_cell.activateEvent();
         }
     }
 }
-
 
 void Navigation::move(direction dir = direction()) {
     switch (dir) {
@@ -63,20 +67,18 @@ Position Navigation::getChPos() {
 }
 
 void Navigation::setChPos(Position newChPos) {
-    if (newChPos.x < 0 || newChPos.y < 0
-        || !map.getCellByCords(newChPos).getPassability()
-        || newChPos.x > map.getMapSizeByX() || newChPos.y > map.getMapSizeByY()) {
-        std::cout<<"badPosition\n";
-    }
-    else {
-        chPos.x=newChPos.x;
-        chPos.y=newChPos.y;
-        std::cout<<"\nteleported to " << newChPos.x << " " << newChPos.y << std::endl;
-        Cell some_cell = map.getCellByCords(chPos);
-        if (some_cell.hasEvent()) {
-            some_cell.getEvent().someEvent();
-        }
-    }
+    Position abs_difference;
+    if(chPos.x > newChPos.x)
+        abs_difference.x = (chPos.x - newChPos.x) * -1;
+    else
+        abs_difference.x = newChPos.x - chPos.x;
+
+    if(chPos.y > newChPos.y)
+        abs_difference.y = (chPos.y - newChPos.y) * -1;
+    else
+        abs_difference.y = newChPos.y - chPos.y;
+
+    Navigation::chMove(abs_difference);
 }
 
 Player& Navigation::getPlayer() {

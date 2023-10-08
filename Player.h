@@ -46,6 +46,7 @@ public:
 
     bool getIsDead() const;
     void setIsDead(bool newState);
+
 };
 
 

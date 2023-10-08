@@ -91,6 +91,30 @@ build CMakeFiles/lab1.dir/IEvent.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/
   OBJECT_DIR = CMakeFiles/lab1.dir
   OBJECT_FILE_DIR = CMakeFiles/lab1.dir
 
+build CMakeFiles/lab1.dir/Spikes.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Spikes.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/Spikes.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+
+build CMakeFiles/lab1.dir/HealPotion.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/HealPotion.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/HealPotion.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+
+build CMakeFiles/lab1.dir/Teleport.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Teleport.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/Teleport.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+
+build CMakeFiles/lab1.dir/MapGenerator.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/MapGenerator.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/MapGenerator.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab1
@@ -99,7 +123,7 @@ build CMakeFiles/lab1.dir/IEvent.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/
 #############################################
 # Link the executable lab1
 
-build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Player.cpp.o CMakeFiles/lab1.dir/Navigation.cpp.o CMakeFiles/lab1.dir/Cell.cpp.o CMakeFiles/lab1.dir/Map.cpp.o CMakeFiles/lab1.dir/Position.cpp.o CMakeFiles/lab1.dir/IEvent.cpp.o
+build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Player.cpp.o CMakeFiles/lab1.dir/Navigation.cpp.o CMakeFiles/lab1.dir/Cell.cpp.o CMakeFiles/lab1.dir/Map.cpp.o CMakeFiles/lab1.dir/Position.cpp.o CMakeFiles/lab1.dir/IEvent.cpp.o CMakeFiles/lab1.dir/Spikes.cpp.o CMakeFiles/lab1.dir/HealPotion.cpp.o CMakeFiles/lab1.dir/Teleport.cpp.o CMakeFiles/lab1.dir/MapGenerator.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/lab1.dir
   POST_BUILD = :

@@ -13,7 +13,6 @@ public:
     Teleport(Navigation& navigation, Map& map);
 
     void someEvent() override;
-
 private:
     Player& player;
     Map& map1;
