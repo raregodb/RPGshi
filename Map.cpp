@@ -138,7 +138,7 @@ void Map::printMap() {
     for (int y = 0; y < sizeY; y++) {
         for (int x = 0; x < sizeX; x++) {
             if (this->map[x][y].getPassability()) {
-                if (this->map[x][y].hasEvent()) {
+                if (this->map[x][y].checkForEvent()) {
                     std::cout<<"e";
                 }
                 else

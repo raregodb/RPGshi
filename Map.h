@@ -9,7 +9,7 @@
 #define STARTPOSITIONX 1
 #define STARTPOSITIONY 1
 #define MAXMAPSIZE 100
-#define MINMAPSIZE 10
+#define MINMAPSIZE 5
 
 class Map {
 public:

@@ -16,12 +16,12 @@ void Cell::spawnEvent(IEvent *newEvent) {
     this->event = newEvent;
 }
 
-IEvent& Cell::getEvent(){
-    return *event;
+IEvent* Cell::getEvent(){
+    return event;
 }
 
-bool Cell::hasEvent() {
-    if (this->event != nullptr)
+bool Cell::checkForEvent() const {
+    if (this->hasEvent)
         return true;
     else
         return false;
@@ -29,4 +29,12 @@ bool Cell::hasEvent() {
 
 void Cell::activateEvent() {
     this->event->someEvent();
+}
+
+Cell::~Cell() {
+    delete event;
+}
+
+void Cell::setHavingEvent(bool newState) {
+    this->hasEvent = newState;
 }

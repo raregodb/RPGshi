@@ -26,9 +26,10 @@ void Navigation::chMove(Position pos) {
             std::cout<<"Вы прошли уровень!\n";
             exit(EXIT_SUCCESS);
         }
-        Cell some_cell = map.getCellByCords(chPos);
-        if (some_cell.hasEvent()) {
-            some_cell.activateEvent();
+        Cell* some_cell = &map.getCellByCords(chPos);
+        if (some_cell->checkForEvent()) {
+            some_cell->activateEvent();
+            some_cell->setHavingEvent(false);
         }
     }
 }

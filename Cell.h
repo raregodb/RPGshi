@@ -12,12 +12,16 @@ public:
     bool getPassability() const;
 
     void spawnEvent(IEvent* event);
-    IEvent& getEvent();
-    bool hasEvent();
+    IEvent* getEvent();
+    bool checkForEvent() const;
+    void setHavingEvent(bool newState);
     void activateEvent();
+
+    ~Cell();
 
 private:
     bool passability;
+    bool hasEvent;
     IEvent* event;
 };
 

@@ -7,6 +7,7 @@
 class IEvent {
 public:
     virtual void someEvent() = 0;
+    virtual ~IEvent() = default;
 };
 
 

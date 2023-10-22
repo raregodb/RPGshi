@@ -8,24 +8,29 @@
 
 int main() {
     Player player1;
-    Map map(110, 20);
+    Map map(7, 7);
     Navigation nav(player1, map);
     MapGenerator GMap(map, nav);
     map.printMap();
-    nav.move(down);
-    nav.move(down);
-    nav.move(down);
-    nav.move(down);
-    nav.move(down);
-    nav.move(left);
-    nav.move(down);
-    nav.move(right);
-    nav.move(right);
-    nav.move(right);
-    nav.move(right);
-    nav.move(up);
-    nav.move(up);
-    nav.move(up);
+
+    while(true) {
+        char dir;
+        std::cin>>dir;
+        switch (dir) {
+            case 'a':
+                nav.move(left);
+                break;
+            case 'w':
+                nav.move(up);
+                break;
+            case 'd':
+                nav.move(right);
+                break;
+            case 's':
+                nav.move(down);
+                break;
+        }
+    }
 
     return 0;
 }
