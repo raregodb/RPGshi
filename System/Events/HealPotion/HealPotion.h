@@ -1,8 +1,8 @@
 #ifndef LAB1_HEALPOTION_H
 #define LAB1_HEALPOTION_H
 
-#include "IEvent.h"
-#include "Navigation.h"
+#include "../IEvent.h"
+#include "../../Navigation/Navigation.h"
 
 class HealPotion : public IEvent{
 public:

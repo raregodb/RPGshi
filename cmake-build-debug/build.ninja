@@ -55,65 +55,65 @@ build CMakeFiles/lab1.dir/main.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CL
   OBJECT_DIR = CMakeFiles/lab1.dir
   OBJECT_FILE_DIR = CMakeFiles/lab1.dir
 
-build CMakeFiles/lab1.dir/Player.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Player.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Player.cpp.o.d
+build CMakeFiles/lab1.dir/Entities/Player.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Entities/Player.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/Entities/Player.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities
 
-build CMakeFiles/lab1.dir/Navigation.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Navigation.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Navigation.cpp.o.d
+build CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Navigation/Navigation.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Navigation
 
-build CMakeFiles/lab1.dir/Cell.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Cell.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Cell.cpp.o.d
+build CMakeFiles/lab1.dir/System/Map/Cell.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Map/Cell.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Map/Cell.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Map
 
-build CMakeFiles/lab1.dir/Map.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Map.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Map.cpp.o.d
+build CMakeFiles/lab1.dir/System/Map/Map.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Map/Map.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Map/Map.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Map
 
-build CMakeFiles/lab1.dir/Position.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Position.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Position.cpp.o.d
+build CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Navigation/Position.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Navigation
 
-build CMakeFiles/lab1.dir/IEvent.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/IEvent.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/IEvent.cpp.o.d
+build CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Events/Spikes/Spikes.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Spikes
 
-build CMakeFiles/lab1.dir/Spikes.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Spikes.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Spikes.cpp.o.d
+build CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Events/HealPotion/HealPotion.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/HealPotion
 
-build CMakeFiles/lab1.dir/HealPotion.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/HealPotion.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/HealPotion.cpp.o.d
+build CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Events/Teleport/Teleport.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Teleport
 
-build CMakeFiles/lab1.dir/Teleport.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Teleport.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Teleport.cpp.o.d
+build CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Map/MapGenerator/MapGenerator.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Map/MapGenerator
 
-build CMakeFiles/lab1.dir/MapGenerator.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/MapGenerator.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/MapGenerator.cpp.o.d
+build CMakeFiles/lab1.dir/System/Game/Game.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Game/Game.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Game/Game.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Game
 
 
 # =============================================================================
@@ -123,7 +123,7 @@ build CMakeFiles/lab1.dir/MapGenerator.cpp.o: CXX_COMPILER__lab1_Debug /Users/ra
 #############################################
 # Link the executable lab1
 
-build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Player.cpp.o CMakeFiles/lab1.dir/Navigation.cpp.o CMakeFiles/lab1.dir/Cell.cpp.o CMakeFiles/lab1.dir/Map.cpp.o CMakeFiles/lab1.dir/Position.cpp.o CMakeFiles/lab1.dir/IEvent.cpp.o CMakeFiles/lab1.dir/Spikes.cpp.o CMakeFiles/lab1.dir/HealPotion.cpp.o CMakeFiles/lab1.dir/Teleport.cpp.o CMakeFiles/lab1.dir/MapGenerator.cpp.o
+build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Entities/Player.cpp.o CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o CMakeFiles/lab1.dir/System/Map/Cell.cpp.o CMakeFiles/lab1.dir/System/Map/Map.cpp.o CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o CMakeFiles/lab1.dir/System/Game/Game.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/lab1.dir
   POST_BUILD = :

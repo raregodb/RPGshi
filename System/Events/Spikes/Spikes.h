@@ -1,8 +1,8 @@
 #ifndef LAB1_SPIKES_H
 #define LAB1_SPIKES_H
 
-#include "IEvent.h"
-#include "Navigation.h"
+#include "../IEvent.h"
+#include "../../Navigation/Navigation.h"
 
 class Spikes : public IEvent{
 public:

@@ -2,7 +2,7 @@
 #define LAB1_CELL_H
 
 #include "iostream"
-#include "IEvent.h"
+#include "../Events/IEvent.h"
 
 class Cell{
 public:

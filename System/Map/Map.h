@@ -2,7 +2,7 @@
 #define LAB1_MAP_H
 #include "iostream"
 #include "Cell.h"
-#include "Position.h"
+#include "../Navigation/Position.h"
 
 #define DEFAULTSIZEX 20
 #define DEFAULTSIZEY 20
@@ -28,7 +28,7 @@ public:
     Position getPlayerStart();
     Position getPlayerFinish();
 
-    void printMap();
+    void printMap(Position pPosition);
 
     ~Map();   //<--- деструктор
 

@@ -1,9 +1,9 @@
 #ifndef LAB1_MAPGENERATOR_H
 #define LAB1_MAPGENERATOR_H
 
-#include "Spikes.h"
-#include "Teleport.h"
-#include "HealPotion.h"
+#include "../../Events/Spikes/Spikes.h"
+#include "../../Events/Teleport/Teleport.h"
+#include "../../Events/HealPotion/HealPotion.h"
 #include "iostream"
 #include<cstdlib>
 #include<ctime>

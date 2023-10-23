@@ -2,7 +2,7 @@
 #define LAB1_PLAYER_H
 
 #include <string>
-#include "Navigation.h"
+#include "../System/Navigation/Navigation.h"
 
 #define DEFAULT_MAX_HEALTH 1000
 #define DEFAULT_HEALTH 100
@@ -19,6 +19,7 @@ private:
     int score;
     bool canBeDamaged;
     bool isDead;
+    bool isFinished;
     std::string nickname;
 
 
@@ -47,6 +48,8 @@ public:
     bool getIsDead() const;
     void setIsDead(bool newState);
 
+    bool getIsFinished() const;
+    void setIsFinished(bool newState);
 };
 
 

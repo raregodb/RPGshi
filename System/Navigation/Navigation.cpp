@@ -23,8 +23,7 @@ void Navigation::chMove(Position pos) {
         chPos.x = propPos.x;
         chPos.y = propPos.y;
         if (chPos.x == map.getPlayerFinish().x && chPos.y == map.getPlayerFinish().y){
-            std::cout<<"Вы прошли уровень!\n";
-            exit(EXIT_SUCCESS);
+            player.setIsFinished(true);
         }
         Cell* some_cell = &map.getCellByCords(chPos);
         if (some_cell->checkForEvent()) {

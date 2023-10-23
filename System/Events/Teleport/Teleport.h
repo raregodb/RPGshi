@@ -1,8 +1,8 @@
 #ifndef LAB1_TELEPORT_H
 #define LAB1_TELEPORT_H
 
-#include "IEvent.h"
-#include "Navigation.h"
+#include "../IEvent.h"
+#include "../../Navigation/Navigation.h"
 #include<cstdlib>
 #include<ctime>
 #include "iostream"

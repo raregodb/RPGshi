@@ -1,8 +1,8 @@
 #ifndef LAB1_NAVIGATION_H
 #define LAB1_NAVIGATION_H
 
-#include "Player.h"
-#include "Map.h"
+#include "../../Entities/Player.h"
+#include "../Map/Map.h"
 #include "Position.h"
 
 enum direction{
