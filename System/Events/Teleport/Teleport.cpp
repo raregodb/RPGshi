@@ -20,6 +20,9 @@ void Teleport::someEvent() {
             flag = false;
         }
     }
-    std::cout<<"Волшебный портал перенес вас на " << destination.x << " " << destination.y << "\n\n";
     navigation1.setChPos(destination);
+}
+
+void Teleport::printSomeEvent() {
+    std::cout<<"Волшебный портал перенес вас на " << destination.x << " " << destination.y << "\n\n";
 }

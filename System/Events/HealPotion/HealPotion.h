@@ -9,6 +9,7 @@ public:
     explicit HealPotion(Navigation &nav);
 
     void someEvent() override;
+    void printSomeEvent() override;
 private:
     Player& player;
 };

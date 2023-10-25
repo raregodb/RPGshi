@@ -4,13 +4,7 @@
 #include "../../Entities/Player.h"
 #include "../Map/Map.h"
 #include "Position.h"
-
-enum direction{
-    right,
-    left,
-    up,
-    down
-};
+#include "../config/Input_Commands_Dir.h"
 
 class Player;
 
@@ -21,7 +15,7 @@ public:
     Position getChPos();
     void setChPos(Position newChPos);
     void chMove(Position pos);
-    void move(direction);
+    void move(input_commands);
 
     Player& getPlayer();
 

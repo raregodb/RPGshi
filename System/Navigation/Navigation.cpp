@@ -16,10 +16,10 @@ void Navigation::chMove(Position pos) {
     if (propPos.x < 0 || propPos.y < 0
         || !map.getCellByCords(propPos).getPassability()
         || propPos.x > map.getMapSizeByX() || propPos.y > map.getMapSizeByY()) {
-        std::cout<<"badPosition\n";
+        //std::cout<<"badPosition\n";
     }
     else {
-        std::cout<<"Вы передвинулись с "<<chPos.x<<"; "<<chPos.y<<" на "<<propPos.x<<"; "<<propPos.y<<"\n";
+        //std::cout<<"Вы передвинулись с "<<chPos.x<<"; "<<chPos.y<<" на "<<propPos.x<<"; "<<propPos.y<<"\n";
         chPos.x = propPos.x;
         chPos.y = propPos.y;
         if (chPos.x == map.getPlayerFinish().x && chPos.y == map.getPlayerFinish().y){
@@ -28,29 +28,29 @@ void Navigation::chMove(Position pos) {
         Cell* some_cell = &map.getCellByCords(chPos);
         if (some_cell->checkForEvent()) {
             some_cell->activateEvent();
-            some_cell->setHavingEvent(false);
+            //some_cell->setHavingEvent(false);
         }
     }
 }
 
-void Navigation::move(direction dir = direction()) {
+void Navigation::move(input_commands dir = input_commands()) {
     switch (dir) {
-        case right:
+        case Right:
             deltaMove.x = 1;
             deltaMove.y = 0;
             chMove(deltaMove);
             break;
-        case left:
+        case Left:
             deltaMove.x = -1;
             deltaMove.y = 0;
             chMove(deltaMove);
             break;
-        case up:
+        case Up:
             deltaMove.x = 0;
             deltaMove.y = -1;
             chMove(deltaMove);
             break;
-        case down:
+        case Down:
             deltaMove.x = 0;
             deltaMove.y = 1;
             chMove(deltaMove);

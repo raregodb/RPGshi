@@ -16,6 +16,7 @@ public:
     bool checkForEvent() const;
     void setHavingEvent(bool newState);
     void activateEvent();
+    void printEvent();
 
     ~Cell();
 

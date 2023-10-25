@@ -9,6 +9,7 @@ public:
     Spikes(Navigation& navigation);
 
     void someEvent() override;
+    void printSomeEvent() override;
 private:
     Player& player;
 };
