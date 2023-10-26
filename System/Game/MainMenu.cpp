@@ -1,6 +1,7 @@
 #include "MainMenu.h"
 
 MainMenu::MainMenu() {
+    this->highlight = 0;
     this->choice = 0;
     this->n_choices = 3;
     this->menu_choices[0] = "PLAY";
@@ -8,7 +9,6 @@ MainMenu::MainMenu() {
     this->menu_choices[2] = "EXIT";
     startx = (80 - WIDTH) / 2;
     starty = (24 - HEIGHT) / 2;
-
 }
 
 void MainMenu::open() {
@@ -26,7 +26,7 @@ void MainMenu::open() {
     keypad(menu_win, TRUE);
     mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
     refresh();
-    print_menu(menu_win, highlight, menu_choices, n_choices);
+    print_window(menu_win, highlight, menu_choices, n_choices);
     while(1)
     {
         c = wgetch(menu_win);
@@ -50,7 +50,7 @@ void MainMenu::open() {
                 refresh();
                 break;
         }
-        print_menu(menu_win, highlight, menu_choices, n_choices);
+        print_window(menu_win, highlight, menu_choices, n_choices);
         if(choice != 0)	/* User did a choice come out of the infinite loop */
             break;
     }
@@ -59,7 +59,7 @@ void MainMenu::open() {
     endwin();
 }
 
-void MainMenu::print_menu(WINDOW *window, int highlight, std::string* choices, int n_choices) {
+void MainMenu::print_window(WINDOW* window, int highlight, std::string* choices, int n_choices) {
     int x, y, i;
 
     x = 5;
@@ -78,11 +78,30 @@ void MainMenu::print_menu(WINDOW *window, int highlight, std::string* choices, i
     }
     wrefresh(window);
 }
+//void MainMenu::print_window(WINDOW *window, int highlight, std::string *choices, int n_choices) {
+//    IWindow::print_window(window, highlight, choices, n_choices);
+//}
 
 int MainMenu::getChoice() {
-    return choice;
+    return this->choice;
 }
 
 void MainMenu::setChoice(int newChoice) {
-    choice = newChoice;
+    this->choice = newChoice;
+}
+
+WINDOW *MainMenu::getWindow() {
+    return this->Menu;
+}
+
+int MainMenu::getHighlight() {
+    return this->highlight;
+}
+
+std::string *MainMenu::getChoices() {
+    return this->menu_choices;
+}
+
+int MainMenu::get_n_choices() {
+    return this->n_choices;
 }

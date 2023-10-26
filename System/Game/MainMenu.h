@@ -2,28 +2,28 @@
 #define LAB1_MAINMENU_H
 
 #include "iostream"
-#include "../InputReader/InputReader.h"
+#include "IWindow.h"
 
-#define WIDTH 30
-#define HEIGHT 10
-
-class MainMenu {
+class MainMenu : public IWindow {
 public:
     MainMenu();
 
-    virtual void open();
-    void print_menu(WINDOW *menu_win, int highlight, std::string* choices, int n_choices);
+    void open() override;
+    void print_window(WINDOW* window, int highlight, std::string* choices, int n_choices) override;
 
-    virtual int getChoice();
-    virtual void setChoice(int newChoice);
+    int getChoice() override;
+    void setChoice(int newChoice) override;
+    WINDOW* getWindow();
+    int getHighlight();
+    std::string* getChoices();
+    int get_n_choices();
 
-    int startx;
-    int starty;
 private:
-    int n_choices;
     std::string menu_choices[3];
     int choice;
-    WINDOW* Menu;
+    int n_choices;
+    int highlight{};
+    WINDOW* Menu{};
 };
 
 

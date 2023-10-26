@@ -4,10 +4,11 @@
 #include "MainMenu.h"
 
 
-class SettingsMenu : MainMenu {
+class SettingsMenu : public IWindow {
 public:
     SettingsMenu();
     void open() override;
+    void print_window(WINDOW* window, int highlight, std::string* choices, int n_choices) override;
     int getChoice() override;
     void setChoice(int newChoice) override;
 

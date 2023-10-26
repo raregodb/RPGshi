@@ -62,3 +62,7 @@ int SettingsMenu::getChoice() {
 void SettingsMenu::setChoice(int newChoice) {
     this->choice = newChoice;
 }
+
+void SettingsMenu::print_window(WINDOW *window, int highlight, std::string *choices, int n_choices) {
+    IWindow::print_window(window, highlight, choices, n_choices);
+}

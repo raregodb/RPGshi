@@ -1,27 +1,24 @@
-//
-// Created by Кирилл Деменев on 26.10.2023.
-//
-
 #ifndef LAB1_IWINDOW_H
 #define LAB1_IWINDOW_H
 
+#include "curses.h"
+#include "string"
 
-
+#define WIDTH 30
+#define HEIGHT 10
 
 class IWindow {
 public:
     virtual void open();
-    virtual void print_window();
+    virtual void print_window(WINDOW* window, int highlight, std::string* choices, int n_choices);
 
-    virtual int getChoice();
-    virtual void setChoice(int newChoice);
+    virtual int getChoice() = 0;
+    virtual void setChoice(int newChoice) = 0;
 
     int startx;
     int starty;
-private:
-    int n_choices;
+
     std::string menu_choices[3];
-    int choice;
     WINDOW* Menu;
 };
 

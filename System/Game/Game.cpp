@@ -16,7 +16,7 @@ Game::Game() {
                 break;
             case 2:
                 while(1) {
-                    SetMenu.open();
+                    //SetMenu.open();
                     switch (SetMenu.getChoice()) {
                         case 1:
                             break;
