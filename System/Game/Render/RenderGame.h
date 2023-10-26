@@ -3,6 +3,15 @@
 
 #include "../../Navigation/Navigation.h"
 #include "curses.h"
+#include "../../../termcolor/termcolor.hpp"
+
+#define treset termcolor::reset
+#define red termcolor::color<196>
+#define yellow termcolor::color<226>
+#define violet termcolor::color<126>
+#define green termcolor::color<118>
+#define on_grey termcolor::on_grey
+
 
 class RenderGame {
 public:
@@ -11,6 +20,9 @@ public:
     void printInterface() const;
     void printMap();
     void printEvent();
+    void printGame();
+
+    void printMainMenu();
 
 private:
     Navigation& navigation;

@@ -10,15 +10,17 @@
 #include "Render/RenderGame.h"
 #include <cstdlib>
 #include "../InputReader/InputReader.h"
+#include "SettingsMenu.h"
 
 
 class Game {
 public:
     Game();
-
-    //void execute_input(const std::string& input);
     static bool getLoseState(Player& pPlayer);
     static bool getWinState(Player& pPlayer);
+
+private:
+    bool exit_state;
 };
 
 

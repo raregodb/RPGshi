@@ -1,6 +1,7 @@
 #include "Teleport.h"
 
 Teleport::Teleport(Navigation& nav, Map& map) : player(nav.getPlayer()), map1(map), navigation1(nav) {
+    this->ID = 3;
 }
 
 void Teleport::someEvent() {
@@ -25,4 +26,8 @@ void Teleport::someEvent() {
 
 void Teleport::printSomeEvent() {
     std::cout<<"Волшебный портал перенес вас на " << destination.x << " " << destination.y << "\n\n";
+}
+
+int Teleport::getID() {
+    return ID;
 }

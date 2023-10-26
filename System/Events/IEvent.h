@@ -9,6 +9,7 @@ public:
     virtual void someEvent() = 0;
     virtual void printSomeEvent() = 0;
     virtual ~IEvent() = default;
+    virtual int getID() = 0;
 };
 
 

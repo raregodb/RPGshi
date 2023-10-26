@@ -1,58 +1,84 @@
 #include "Game.h"
 
+
 Game::Game() {
+    this->exit_state = false;
     Player pPlayer; //создание игрока
-    Map map(10, 7); //создание карты
+    Map map(10, 10); //создание карты
     Navigation nav(pPlayer, map); //создание навигации
-    MapGenerator GMap(map, nav); //генерация карты
-    InputReader inputReader("../System/config/InputConfig.txt");
-    RenderGame(nav, pPlayer, map);
 
-
-    while(!getLoseState(pPlayer)) {
-        if (getWinState(pPlayer)) {
-            pPlayer.setIsFinished(false);
-            MapGenerator GMap(map, nav); //генерация карты
-            nav.setChPos(map.getPlayerStart());
-            RenderGame(nav, pPlayer, map);
+    MainMenu Menu;
+    SettingsMenu SetMenu;
+    while (1) {
+        Menu.open();
+        switch (Menu.getChoice()) {
+            case 1:
+                break;
+            case 2:
+                while(1) {
+                    SetMenu.open();
+                    switch (SetMenu.getChoice()) {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                    }
+                    if (SetMenu.getChoice() == 2)
+                        break;
+                }
+                break;
+            case 3:
+                exit_state = true;
+                break;
         }
-        //nodelay(stdscr, TRUE);
-        initscr(); //начало работы с curses.h
-        cbreak(); /* Line buffering disabled. pass on everything */
-        noecho(); //отключить отображение вводимых символов
-        input_commands input = inputReader.ReadInput();
-        //endwin();
-        //refresh();
+        if (Menu.getChoice() == 1 || Menu.getChoice() == 3)
+            break;
+    }
 
-        switch (input) {
-            case Left:
-                //system("clear");
-                nav.move(Left);
-                RenderGame(nav, pPlayer, map);
-                break;
-            case Up:
-                //system("clear");
-                nav.move(Up);
-                RenderGame(nav, pPlayer, map);
-                break;
-            case Right:
-                //system("clear");
-                nav.move(Right);
-                RenderGame(nav, pPlayer, map);
-                break;
-            case Down:
-                //system("clear");
-                nav.move(Down);
-                RenderGame(nav, pPlayer, map);
-                break;
-            case Escape:
+    if (!exit_state) {
+        MapGenerator(map, nav); //генерация карты
+        InputReader inputReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
+        RenderGame(nav, pPlayer,map).printGame();
+        initscr(); //начало работы с curses.h
+
+        while(!getLoseState(pPlayer)) {
+            if (getWinState(pPlayer)) {
+                pPlayer.setIsFinished(false);
+                MapGenerator(map, nav); //генерация карты
+                nav.setChPos(map.getPlayerStart());
+                RenderGame(nav, pPlayer, map).printGame();
+            }
+            cbreak(); /* Line buffering disabled. pass on everything */
+            noecho(); //отключить отображение вводимых символов
+            input_commands input = inputReader.ReadInput();
+            endwin();
+
+            switch (input) {
+                case Left:
+                    nav.move(Left);
+                    RenderGame(nav, pPlayer, map).printGame();
+                    break;
+                case Up:
+                    nav.move(Up);
+                    RenderGame(nav, pPlayer, map).printGame();
+                    break;
+                case Right:
+                    nav.move(Right);
+                    RenderGame(nav, pPlayer, map).printGame();
+                    break;
+                case Down:
+                    nav.move(Down);
+                    RenderGame(nav, pPlayer, map).printGame();
+                    break;
+                case Escape:
 //                system("clear");
 //                nav.move(down);
 //                RenderGame(nav, pPlayer, map);
-                break;
-            default:
-                std::cout<<"bad input. use WASD\n";
-                break;
+                    break;
+                default:
+                    std::cout<<"bad input. use WASD\n";
+                    break;
+            }
         }
     }
 }
@@ -67,6 +93,7 @@ bool Game::getLoseState(Player& pPlayer) {
 
 bool Game::getWinState(Player& pPlayer) {
     if (pPlayer.getIsFinished()) {
+        system("clear");
         std::cout<<"Вы прошли уровень!\nВы стали гораздо сильнее!\n";
         pPlayer.addScore(20);
         //pPlayer.setCharacterDamage(pPlayer.getCharacterDamage() + (pPlayer.getCharacterDamage() % 20));
@@ -74,7 +101,3 @@ bool Game::getWinState(Player& pPlayer) {
     }
     return false;
 }
-
-//void Game::execute_input(const std::string &input) {
-//
-//}

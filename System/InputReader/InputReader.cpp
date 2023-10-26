@@ -1,7 +1,6 @@
 #include "InputReader.h"
 
 InputReader::InputReader(const std::string &inputConfig) {
-    std::ifstream configFile;
     configFile.open(inputConfig);
 
     if (configFile.is_open()) {
@@ -17,7 +16,6 @@ InputReader::InputReader(const std::string &inputConfig) {
             }
             keyMap[inputKey] = command;
         }
-        configFile.close();
     }
     else
         std::cout<<"Input config file was not found. \n";
@@ -43,3 +41,8 @@ input_commands InputReader::ReadInput() {
     }
     return Default; // Если команда не найдена
 }
+
+InputReader::~InputReader() {
+    configFile.close();
+}
+

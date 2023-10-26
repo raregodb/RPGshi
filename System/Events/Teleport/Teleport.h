@@ -14,11 +14,15 @@ public:
 
     void someEvent() override;
     void printSomeEvent() override;
+
+    int getID() override;
 private:
     Player& player;
     Map& map1;
     Navigation& navigation1;
     Position destination;
+
+    int ID;
 };
 
 

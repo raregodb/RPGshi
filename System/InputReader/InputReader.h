@@ -11,9 +11,11 @@ class InputReader {
 public:
     explicit InputReader(const std::string &inputConfig);
     input_commands ReadInput();
+    ~InputReader();
 
 private:
     std::unordered_map<char, std::string> keyMap;
+    std::ifstream configFile;
 };
 
 

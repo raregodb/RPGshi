@@ -248,3 +248,27 @@ Parsed CXX implicit link information from above output:
   implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
 
 
+Determining if the function wsyncup exists in the /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libcurses.tbd passed with the following output:
+Change Dir: /Users/raregod/CLionProjects/lab1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Mlcbhk
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_e69ab && [1/2] Building C object CMakeFiles/cmTC_e69ab.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_e69ab
+
+
+
+Determining if the function cbreak exists in the /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd passed with the following output:
+Change Dir: /Users/raregod/CLionProjects/lab1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-V5EARF
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_2660b && [1/2] Building C object CMakeFiles/cmTC_2660b.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_2660b
+
+
+
+Determining if the function nodelay exists in the /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd passed with the following output:
+Change Dir: /Users/raregod/CLionProjects/lab1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ONplfj
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_656f6 && [1/2] Building C object CMakeFiles/cmTC_656f6.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_656f6
+
+
+

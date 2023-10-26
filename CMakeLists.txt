@@ -3,10 +3,13 @@ project(lab1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(lab1 main.cpp Entities/Player.cpp Entities/Player.h System/Navigation/Navigation.cpp System/Navigation/Navigation.h System/Map/Cell.cpp System/Map/Cell.h System/Map/Map.cpp System/Map/Map.h System/Navigation/Position.cpp System/Navigation/Position.h System/Events/IEvent.h System/Events/Spikes/Spikes.cpp System/Events/Spikes/Spikes.h System/Events/HealPotion/HealPotion.cpp System/Events/HealPotion/HealPotion.h System/Events/Teleport/Teleport.cpp System/Events/Teleport/Teleport.h System/Map/MapGenerator/MapGenerator.cpp System/Map/MapGenerator/MapGenerator.h System/Game/Game.cpp System/Game/Game.h System/Game/MainMenu.cpp System/Game/MainMenu.h System/Game/Render/RenderGame.cpp System/Game/Render/RenderGame.h System/Game/Game.cpp System/InputReader/InputReader.cpp System/InputReader/InputReader.h System/config/Input_Commands_Dir.h)
+add_executable(lab1 main.cpp Entities/Player.cpp Entities/Player.h System/Navigation/Navigation.cpp System/Navigation/Navigation.h System/Map/Cell.cpp System/Map/Cell.h System/Map/Map.cpp System/Map/Map.h System/Navigation/Position.cpp System/Navigation/Position.h System/Events/IEvent.h System/Events/Spikes/Spikes.cpp System/Events/Spikes/Spikes.h System/Events/HealPotion/HealPotion.cpp System/Events/HealPotion/HealPotion.h System/Events/Teleport/Teleport.cpp System/Events/Teleport/Teleport.h System/Map/MapGenerator/MapGenerator.cpp System/Map/MapGenerator/MapGenerator.h System/Game/Game.cpp System/Game/Game.h System/Game/MainMenu.cpp System/Game/MainMenu.h System/Game/Render/RenderGame.cpp System/Game/Render/RenderGame.h System/Game/Game.cpp System/InputReader/InputReader.cpp System/InputReader/InputReader.h System/config/Input_Commands_Dir.h src/audiere.h System/Game/SettingsMenu.cpp System/Game/SettingsMenu.h System/Game/IWindow.cpp System/Game/IWindow.h)
+
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
 if (CURSES_FOUND AND CURSES_HAVE_NCURSES_H)
     include_directories(${CURSES_INCLUDE_DIR})
     target_link_libraries (lab1 ${CURSES_LIBRARIES})
 endif()
+
+include_directories(audiere-1.9.4/src)

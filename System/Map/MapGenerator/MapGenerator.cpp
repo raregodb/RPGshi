@@ -41,19 +41,19 @@ void MapGenerator::RandomGeneration() {
                     map1.getCellByCords(position).setPassability(false);
                 }
                 else {
-                    if (random_n <= 30) {
+                    if (random_n <= 28) {
                         auto *teleport = new Teleport(nav, map1);
                         map1.getCellByCords(position).spawnEvent(teleport);
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
                     }
-                    else if (random_n <= 37) {
+                    else if (random_n <= 35) {
                         auto *heal = new HealPotion(nav);
                         map1.getCellByCords(position).spawnEvent(heal);
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
                     }
-                    else if (random_n <= 47) {
+                    else if (random_n <= 40) {
                         auto *spikes = new Spikes(nav);
                         map1.getCellByCords(position).spawnEvent(spikes);
                         map1.getCellByCords(position).setHavingEvent(true);

@@ -6,14 +6,14 @@ RenderGame::RenderGame(Navigation& nNavigation, Player& pPlayer, Map& mMap)
     this->score = player.getScore();
     this->damage = player.getCharacterDamage();
 
-    //system("clear");
-    printInterface();
-    printMap();
-    printEvent();
+//    system("clear");
+//    printInterface();
+//    printEvent();
+//    printMap();
 }
 
 void RenderGame::printInterface() const {
-    std::cout<<"HP: " << hp << " XP: " << score << " Damage: " << damage << std::endl;
+    std::cout << red << termcolor::bold << "HP: " << hp << yellow << " XP: " << score << violet << " Damage: " << damage << treset <<  std::endl;
 }
 
 void RenderGame::printMap() {
@@ -25,17 +25,28 @@ void RenderGame::printMap() {
             pos.y = y;
             if (map.getCellByCords(pos).getPassability()) {
                 if (navigation.getChPos() == pos) {
-                    std::cout<<"p";
+                    std::cout<< termcolor::bold << on_grey << green << termcolor::blink << "P" << treset;
                 }
                 else if(map.getCellByCords(pos).checkForEvent() ) {
-                    std::cout<<"e";
+                    int ID = map.getCellByCords(pos).getEvent()->getID();
+                    switch (ID) {
+                        case 1:
+                            std::cout << green << on_grey <<"♥";
+                            break;
+                        case 2:
+                            std::cout << red << on_grey << "ᚈ" << treset; //"෴"
+                            break;
+                        case 3:
+                            std::cout << termcolor::blue << on_grey << "֍";  //൭
+                            break;
+                    }
                 }
                 else
-                    std::cout<<" ";
+                    std::cout<< on_grey << termcolor::grey << " " << treset; //
 
             }
             else if (!map.getCellByCords(pos).getPassability())
-                std::cout<<"#";
+                std::cout << termcolor::on_color<240> << termcolor::color<180> << "ᗑ" << treset;
         }
         std::cout<<std::endl;
     }
@@ -49,4 +60,15 @@ void RenderGame::printEvent() {
         some_cell->setHavingEvent(false);
     }
 
+}
+
+void RenderGame::printGame() {
+    system("clear");
+    printInterface();
+    printEvent();
+    printMap();
+}
+
+void RenderGame::printMainMenu() {
+    std::cout<<"LOL\n";
 }

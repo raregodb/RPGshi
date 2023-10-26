@@ -1,7 +1,7 @@
 #include "HealPotion.h"
 
 HealPotion::HealPotion(Navigation& nav) : player(nav.getPlayer()){
-
+    this->ID = 1;
 }
 
 void HealPotion::someEvent() {
@@ -11,4 +11,8 @@ void HealPotion::someEvent() {
 
 void HealPotion::printSomeEvent() {
     std::cout << "Отлично! Ты нашел лечебное зелье и восстановил " << DEFAULT_HEALPOTION_HEAL << " ОЗ\n\n";
+}
+
+int HealPotion::getID() {
+    return ID;
 }

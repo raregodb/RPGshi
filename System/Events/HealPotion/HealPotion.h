@@ -10,8 +10,11 @@ public:
 
     void someEvent() override;
     void printSomeEvent() override;
+
+    int getID() override;
 private:
     Player& player;
+    int ID;
 };
 
 
