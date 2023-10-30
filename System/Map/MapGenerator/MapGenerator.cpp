@@ -82,13 +82,6 @@ bool MapGenerator::isPath() {
                 arr[x][y] = -1;
         }
     }
-//    for (int i = 0; i < col; i++) {
-//        for (int j = 0; j < row; j++) {
-//            std::cout<<arr[j][i] << " ";
-//        }
-//        std::cout<<std::endl;
-//    }
-//    std::cout<<"\n\n";
     arr[0][0] = 1;
     for (int i = 1; i < row; i++)
         if (arr[i][0] != -1)
