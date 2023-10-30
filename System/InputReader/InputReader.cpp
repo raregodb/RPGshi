@@ -23,8 +23,7 @@ InputReader::InputReader(const std::string &inputConfig) {
 
 input_commands InputReader::ReadInput() {
     int input;
-    //input = getch();
-    input = getchar();
+    input = getch();
 
     if (keyMap.find(input) != keyMap.end()) {
         //return keyMap[input];

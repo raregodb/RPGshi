@@ -10,17 +10,20 @@
 #include "Render/RenderGame.h"
 #include <cstdlib>
 #include "../InputReader/InputReader.h"
-#include "SettingsMenu.h"
+#include "../GameStates/GameState.h"
 
 
 class Game {
 public:
     Game();
-    static bool getLoseState(Player& pPlayer);
+    //static bool getLoseState(Player& pPlayer);
     static bool getWinState(Player& pPlayer);
 
+    void new_game(Player& player, Map& map, Navigation& navigation) const;
+
 private:
-    bool exit_state;
+    int mapSizeX;
+    int mapSizeY;
 };
 
 

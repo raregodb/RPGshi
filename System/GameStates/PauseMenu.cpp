@@ -1,31 +1,37 @@
-#include "SettingsMenu.h"
+#include "PauseMenu.h"
 
-SettingsMenu::SettingsMenu() {
-    n_choices = 2;
+PauseMenu::PauseMenu() {
+    this->highlight = 0;
+    this->choice = 0;
+    this->n_choices = 4;
+    this->pause_choices[0] = "START NEW GAME";
+    this->pause_choices[1] = "REGENERATE MAP";
+    this->pause_choices[2] = "EXIT TO MAIN MENU";
+    this->pause_choices[3] = "BACK";
     startx = (80 - WIDTH) / 2;
     starty = (24 - HEIGHT) / 2;
-    this->choice = 0;
-    this->settings_choices[0] = "MAP SIZE";
-    this->settings_choices[1] = "BACK";
 }
 
-void SettingsMenu::open() {
-    WINDOW *settings_win;
-    int highlight = 1;
+void PauseMenu::open() {
+
+    WINDOW *menu_win;
     choice = 0;
+    int highlight = 1;
     int c;
+
     initscr();
     clear();
     noecho();
     cbreak();	/* Line buffering disabled. pass on everything */
-    settings_win = newwin(HEIGHT, WIDTH, starty, startx);
-    keypad(settings_win, TRUE);
+
+    menu_win = newwin(HEIGHT, WIDTH, starty, startx);
+    keypad(menu_win, TRUE);
     mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
     refresh();
-    MainMenu::print_menu(settings_win, highlight, settings_choices, n_choices);
+    print_window(menu_win, highlight, pause_choices, n_choices);
     while(1)
     {
-        c = wgetch(settings_win);
+        c = wgetch(menu_win);
         switch(c)
         {	case KEY_UP:
                 if(highlight == 1)
@@ -39,6 +45,9 @@ void SettingsMenu::open() {
                 else
                     ++highlight;
                 break;
+            case 27:
+                choice = 4;
+                break;
             case 10:
                 choice = highlight;
                 break;
@@ -46,7 +55,8 @@ void SettingsMenu::open() {
                 refresh();
                 break;
         }
-        MainMenu::print_menu(settings_win, highlight, settings_choices, n_choices);
+        beep();
+        print_window(menu_win, highlight, pause_choices, n_choices);
         if(choice != 0)	/* User did a choice come out of the infinite loop */
             break;
     }
@@ -55,14 +65,10 @@ void SettingsMenu::open() {
     endwin();
 }
 
-int SettingsMenu::getChoice() {
+int PauseMenu::getChoice() {
     return this->choice;
 }
 
-void SettingsMenu::setChoice(int newChoice) {
+void PauseMenu::setChoice(int newChoice) {
     this->choice = newChoice;
-}
-
-void SettingsMenu::print_window(WINDOW *window, int highlight, std::string *choices, int n_choices) {
-    IWindow::print_window(window, highlight, choices, n_choices);
 }

@@ -50,6 +50,7 @@ void MainMenu::open() {
                 refresh();
                 break;
         }
+        beep();
         print_window(menu_win, highlight, menu_choices, n_choices);
         if(choice != 0)	/* User did a choice come out of the infinite loop */
             break;
@@ -58,28 +59,25 @@ void MainMenu::open() {
     refresh();
     endwin();
 }
-
-void MainMenu::print_window(WINDOW* window, int highlight, std::string* choices, int n_choices) {
-    int x, y, i;
-
-    x = 5;
-    y = 2;
-    //box(menu_win, 0, 0); //обводка
-    for(i = 0; i < n_choices; ++i)
-    {	if(highlight == i + 1) /* High light the present choice */
-        {
-            wattron(window, A_REVERSE);
-            mvwprintw(window, y, x, "%s", choices[i].c_str());
-            wattroff(window, A_REVERSE);
-        }
-        else
-            mvwprintw(window, y, x, "%s", choices[i].c_str());
-        y += 2;
-    }
-    wrefresh(window);
-}
-//void MainMenu::print_window(WINDOW *window, int highlight, std::string *choices, int n_choices) {
-//    IWindow::print_window(window, highlight, choices, n_choices);
+//
+//void MainMenu::print_window(WINDOW* window, int highlight, std::string* choices, int n_choices) {
+//    int x, y, i;
+//
+//    x = 5;
+//    y = 2;
+//    //box(menu_win, 0, 0); //обводка
+//    for(i = 0; i < n_choices; ++i)
+//    {	if(highlight == i + 1) /* High light the present choice */
+//        {
+//            wattron(window, A_REVERSE);
+//            mvwprintw(window, y, x, "%s", choices[i].c_str());
+//            wattroff(window, A_REVERSE);
+//        }
+//        else
+//            mvwprintw(window, y, x, "%s", choices[i].c_str());
+//        y += 2;
+//    }
+//    wrefresh(window);
 //}
 
 int MainMenu::getChoice() {
@@ -88,20 +86,4 @@ int MainMenu::getChoice() {
 
 void MainMenu::setChoice(int newChoice) {
     this->choice = newChoice;
-}
-
-WINDOW *MainMenu::getWindow() {
-    return this->Menu;
-}
-
-int MainMenu::getHighlight() {
-    return this->highlight;
-}
-
-std::string *MainMenu::getChoices() {
-    return this->menu_choices;
-}
-
-int MainMenu::get_n_choices() {
-    return this->n_choices;
 }

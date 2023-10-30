@@ -126,12 +126,12 @@ build CMakeFiles/lab1.dir/System/Game/Game.cpp.o: CXX_COMPILER__lab1_Debug /User
   OBJECT_DIR = CMakeFiles/lab1.dir
   OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Game
 
-build CMakeFiles/lab1.dir/System/Game/MainMenu.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Game/MainMenu.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Game/MainMenu.cpp.o.d
+build CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/GameStates/MainMenu.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   INCLUDES = -I/Users/raregod/CLionProjects/lab1/audiere-1.9.4/src
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Game
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
 
 build CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Game/Render/RenderGame.cpp || cmake_object_order_depends_target_lab1
   DEP_FILE = CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o.d
@@ -147,19 +147,33 @@ build CMakeFiles/lab1.dir/System/InputReader/InputReader.cpp.o: CXX_COMPILER__la
   OBJECT_DIR = CMakeFiles/lab1.dir
   OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/InputReader
 
-build CMakeFiles/lab1.dir/System/Game/SettingsMenu.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Game/SettingsMenu.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Game/SettingsMenu.cpp.o.d
+build CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/GameStates/SettingsMenu.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   INCLUDES = -I/Users/raregod/CLionProjects/lab1/audiere-1.9.4/src
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Game
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/System/Game/IWindow.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Game/IWindow.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Game/IWindow.cpp.o.d
+build CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/GameStates/IWindow.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   INCLUDES = -I/Users/raregod/CLionProjects/lab1/audiere-1.9.4/src
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Game
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
+
+build CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/GameStates/PauseMenu.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/raregod/CLionProjects/lab1/audiere-1.9.4/src
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
+
+build CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/GameStates/GameOver.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/raregod/CLionProjects/lab1/audiere-1.9.4/src
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
 
 
 # =============================================================================
@@ -169,7 +183,7 @@ build CMakeFiles/lab1.dir/System/Game/IWindow.cpp.o: CXX_COMPILER__lab1_Debug /U
 #############################################
 # Link the executable lab1
 
-build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Entities/Player.cpp.o CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o CMakeFiles/lab1.dir/System/Map/Cell.cpp.o CMakeFiles/lab1.dir/System/Map/Map.cpp.o CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o CMakeFiles/lab1.dir/System/Game/Game.cpp.o CMakeFiles/lab1.dir/System/Game/MainMenu.cpp.o CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o CMakeFiles/lab1.dir/System/InputReader/InputReader.cpp.o CMakeFiles/lab1.dir/System/Game/SettingsMenu.cpp.o CMakeFiles/lab1.dir/System/Game/IWindow.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libform.tbd
+build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Entities/Player.cpp.o CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o CMakeFiles/lab1.dir/System/Map/Cell.cpp.o CMakeFiles/lab1.dir/System/Map/Map.cpp.o CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o CMakeFiles/lab1.dir/System/Game/Game.cpp.o CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o CMakeFiles/lab1.dir/System/InputReader/InputReader.cpp.o CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libform.tbd
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libform.tbd
   OBJECT_DIR = CMakeFiles/lab1.dir

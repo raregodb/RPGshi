@@ -8,6 +8,8 @@ damage(damage), score(score), nickname(nickname) {
     this->maxHealth=DEFAULT_MAX_HEALTH;
     this->canBeDamaged = DEFAULT_CANBEDAMAGED;
     this->isDead = DEFAULT_ISDEAD;
+    this->isFinished = false;
+    this->isDead = false;
 }
 
 

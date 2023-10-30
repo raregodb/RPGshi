@@ -3,13 +3,14 @@
 
 #include "curses.h"
 #include "string"
+#include "iostream"
 
 #define WIDTH 30
 #define HEIGHT 10
 
 class IWindow {
 public:
-    virtual void open();
+    virtual void open() = 0;
     virtual void print_window(WINDOW* window, int highlight, std::string* choices, int n_choices);
 
     virtual int getChoice() = 0;
@@ -18,8 +19,9 @@ public:
     int startx;
     int starty;
 
-    std::string menu_choices[3];
-    WINDOW* Menu;
+    int n_choices;
+    int choice;
+    int highlight;
 };
 
 
