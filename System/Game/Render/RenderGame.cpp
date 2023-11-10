@@ -30,10 +30,10 @@ void RenderGame::printMap() {
                     int ID = map.getCellByCords(pos).getEvent()->getID();
                     switch (ID) {
                         case 1:
-                            std::cout << green << on_grey <<"♥ ";
+                            std::cout << red << on_grey <<"♥ ";
                             break;
                         case 2:
-                            std::cout << red << on_grey << "ᚈ " << treset;
+                            std::cout << termcolor::magenta << on_grey << "ᚈ " << treset;
                             break;
                         case 3:
                             std::cout << termcolor::blue << on_grey << "֍ ";

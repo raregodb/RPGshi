@@ -1,4 +1,3 @@
-#include <iostream>
 #include "System/Game/Game.h"
 
 

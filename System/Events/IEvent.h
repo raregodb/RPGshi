@@ -10,6 +10,7 @@ public:
     virtual void printSomeEvent() = 0;
     virtual ~IEvent() = default;
     virtual int getID() = 0;
+    int ID = 0;
 };
 
 

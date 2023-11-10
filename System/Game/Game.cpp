@@ -6,7 +6,6 @@ Game::Game() {
     mapSizeX = DEFAULTSIZEX;
     mapSizeY = DEFAULTSIZEY;
     exitFlag = false;
-    Level = 0;
 
     Player pPlayer; //создание игрока
     Map map(mapSizeX, mapSizeY); //создание карты
@@ -154,17 +153,6 @@ Game::Game() {
                 break;
         }
     }
-}
-bool Game::getWinState(Player& pPlayer) {
-    if (pPlayer.getIsFinished()) {
-        system("clear");
-        std::cout<<"Вы прошли уровень!\nВы стали гораздо сильнее!\n";
-        pPlayer.addScore(20);
-        pPlayer.setMaxHealth(pPlayer.getScore() * 5);
-        pPlayer.setLevel(pPlayer.getLevel() + 1);
-        return true;
-    }
-    return false;
 }
 
 void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {

@@ -22,8 +22,6 @@ private:
     Map& map1;
     Navigation& navigation1;
     Position destination;
-
-    int ID;
 };
 
 

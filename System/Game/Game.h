@@ -16,8 +16,6 @@
 class Game {
 public:
     Game();
-    //static bool getLoseState(Player& pPlayer);
-    static bool getWinState(Player& pPlayer);
 
     void new_game(Player& player, Map& map, Navigation& navigation) const;
 
@@ -25,7 +23,6 @@ private:
     int mapSizeX;
     int mapSizeY;
     bool exitFlag;
-    int Level;
 };
 
 

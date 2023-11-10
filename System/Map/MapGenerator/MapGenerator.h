@@ -23,12 +23,7 @@ private:
     Map &map1;
     Navigation &nav;
 
-    int maxSpikes;
-    int maxHeals;
     int maxTeleports;
-
-    int countSpikes;
-    int countHeals;
     int countTeleports;
 
     int percentageHeal;

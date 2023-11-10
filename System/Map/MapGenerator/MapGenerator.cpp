@@ -1,13 +1,17 @@
 #include "MapGenerator.h"
 
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
-    this->countHeals = 0;
-    this->countSpikes = 0;
     this->countTeleports = 0;
 
     this->percentageTeleport = 28;
-    this->percentageSpike = 50;
-    this->percentageHeal = 35;
+    if (nav.getPlayer().getLevel() >= 20) {
+        this->percentageSpike = 42;
+        this->percentageHeal = 32;
+    }
+    else {
+        this->percentageSpike = (nav.getPlayer().getLevel()/2) + 45;
+        this->percentageHeal = 40 - (nav.getPlayer().getLevel()/2);
+    }
 
     GenerateWalls();
     map1.cleanMap();
@@ -43,15 +47,6 @@ void MapGenerator::RandomGeneration() {
     std::mt19937 gen(rd()); //использование алгоритма Mersenne Twister на основе данного сида
     std::uniform_int_distribution<> dist(1, 100); //генерация рандомных значений на замкнутом интервале
 
-
-    //maxSpikes = ((sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())))/*/(nav.getPlayer().getLevel() / 1.5)*/;
-    //maxSpikes = (int)maxSpikes;
-
-    //maxHeals = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())) /*/ (nav.getPlayer().getLevel() * 1.5)*/;
-    //maxHeals = (int)maxHeals;
-
-    this->countHeals = 0;
-    this->countSpikes = 0;
     this->countTeleports = 0;
     this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())/6);
 
@@ -79,14 +74,13 @@ void MapGenerator::RandomGeneration() {
                         map1.getCellByCords(position).setPassability(true);
                         countTeleports++;
                     }
-                    else if ((random_n <= percentageHeal) /*&& (countHeals < maxHeals)*/) {
+                    else if ((random_n <= percentageHeal)) {
                         auto *heal = new HealPotion(nav);
                         map1.getCellByCords(position).spawnEvent(heal);
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
-                        //countHeals++;
                     }
-                    else if ((random_n <= percentageSpike) /*&& (countSpikes < maxSpikes)*/) {
+                    else if ((random_n <= percentageSpike)) {
                         auto *spikes = new Spikes(nav);
                         map1.getCellByCords(position).spawnEvent(spikes);
                         map1.getCellByCords(position).setHavingEvent(true);

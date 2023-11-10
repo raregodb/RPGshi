@@ -14,7 +14,6 @@ public:
     int getID() override;
 private:
     Player& player;
-    int ID;
 };
 
 

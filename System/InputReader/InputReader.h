@@ -3,7 +3,6 @@
 
 #include "iostream"
 #include <fstream>
-#include <sstream>
 #include "../config/Input_Commands_Dir.h"
 #include "curses.h"
 #include "InputList/InputList.h"
@@ -15,9 +14,8 @@ public:
     ~InputReader();
 
 private:
-    std::unordered_map<char, std::string> keyMap;
     std::ifstream configFile;
-    HashTable HT;
+    InputList HT;
 };
 
 
