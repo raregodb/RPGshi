@@ -12,7 +12,7 @@ public:
     int getChoice() override;
     void setChoice(int newChoice) override;
 
-    void changeMapSize(int& x, int& y);
+    static void changeMapSize(int& x, int& y);
 
 
 private:

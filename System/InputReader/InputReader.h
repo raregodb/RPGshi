@@ -6,7 +6,7 @@
 #include <sstream>
 #include "../config/Input_Commands_Dir.h"
 #include "curses.h"
-#include "HashTable/CHashTable.h"
+#include "InputList/InputList.h"
 
 class InputReader {
 public:

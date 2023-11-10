@@ -3,15 +3,14 @@
 
 Game::Game() {
     GameState GS = MENU;
-    mapSizeX = 10;
-    mapSizeY = 10;
+    mapSizeX = DEFAULTSIZEX;
+    mapSizeY = DEFAULTSIZEY;
     exitFlag = false;
     Level = 0;
 
     Player pPlayer; //создание игрока
     Map map(mapSizeX, mapSizeY); //создание карты
     Navigation nav(pPlayer, map); //создание навигации
-    //MapGenerator(map, nav); //генерация карты
 
     MainMenu Menu;
     SettingsMenu SetMenu;
@@ -88,7 +87,7 @@ Game::Game() {
                 exitFlag = true;
                 break;
             case NEXT_LEVEL:
-                pPlayer.setIsFinished(false);
+                //pPlayer.setIsFinished(false);
                 map.cleanMap();
                 MapGenerator(map, nav); //генерация карты
                 Navigation::initialize(nav);
@@ -103,10 +102,14 @@ Game::Game() {
             case GAME:
                 while (GS == GAME) {
                     InputReader inputReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
-                    RenderGame(nav, pPlayer,map).printGame();
-
+                    if (pPlayer.getIsFinished()) {
+                        RenderGame(nav, pPlayer, map).printWin();
+                        pPlayer.setIsFinished(false);
+                    }
+                    else
+                        RenderGame(nav, pPlayer,map).printGame();
                     while(GS == GAME) {
-                        if (getWinState(pPlayer)) {
+                        if (pPlayer.getIsFinished()) {
                             GS = NEXT_LEVEL;
                             break;
                         }
@@ -159,7 +162,6 @@ bool Game::getWinState(Player& pPlayer) {
         pPlayer.addScore(20);
         pPlayer.setMaxHealth(pPlayer.getScore() * 5);
         pPlayer.setLevel(pPlayer.getLevel() + 1);
-        //pPlayer.setCharacterDamage(pPlayer.getCharacterDamage() + (pPlayer.getCharacterDamage() % 20));
         return true;
     }
     return false;

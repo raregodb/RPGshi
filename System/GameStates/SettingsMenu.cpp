@@ -68,6 +68,6 @@ void SettingsMenu::changeMapSize(int &x, int &y) {
     endwin();
     system("clear");
 
-    std::cout<<"\n\n\n\n\n\t\t\t New map size ('x y'): \n";
+    std::cout<<"\n\n\n\n\n\t\t\t New map size (input: 'x y' and 5<size<=100): \n";
     std::cin>>x>>y;
 }

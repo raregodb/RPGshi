@@ -21,6 +21,7 @@ public:
     void printMap();
     void printEvent();
     void printGame();
+    void printWin();
 
 private:
     Navigation& navigation;

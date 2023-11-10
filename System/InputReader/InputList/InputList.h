@@ -1,5 +1,5 @@
-#ifndef LAB1_CHASHTABLE_H
-#define LAB1_CHASHTABLE_H
+#ifndef LAB1_INPUTLIST_H
+#define LAB1_INPUTLIST_H
 
 #include "list"
 #include "string"
@@ -7,11 +7,9 @@
 #include "vector"
 
 class HashTable {
-    int capacity;
-    //std::list<std::string> *table;
     std::vector<std::string> table;
 public:
-    explicit HashTable(int size = 250);
+    HashTable();
 
     void insert_item(int key, const std::string& command);
     void displayHash();
@@ -20,7 +18,6 @@ public:
 
 
     std::string getCommand(int key);
-    int getCapacity() const;
     std::vector<std::string> getTable();
 
     //~HashTable();
@@ -28,4 +25,4 @@ public:
 
 
 
-#endif //LAB1_CHASHTABLE_H
+#endif //LAB1_INPUTLIST_H

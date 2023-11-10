@@ -13,7 +13,6 @@ PauseMenu::PauseMenu() {
 }
 
 void PauseMenu::open() {
-
     WINDOW *menu_win;
     choice = 0;
     int highlight = 1;

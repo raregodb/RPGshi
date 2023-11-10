@@ -59,6 +59,13 @@ void MapGenerator::RandomGeneration() {
         for (int y = 1; y < map1.getMapSizeByY()-1; y++) {
             position.x = x;
             position.y = y;
+            if (position == map1.getPlayerFinish()) {
+                auto *exit = new Exit_event(nav);
+                map1.getCellByCords(position).spawnEvent(exit);
+                map1.getCellByCords(position).setHavingEvent(true);
+                map1.getCellByCords(position).setPassability(true);
+                break;
+            }
             if (position != map1.getPlayerStart() && position != map1.getPlayerFinish()) {
                 int random_n = dist(gen); // получение рандомного числа
                 if (random_n <= 25) {

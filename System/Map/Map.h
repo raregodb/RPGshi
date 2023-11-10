@@ -4,8 +4,8 @@
 #include "Cell.h"
 #include "../Navigation/Position.h"
 
-#define DEFAULTSIZEX 15
-#define DEFAULTSIZEY 15
+#define DEFAULTSIZEX 12
+#define DEFAULTSIZEY 12
 #define STARTPOSITIONX 1
 #define STARTPOSITIONY 1
 #define MAXMAPSIZE 100

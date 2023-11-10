@@ -29,13 +29,9 @@ void Navigation::chMove(Position pos) {
         //std::cout<<"Вы передвинулись с "<<chPos.x<<"; "<<chPos.y<<" на "<<propPos.x<<"; "<<propPos.y<<"\n"; логгирование
         chPos.x = propPos.x;
         chPos.y = propPos.y;
-        if (chPos.x == map.getPlayerFinish().x && chPos.y == map.getPlayerFinish().y){
-            player.setIsFinished(true);
-        }
         Cell* some_cell = &map.getCellByCords(chPos);
         if (some_cell->checkForEvent()) {
             some_cell->activateEvent();
-            //some_cell->setHavingEvent(false);
         }
     }
 }

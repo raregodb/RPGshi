@@ -24,7 +24,7 @@ add_executable(lab1 main.cpp
         System/GameStates/GameState.h
         System/GameStates/PauseMenu.cpp System/GameStates/PauseMenu.h
         System/GameStates/GameOver.cpp System/GameStates/GameOver.h
-        System/InputReader/HashTable/CHashTable.cpp System/InputReader/HashTable/CHashTable.h)
+        System/InputReader/InputList/InputList.cpp System/InputReader/InputList/InputList.h System/Events/Exit/Exit_event.cpp System/Events/Exit/Exit_event.h)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)

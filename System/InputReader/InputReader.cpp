@@ -29,7 +29,6 @@ InputReader::InputReader(const std::string &inputConfig) {
             }
         }
         HT.insert_item(27, "menu");
-        //HT.displayHash();
     }
     else
         std::cout<<"Input config file was not found. \n";

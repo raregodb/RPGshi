@@ -4,6 +4,7 @@
 #include "../../Events/Spikes/Spikes.h"
 #include "../../Events/Teleport/Teleport.h"
 #include "../../Events/HealPotion/HealPotion.h"
+#include "../../Events/Exit/Exit_event.h"
 #include "iostream"
 #include<cstdlib>
 #include<ctime>

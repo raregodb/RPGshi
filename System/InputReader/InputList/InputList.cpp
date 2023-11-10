@@ -1,8 +1,6 @@
-#include "CHashTable.h"
+#include "InputList.h"
 
-HashTable::HashTable(int size) {
-    std::cout<<"construct Hsh\n";
-    this->capacity = size;
+HashTable::HashTable() {
     table = std::vector<std::string>(250);
 }
 
@@ -12,7 +10,7 @@ void HashTable::insert_item(int key, const std::string& command) {
 
 void HashTable::displayHash()
 {
-    for (int i = 0; i < capacity; i++)
+    for (int i = 0; i < table.size(); i++)
     {
         std::cout << "inputKey[" << i << "]";
         std::cout << " --> " << table.at(i);
@@ -21,7 +19,7 @@ void HashTable::displayHash()
 }
 
 bool HashTable::find(int key) {
-    for (int i = 0; i < capacity; i++) {
+    for (int i = 0; i < table.size(); i++) {
         if (i == key && !table[i].empty()) {
             return true;
         }
@@ -30,14 +28,7 @@ bool HashTable::find(int key) {
 }
 
 std::string HashTable::getCommand(int key) {
-    std::cout<<table.size();
     return table.at(key);
-}
-
-
-
-int HashTable::getCapacity() const {
-    return capacity;
 }
 
 std::vector<std::string> HashTable::getTable() {
