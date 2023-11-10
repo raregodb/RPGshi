@@ -1,0 +1,5 @@
+
+w move_forward
+a move_left
+S move_backward
+D move_right
