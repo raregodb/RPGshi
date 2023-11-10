@@ -133,28 +133,14 @@ Position Map::getPlayerFinish() {
     return finishPosition;
 }
 
-//сделано для дебагга
-//void Map::printMap(Position pPosition) {
-//    for (int y = 0; y < sizeY; y++) {
-//        for (int x = 0; x < sizeX; x++) {
-//            if (this->map[x][y].getPassability()) {
-//                Position pos;
-//                pos.x = x;
-//                pos.y = y;
-//                if (this->map[x][y].checkForEvent()) {
-//                    std::cout<<"e";
-//                }
-//                else if(pPosition == pos) {
-//                    std::cout<<"p";
-//                }
-//                else
-//                    std::cout<<" ";
-//
-//            }
-//            else if (!this->map[x][y].getPassability())
-//                std::cout<<"#";
-//        }
-//        std::cout<<std::endl;
-//    }
-//
-//}
+void Map::cleanMap() {
+    for (int x = 0; x < sizeX; x++) {
+        for (int y = 0; y < sizeY; y++) {
+            if (map[x][y].checkForEvent()) {
+                //delete map[x][y].getEvent();
+                map[x][y].setHavingEvent(false);
+                map[x][y].setPassability(true);
+            }
+        }
+    }
+}

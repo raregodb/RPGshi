@@ -9,6 +9,13 @@ Navigation::Navigation(Player &player, Map &map) : player(player), map(map){
     this->deltaMove.y=0;
 }
 
+void Navigation::initialize(Navigation& navigation) {
+    navigation.chPos.x=navigation.map.getPlayerStart().x;
+    navigation.chPos.y=navigation.map.getPlayerStart().y;
+    navigation.deltaMove.x=0;
+    navigation.deltaMove.y=0;
+}
+
 void Navigation::chMove(Position pos) {
     Position propPos;
     propPos.x = chPos.x + pos.x;
@@ -16,10 +23,10 @@ void Navigation::chMove(Position pos) {
     if (propPos.x < 0 || propPos.y < 0
         || !map.getCellByCords(propPos).getPassability()
         || propPos.x > map.getMapSizeByX() || propPos.y > map.getMapSizeByY()) {
-        //std::cout<<"badPosition\n";
+        //std::cout<<"badPosition\n"; //логгирование
     }
     else {
-        //std::cout<<"Вы передвинулись с "<<chPos.x<<"; "<<chPos.y<<" на "<<propPos.x<<"; "<<propPos.y<<"\n";
+        //std::cout<<"Вы передвинулись с "<<chPos.x<<"; "<<chPos.y<<" на "<<propPos.x<<"; "<<propPos.y<<"\n"; логгирование
         chPos.x = propPos.x;
         chPos.y = propPos.y;
         if (chPos.x == map.getPlayerFinish().x && chPos.y == map.getPlayerFinish().y){

@@ -20,7 +20,19 @@ public:
 
 private:
     Map &map1;
-    Navigation & nav;
+    Navigation &nav;
+
+    int maxSpikes;
+    int maxHeals;
+    int maxTeleports;
+
+    int countSpikes;
+    int countHeals;
+    int countTeleports;
+
+    int percentageHeal;
+    int percentageSpike;
+    int percentageTeleport;
 };
 
 

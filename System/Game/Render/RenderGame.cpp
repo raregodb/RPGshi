@@ -5,10 +5,14 @@ RenderGame::RenderGame(Navigation& nNavigation, Player& pPlayer, Map& mMap)
     this->hp = player.getHealth();
     this->score = player.getScore();
     this->damage = player.getCharacterDamage();
+    this->lvl = player.getLevel();
 }
 
 void RenderGame::printInterface() const {
-    std::cout << red << termcolor::bold << "HP: " << hp << yellow << " XP: " << score << violet << " Damage: " << damage << treset <<  std::endl;
+    std::cout << red << termcolor::bold << "HP: " << hp << "/" << player.getMaxHealth() << " "
+    << termcolor::blue << " XP: " << score << violet
+    << " Damage: " << damage << termcolor::cyan
+    << " Level: " << lvl << treset <<  std::endl;
 }
 
 void RenderGame::printMap() {
@@ -33,6 +37,9 @@ void RenderGame::printMap() {
                             break;
                         case 3:
                             std::cout << termcolor::blue << on_grey << "֍ ";  //൭
+                            break;
+                        default:
+                            std::cout << termcolor::blue << on_grey << "D ";
                             break;
                     }
                 }
@@ -65,6 +72,3 @@ void RenderGame::printGame() {
     endwin();
 }
 
-void RenderGame::printMainMenu() {
-    std::cout<<"LOL\n";
-}

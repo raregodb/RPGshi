@@ -22,8 +22,6 @@ public:
     void printEvent();
     void printGame();
 
-    void printMainMenu();
-
 private:
     Navigation& navigation;
     Player& player;
@@ -31,6 +29,7 @@ private:
     int hp;
     int score;
     int damage;
+    int lvl;
 };
 
 

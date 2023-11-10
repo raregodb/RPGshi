@@ -11,6 +11,7 @@ class Player;
 class Navigation {
 public:
     explicit Navigation(Player& player, Map& map);
+    static void initialize(Navigation& navigation);
 
     Position getChPos();
     void setChPos(Position newChPos);

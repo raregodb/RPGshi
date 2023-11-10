@@ -7,6 +7,7 @@
 #include<ctime>
 #include "iostream"
 #include <random>
+#include "../../Game/Render/RenderGame.h"
 
 class Teleport : public IEvent{
 public:

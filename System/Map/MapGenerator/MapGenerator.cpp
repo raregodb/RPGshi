@@ -1,10 +1,22 @@
 #include "MapGenerator.h"
 
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
+    this->countHeals = 0;
+    this->countSpikes = 0;
+    this->countTeleports = 0;
+
+    this->percentageTeleport = 28;
+    this->percentageSpike = 50;
+    this->percentageHeal = 35;
+
     GenerateWalls();
+    map1.cleanMap();
     RandomGeneration();
-    while (!isPath())
+    while (!isPath()) {
+        map1.cleanMap();
         RandomGeneration();
+    }
+
 }
 
 void MapGenerator::GenerateWalls() {
@@ -31,6 +43,18 @@ void MapGenerator::RandomGeneration() {
     std::mt19937 gen(rd()); //использование алгоритма Mersenne Twister на основе данного сида
     std::uniform_int_distribution<> dist(1, 100); //генерация рандомных значений на замкнутом интервале
 
+
+    //maxSpikes = ((sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())))/*/(nav.getPlayer().getLevel() / 1.5)*/;
+    //maxSpikes = (int)maxSpikes;
+
+    //maxHeals = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())) /*/ (nav.getPlayer().getLevel() * 1.5)*/;
+    //maxHeals = (int)maxHeals;
+
+    this->countHeals = 0;
+    this->countSpikes = 0;
+    this->countTeleports = 0;
+    this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())/6);
+
     for (int x = 1; x < map1.getMapSizeByX()-1; x++) {
         for (int y = 1; y < map1.getMapSizeByY()-1; y++) {
             position.x = x;
@@ -41,19 +65,21 @@ void MapGenerator::RandomGeneration() {
                     map1.getCellByCords(position).setPassability(false);
                 }
                 else {
-                    if (random_n <= 28) {
+                    if ((random_n <= percentageTeleport) && (countTeleports < maxTeleports)) {
                         auto *teleport = new Teleport(nav, map1);
                         map1.getCellByCords(position).spawnEvent(teleport);
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
+                        countTeleports++;
                     }
-                    else if (random_n <= 35) {
+                    else if ((random_n <= percentageHeal) /*&& (countHeals < maxHeals)*/) {
                         auto *heal = new HealPotion(nav);
                         map1.getCellByCords(position).spawnEvent(heal);
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
+                        //countHeals++;
                     }
-                    else if (random_n <= 40) {
+                    else if ((random_n <= percentageSpike) /*&& (countSpikes < maxSpikes)*/) {
                         auto *spikes = new Spikes(nav);
                         map1.getCellByCords(position).spawnEvent(spikes);
                         map1.getCellByCords(position).setHavingEvent(true);
@@ -78,7 +104,11 @@ bool MapGenerator::isPath() {
             position.y = y+1;
             if (map1.getCellByCords(position).getPassability())
                 arr[x][y] = 0;
-            else
+            if (map1.getCellByCords(position).checkForEvent()) {
+                if (map1.getCellByCords(position).getEvent()->getID() == 3)
+                    arr[x][y] = -1;
+            }
+            if(!(map1.getCellByCords(position).getPassability()))
                 arr[x][y] = -1;
         }
     }

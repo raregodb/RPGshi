@@ -4,8 +4,8 @@
 #include "Cell.h"
 #include "../Navigation/Position.h"
 
-#define DEFAULTSIZEX 20
-#define DEFAULTSIZEY 20
+#define DEFAULTSIZEX 15
+#define DEFAULTSIZEY 15
 #define STARTPOSITIONX 1
 #define STARTPOSITIONY 1
 #define MAXMAPSIZE 100
@@ -28,7 +28,7 @@ public:
     Position getPlayerStart();
     Position getPlayerFinish();
 
-    //void printMap(Position pPosition);
+    void cleanMap();
 
     ~Map();   //<--- деструктор
 

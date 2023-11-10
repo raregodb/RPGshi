@@ -6,6 +6,7 @@
 #include <sstream>
 #include "../config/Input_Commands_Dir.h"
 #include "curses.h"
+#include "HashTable/CHashTable.h"
 
 class InputReader {
 public:
@@ -16,6 +17,7 @@ public:
 private:
     std::unordered_map<char, std::string> keyMap;
     std::ifstream configFile;
+    HashTable HT;
 };
 
 

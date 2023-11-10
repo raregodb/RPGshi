@@ -21,11 +21,12 @@ void Teleport::someEvent() {
             flag = false;
         }
     }
+    RenderGame(navigation1, player, map1).printEvent();
     navigation1.setChPos(destination);
 }
 
 void Teleport::printSomeEvent() {
-    std::cout<<"Волшебный портал перенес вас на " << destination.x << " " << destination.y << "\n\n";
+    std::cout<<"Волшебный портал перенес вас на " << destination.x << " " << destination.y << "\n";
 }
 
 int Teleport::getID() {

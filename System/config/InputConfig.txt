@@ -1,9 +1,5 @@
-87 move_forward
-119 move_forward
-65 move_left
-97 move_left
-83 move_backward
-115 move_backward
-68 move_right
-100 move_right
-27 menu
+
+w move_forward
+a move_left
+S move_backward
+D move_right

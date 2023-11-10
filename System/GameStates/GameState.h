@@ -13,7 +13,8 @@ enum GameState{
     SETTINGS,
     PAUSE,
     GAME_OVER,
-    EXIT
+    EXIT,
+    NEXT_LEVEL
 };
 
 #endif //LAB1_GAMESTATE_H

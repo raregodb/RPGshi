@@ -24,6 +24,8 @@ public:
 private:
     int mapSizeX;
     int mapSizeY;
+    bool exitFlag;
+    int Level;
 };
 
 

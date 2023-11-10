@@ -5,18 +5,20 @@ Game::Game() {
     GameState GS = MENU;
     mapSizeX = 10;
     mapSizeY = 10;
+    exitFlag = false;
+    Level = 0;
 
     Player pPlayer; //создание игрока
     Map map(mapSizeX, mapSizeY); //создание карты
     Navigation nav(pPlayer, map); //создание навигации
-    MapGenerator(map, nav); //генерация карты
+    //MapGenerator(map, nav); //генерация карты
 
     MainMenu Menu;
     SettingsMenu SetMenu;
     PauseMenu Pause;
     GameOver gameOver;
 
-    while (1) {
+    while (!exitFlag) {
         switch (GS) {
             case MENU:
                 while (GS == MENU) {
@@ -81,6 +83,18 @@ Game::Game() {
                     }
                 }
                 break;
+            case EXIT:
+                system("clear");
+                exitFlag = true;
+                break;
+            case NEXT_LEVEL:
+                pPlayer.setIsFinished(false);
+                map.cleanMap();
+                MapGenerator(map, nav); //генерация карты
+                Navigation::initialize(nav);
+
+                GS = GAME;
+                break;
             case NEW_GAME:
                 new_game(pPlayer, map, nav);
 
@@ -93,10 +107,8 @@ Game::Game() {
 
                     while(GS == GAME) {
                         if (getWinState(pPlayer)) {
-                            pPlayer.setIsFinished(false);
-                            MapGenerator(map, nav); //генерация карты
-                            nav.setChPos(map.getPlayerStart());
-                            RenderGame(nav, pPlayer, map).printGame();
+                            GS = NEXT_LEVEL;
+                            break;
                         }
 
                         if (pPlayer.getIsDead()) {
@@ -131,17 +143,13 @@ Game::Game() {
                                 GS = PAUSE;
                                 break;
                             default:
-                                std::cout<<"bad input. use WASD\n";
+                                RenderGame(nav, pPlayer, map).printGame();
                                 break;
                         }
                     }
                 }
                 break;
-            case EXIT:
-                break;
         }
-        if (GS == EXIT)
-            break;
     }
 }
 bool Game::getWinState(Player& pPlayer) {
@@ -149,6 +157,8 @@ bool Game::getWinState(Player& pPlayer) {
         system("clear");
         std::cout<<"Вы прошли уровень!\nВы стали гораздо сильнее!\n";
         pPlayer.addScore(20);
+        pPlayer.setMaxHealth(pPlayer.getScore() * 5);
+        pPlayer.setLevel(pPlayer.getLevel() + 1);
         //pPlayer.setCharacterDamage(pPlayer.getCharacterDamage() + (pPlayer.getCharacterDamage() % 20));
         return true;
     }
@@ -156,11 +166,9 @@ bool Game::getWinState(Player& pPlayer) {
 }
 
 void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {
-    Player player; //создание игрока
-    oPlayer = player;
-    Map map(mapSizeX, mapSizeY); //создание карты
-    oMap = map;
-    //Navigation nav(oPlayer, oMap); //создание навигации
-    oNavigation.setChPos(oMap.getPlayerStart());
+    Player::initialize(oPlayer); //создание нового игрока
+    oMap.cleanMap();
+    oMap = Map(mapSizeX, mapSizeY);
+    Navigation::initialize(oNavigation);
     MapGenerator(oMap, oNavigation);
 }
