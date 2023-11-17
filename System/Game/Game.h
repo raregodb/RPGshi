@@ -12,7 +12,6 @@
 #include "../ControlSettings/InputReader/InputReader.h"
 #include "../GameStates/GameState.h"
 #include "../ControlSettings/CommandReader/ConfigReader.h"
-#include "Render/EventStack.h"
 
 
 class Game {

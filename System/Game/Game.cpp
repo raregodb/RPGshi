@@ -102,7 +102,6 @@ Game::Game() {
                 while (GS == GAME) {
                     InputReader basicInputReader;
                     ConfigReader basicKeyConfig;
-                    EventStack EventStack(5);
                     basicKeyConfig.InputSettingsReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
                     if (pPlayer.getIsFinished()) {
                         RenderGame(nav, pPlayer, map).printWin();

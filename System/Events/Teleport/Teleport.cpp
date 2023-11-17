@@ -3,7 +3,6 @@
 Teleport::Teleport(Navigation& nav, Map& map) : player(nav.getPlayer()), map1(map), navigation1(nav) {
     this->Type = E_TELEPORT;
     this->isDestructible = true;
-    this->hasDelayedOutput = true;
 }
 
 void Teleport::someEvent() {

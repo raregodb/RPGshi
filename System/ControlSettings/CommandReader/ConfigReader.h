@@ -14,7 +14,6 @@ public:
 
 private:
     std::ifstream configFile;
-    //InputList KeyList;
     std::map<int, std::string> keyMap;
 };
 
