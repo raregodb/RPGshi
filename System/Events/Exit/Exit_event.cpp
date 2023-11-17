@@ -1,7 +1,8 @@
 #include "Exit_event.h"
 
 Exit_event::Exit_event(Navigation &nav) : player(nav.getPlayer()) {
-    this->ID = 4;
+    this->Type = E_EXIT;
+    this->isDestructible = false;
 }
 
 void Exit_event::someEvent() {
@@ -11,10 +12,10 @@ void Exit_event::someEvent() {
     player.setLevel(player.getLevel() + 1);
 }
 
-void Exit_event::printSomeEvent() {
-    std::cout<<"Вы прошли уровень!\nВы стали гораздо сильнее!\n";
+Event_Type Exit_event::getType() {
+    return Type;
 }
 
-int Exit_event::getID() {
-    return ID;
+bool Exit_event::checkIsDesctructible() {
+    return isDestructible;
 }

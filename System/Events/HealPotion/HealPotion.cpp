@@ -1,7 +1,8 @@
 #include "HealPotion.h"
 
 HealPotion::HealPotion(Navigation& nav) : player(nav.getPlayer()){
-    this->ID = 1;
+    this->Type = E_HEAL;
+    this->isDestructible = true;
 }
 
 void HealPotion::someEvent() {
@@ -9,10 +10,10 @@ void HealPotion::someEvent() {
     player.addScore(1);
 }
 
-void HealPotion::printSomeEvent() {
-    std::cout << "Отлично! Ты нашел лечебное зелье и восстановил " << DEFAULT_HEALPOTION_HEAL << " ОЗ\n\n";
+Event_Type HealPotion::getType() {
+    return Type;
 }
 
-int HealPotion::getID() {
-    return ID;
+bool HealPotion::checkIsDesctructible() {
+    return isDestructible;
 }

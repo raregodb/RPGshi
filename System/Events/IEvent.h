@@ -4,13 +4,17 @@
 #define DEFAULT_HEALPOTION_HEAL 20
 #define DEFAULT_SPIKE_DAMAGE 50
 
+#include "Event_Types.h"
+
 class IEvent {
 public:
     virtual void someEvent() = 0;
-    virtual void printSomeEvent() = 0;
+    virtual bool checkIsDesctructible() = 0;
     virtual ~IEvent() = default;
-    virtual int getID() = 0;
-    int ID = 0;
+    virtual Event_Type getType() = 0;
+    Event_Type Type = NONE;
+protected:
+    bool isDestructible = false;
 };
 
 

@@ -98,16 +98,16 @@ Game::Game() {
                 GS = GAME;
                 break;
             case GAME:
+                RenderGame(nav, pPlayer,map).printGame();
                 while (GS == GAME) {
                     InputReader basicInputReader;
                     ConfigReader basicKeyConfig;
+                    EventStack EventStack(5);
                     basicKeyConfig.InputSettingsReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
                     if (pPlayer.getIsFinished()) {
                         RenderGame(nav, pPlayer, map).printWin();
                         pPlayer.setIsFinished(false);
                     }
-                    else
-                        RenderGame(nav, pPlayer,map).printGame();
                     while(GS == GAME) {
                         if (pPlayer.getIsFinished()) {
                             GS = NEXT_LEVEL;
@@ -126,6 +126,8 @@ Game::Game() {
                         endwin();
 
                         interlayer(input, nav, map, GS);
+
+                        RenderGame(nav, nav.getPlayer(), map).printGame();
                     }
                 }
                 break;
@@ -144,7 +146,6 @@ void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {
 void Game::interlayer(input_commands& input, Navigation& nav, Map& map, GameState& GS) {
     if (input == Left || input == Up || input == Right || input == Down) {
         nav.move(input);
-        RenderGame(nav, nav.getPlayer(), map).printGame();
     }
     else {
         switch (input) {
@@ -152,7 +153,6 @@ void Game::interlayer(input_commands& input, Navigation& nav, Map& map, GameStat
                 GS = PAUSE;
                 break;
             default:
-                RenderGame(nav, nav.getPlayer(), map).printGame();
                 break;
         }
     }

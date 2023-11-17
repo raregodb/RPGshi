@@ -3,10 +3,11 @@
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
     this->countTeleports = 0;
 
+    this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())/6);
     this->percentageTeleport = 28;
     if (nav.getPlayer().getLevel() >= 20) {
-        this->percentageSpike = 42;
-        this->percentageHeal = 32;
+        this->percentageSpike = 55;
+        this->percentageHeal = 30;
     }
     else {
         this->percentageSpike = (nav.getPlayer().getLevel()/2) + 45;
@@ -47,8 +48,7 @@ void MapGenerator::RandomGeneration() {
     std::mt19937 gen(rd()); //использование алгоритма Mersenne Twister на основе данного сида
     std::uniform_int_distribution<> dist(1, 100); //генерация рандомных значений на замкнутом интервале
 
-    this->countTeleports = 0;
-    this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())/6);
+    countTeleports = 0;
 
     for (int x = 1; x < map1.getMapSizeByX()-1; x++) {
         for (int y = 1; y < map1.getMapSizeByY()-1; y++) {
@@ -106,7 +106,7 @@ bool MapGenerator::isPath() {
             if (map1.getCellByCords(position).getPassability())
                 arr[x][y] = 0;
             if (map1.getCellByCords(position).checkForEvent()) {
-                if (map1.getCellByCords(position).getEvent()->getID() == 3)
+                if (map1.getCellByCords(position).getEvent()->getType() == E_TELEPORT)
                     arr[x][y] = -1;
             }
             if(!(map1.getCellByCords(position).getPassability()))

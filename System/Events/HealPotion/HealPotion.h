@@ -9,9 +9,9 @@ public:
     explicit HealPotion(Navigation &nav);
 
     void someEvent() override;
-    void printSomeEvent() override;
+    bool checkIsDesctructible() override;
 
-    int getID() override;
+    Event_Type getType() override;
 private:
     Player& player;
 };

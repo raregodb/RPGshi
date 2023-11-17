@@ -4,7 +4,6 @@
 #include "iostream"
 
 #include "curses.h"
-#include "../InputList/InputList.h"
 #include "I_InputReader.h"
 
 class InputReader : public I_InputReader {

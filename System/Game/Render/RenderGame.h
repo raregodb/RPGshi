@@ -4,10 +4,12 @@
 #include "../../Navigation/Navigation.h"
 #include "curses.h"
 #include "../../../termcolor/termcolor.hpp"
+#include "../../Events/Event_Types.h"
 
 #define treset termcolor::reset
 #define red termcolor::color<196>
-#define yellow termcolor::color<226>
+#define blue termcolor::blue
+#define cyan termcolor::cyan
 #define violet termcolor::color<126>
 #define green termcolor::color<118>
 #define on_grey termcolor::on_grey
@@ -20,13 +22,16 @@ public:
     void printInterface() const;
     void printMap();
     void printEvent();
+    static void printEvent(Event_Type TYPE);
     void printGame();
     void printWin();
+
 
 private:
     Navigation& navigation;
     Player& player;
     Map& map;
+    Cell* some_cell;
     int hp;
     int score;
     int damage;

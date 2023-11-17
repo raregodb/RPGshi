@@ -18,6 +18,7 @@ void Navigation::initialize(Navigation& navigation) {
 
 void Navigation::chMove(Position pos) {
     Position propPos;
+    EventStack EvStack(5);
     propPos.x = chPos.x + pos.x;
     propPos.y = chPos.y + pos.y;
     if (propPos.x < 0 || propPos.y < 0
@@ -31,6 +32,7 @@ void Navigation::chMove(Position pos) {
         chPos.y = propPos.y;
         Cell* some_cell = &map.getCellByCords(chPos);
         if (some_cell->checkForEvent()) {
+            EvStack.push(some_cell->getEvent()->getType());
             some_cell->activateEvent();
         }
     }
