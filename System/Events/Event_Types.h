@@ -6,6 +6,8 @@ enum Event_Type {
     E_SPIKES,
     E_HEAL,
     E_EXIT,
+    E_SHOP,
+    E_SOULS,
     NONE
 };
 

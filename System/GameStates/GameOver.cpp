@@ -82,8 +82,8 @@ void GameOver::print_death() {
                  "\t\t\t⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⣷⣶⣾⣿⠟⠛⣭⣶⣶⣾⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
                  "\t\t\t⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⠏⠀⠀⠀⠀⠹⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" << termcolor::reset;
 
-    std::cout << termcolor::red << termcolor::bold <<"\n  \t\t\t\tYOU ARE DEAD\n" << termcolor::reset;
-    std::cout << termcolor::bold <<"\n  \t\t\t\tpress any key\n" << termcolor::reset;
+    std::cout << termcolor::red << termcolor::bold <<"\n  \t\t\t\tВЫ УМЕРЛИ\n" << termcolor::reset;
+    std::cout << termcolor::bold <<"\n  \t\t\t\tнажмите любую клавишу\n" << termcolor::reset;
 
     endwin();
     noecho();

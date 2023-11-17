@@ -12,6 +12,7 @@
 #include "../ControlSettings/InputReader/InputReader.h"
 #include "../GameStates/GameState.h"
 #include "../ControlSettings/CommandReader/ConfigReader.h"
+#include "../../Entities/Items.h"
 
 
 class Game {
@@ -25,6 +26,8 @@ private:
     int mapSizeX;
     int mapSizeY;
     bool exitFlag;
+
+    bool isFog;
 };
 
 

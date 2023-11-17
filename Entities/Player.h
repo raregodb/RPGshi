@@ -3,6 +3,7 @@
 
 #include <string>
 #include "../System/Navigation/Navigation.h"
+#include "Inventory.h"
 
 #define DEFAULT_MAX_HEALTH 100
 #define DEFAULT_HEALTH 100
@@ -12,6 +13,7 @@
 #define DEFAULT_IS_DEAD 0
 #define DEFAULT_IS_FINISHED 0
 #define DEFAULT_LEVEL 1
+#define DEFAULT_FOV 3
 
 class Player {
 private:
@@ -23,7 +25,10 @@ private:
     bool isDead;
     bool isFinished;
     int lvl;
+    int FOV;
+    int souls;
 
+    Inventory inventory;
 
 public:
     explicit Player(int health = DEFAULT_HEALTH, int damage = DEFAULT_DAMAGE,
@@ -55,6 +60,16 @@ public:
 
     int getMaxHealth() const;
     void setMaxHealth(int newMax);
+
+    int getFOV() const;
+    void setFOV(int newFOV);
+
+    int getSouls() const;
+    void setSouls(int newSouls);
+    void addSouls(int addSouls);
+    bool takeSouls(int takenSouls);
+
+    Inventory* getInventory();
 
     static void initialize(Player& player);
 };

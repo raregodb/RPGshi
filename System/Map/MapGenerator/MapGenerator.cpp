@@ -2,17 +2,21 @@
 
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
     this->countTeleports = 0;
+    this->countSouls = 0;
 
-    this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY())/6);
+    this->maxSouls = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/8;
+    this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/6;
     this->percentageTeleport = 28;
+    this->percentageSouls = 29;
     if (nav.getPlayer().getLevel() >= 20) {
-        this->percentageSpike = 55;
-        this->percentageHeal = 30;
+        this->percentageSpike = 57;
+        this->percentageHeal = 32;
     }
     else {
-        this->percentageSpike = (nav.getPlayer().getLevel()/2) + 45;
-        this->percentageHeal = 40 - (nav.getPlayer().getLevel()/2);
+        this->percentageSpike = (nav.getPlayer().getLevel()/2) + 47; //max +10
+        this->percentageHeal = 42 - (nav.getPlayer().getLevel()/2); //max -10
     }
+
 
     GenerateWalls();
     map1.cleanMap();
@@ -44,11 +48,20 @@ void MapGenerator::GenerateWalls() {
 
 void MapGenerator::RandomGeneration() {
     Position position;
-    std::random_device rd; //генерация сида
-    std::mt19937 gen(rd()); //использование алгоритма Mersenne Twister на основе данного сида
-    std::uniform_int_distribution<> dist(1, 100); //генерация рандомных значений на замкнутом интервале
+    Position random_pos_shop;
 
     countTeleports = 0;
+    countSouls = 0;
+
+    random_pos_shop.x = Random::getRandomGen(3, map1.getMapSizeByX()-2);
+    random_pos_shop.y = Random::getRandomGen(3, map1.getMapSizeByY()-2);
+
+    auto *shop = new Shop(nav);
+    map1.getCellByCords(random_pos_shop).spawnEvent(shop);
+    map1.getCellByCords(random_pos_shop).setHavingEvent(true);
+    map1.getCellByCords(random_pos_shop).setPassability(true);
+
+    int random_souls = Random::getRandomGen(1, 10);
 
     for (int x = 1; x < map1.getMapSizeByX()-1; x++) {
         for (int y = 1; y < map1.getMapSizeByY()-1; y++) {
@@ -61,8 +74,8 @@ void MapGenerator::RandomGeneration() {
                 map1.getCellByCords(position).setPassability(true);
                 break;
             }
-            if (position != map1.getPlayerStart() && position != map1.getPlayerFinish()) {
-                int random_n = dist(gen); // получение рандомного числа
+            if (position != map1.getPlayerStart() && position != map1.getPlayerFinish() && !map1.getCellByCords(position).checkForEvent()) {
+                int random_n = Random::getRandomGen(1, 100); // получение рандомного числа
                 if (random_n <= 25) {
                     map1.getCellByCords(position).setPassability(false);
                 }
@@ -73,6 +86,14 @@ void MapGenerator::RandomGeneration() {
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
                         countTeleports++;
+                    }
+                    else if ((random_n <= percentageSouls) && (countSouls < maxSouls) &&
+                    random_souls <= 8 && random_n > percentageTeleport && nav.getPlayer().getLevel() > 3) {
+                        auto *souls = new Souls(nav);
+                        map1.getCellByCords(position).spawnEvent(souls);
+                        map1.getCellByCords(position).setHavingEvent(true);
+                        map1.getCellByCords(position).setPassability(true);
+                        countSouls++;
                     }
                     else if ((random_n <= percentageHeal)) {
                         auto *heal = new HealPotion(nav);

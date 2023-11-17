@@ -1,21 +1,23 @@
 #include "RenderGame.h"
 
-RenderGame::RenderGame(Navigation& nNavigation, Player& pPlayer, Map& mMap)
-: map(mMap), navigation(nNavigation), player(pPlayer) {
+RenderGame::RenderGame(Navigation& nNavigation, Player& pPlayer, Map& mMap, bool& fog)
+: map(mMap), navigation(nNavigation), player(pPlayer), isFog(fog) {
     this->hp = player.getHealth();
     this->score = player.getScore();
     this->damage = player.getCharacterDamage();
     this->lvl = player.getLevel();
+    this->souls = player.getSouls();
     some_cell = &map.getCellByCords(navigation.getChPos());
 }
 
 void RenderGame::printInterface() const {
     std::cout << termcolor::bold
-    << red << "HP: " << hp
+    << red << "ХП: " << hp
     << "/" << player.getMaxHealth()
-    << blue << " XP: " << score
-    << violet << " Damage: " << damage
-    << cyan << " Level: " << lvl
+    << blue << " ОП: " << score
+    << violet << " Урон: " << damage
+    << cyan << " Уровень: " << lvl
+    << termcolor::bright_cyan << " Души: " << souls
     << treset <<  std::endl;
 }
 
@@ -25,11 +27,27 @@ void RenderGame::printMap() {
             Position pos;
             pos.x = x;
             pos.y = y;
-            if (map.getCellByCords(pos).getPassability()) {
-                if (navigation.getChPos() == pos) {
-                    std::cout << termcolor::bold << on_grey << green << "P " << treset;
-                }
-                else if(map.getCellByCords(pos).checkForEvent() ) {
+
+            Position distanceBetweenPandCell;
+            distanceBetweenPandCell.x = abs(pos.x - navigation.getChPos().x);
+            distanceBetweenPandCell.y = abs(pos.y - navigation.getChPos().y);
+
+            if (navigation.getChPos() == pos) {
+                std::cout << termcolor::bold << on_grey << green << "⚉ " << treset; //P 👤
+            }
+            else if(isFog && (distanceBetweenPandCell.x >= navigation.getPlayer().getFOV() || distanceBetweenPandCell.y >= navigation.getPlayer().getFOV())) {
+                int random_n = Random::getRandomGen(1, 10);
+
+                if (random_n <= 3)
+                    std::cout << termcolor::bold << termcolor::on_color<237> << termcolor::color<245> <<"☁ " << treset;
+                else if (random_n <= 6)
+                    std::cout << termcolor::bold << termcolor::on_color<237> << termcolor::color<245> <<"~ " << treset;
+                else
+                    std::cout << termcolor::bold << termcolor::on_color<237> << termcolor::color<245> <<"  " << treset;
+            }
+            else if (map.getCellByCords(pos).getPassability()) {
+
+                if(map.getCellByCords(pos).checkForEvent() ) {
                     Event_Type TYPE = map.getCellByCords(pos).getEvent()->getType();
                     switch (TYPE) {
                         case E_HEAL:
@@ -40,6 +58,12 @@ void RenderGame::printMap() {
                             break;
                         case E_TELEPORT:
                             std::cout << on_grey << blue << "֍ " << treset;
+                            break;
+                        case E_SHOP:
+                            std::cout << on_grey << yellow << "$ " << treset;
+                            break;
+                        case E_SOULS:
+                            std::cout << on_grey << yellow << "⛬ " << treset;
                             break;
                         case E_EXIT:
                             std::cout << on_grey << green << "X " << treset;
@@ -54,7 +78,7 @@ void RenderGame::printMap() {
 
             }
             else if (!map.getCellByCords(pos).getPassability())
-                std::cout << termcolor::on_color<240> << termcolor::color<180> << "ᗑ " << treset;
+                std::cout << termcolor::on_color<240> << termcolor::color<180> << "⛰ " << treset;  //ᗑ
         }
         std::cout<<std::endl;
     }
@@ -80,6 +104,15 @@ void RenderGame::printEvent(Event_Type TYPE) {
         case E_HEAL:
             std::cout << termcolor::bold
                       << "Отлично! Ты нашел лечебное зелье и восстановил " << DEFAULT_HEALPOTION_HEAL << " ОЗ\n" << treset;
+            break;
+        case E_SHOP:
+            std::cout << termcolor::bold
+                      << "Возвращайтесь еще!" << treset;
+            break;
+        case E_SOULS:
+            std::cout << termcolor::bold
+                      << "После кратковременного странного ощущения вы на секунду услышали крики откуда-то изнутри себя."
+                         " Вы поглотили чьи-то души. Может они для чего-то еще пригодятся? " << treset;
             break;
         case E_EXIT:
             std::cout << termcolor::bold << red

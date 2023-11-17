@@ -169,6 +169,36 @@ build CMakeFiles/lab1.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.
   OBJECT_DIR = CMakeFiles/lab1.dir
   OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/ControlSettings/CommandReader
 
+build CMakeFiles/lab1.dir/System/Utility/Random.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Utility/Random.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Utility/Random.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Utility
+
+build CMakeFiles/lab1.dir/System/Events/Shop/Shop.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Events/Shop/Shop.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Shop/Shop.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Shop
+
+build CMakeFiles/lab1.dir/System/GameStates/ShopMenu.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/GameStates/ShopMenu.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/ShopMenu.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
+
+build CMakeFiles/lab1.dir/Entities/Inventory.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/Entities/Inventory.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/Entities/Inventory.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities
+
+build CMakeFiles/lab1.dir/System/Events/Souls/Souls.cpp.o: CXX_COMPILER__lab1_Debug /Users/raregod/CLionProjects/lab1/System/Events/Souls/Souls.cpp || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Souls/Souls.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Souls
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab1
@@ -177,7 +207,7 @@ build CMakeFiles/lab1.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.
 #############################################
 # Link the executable lab1
 
-build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Entities/Player.cpp.o CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o CMakeFiles/lab1.dir/System/Map/Cell.cpp.o CMakeFiles/lab1.dir/System/Map/Map.cpp.o CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o CMakeFiles/lab1.dir/System/Game/Game.cpp.o CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o CMakeFiles/lab1.dir/System/ControlSettings/InputReader/InputReader.cpp.o CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o CMakeFiles/lab1.dir/System/Events/Exit/Exit_event.cpp.o CMakeFiles/lab1.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libform.tbd
+build lab1: CXX_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Entities/Player.cpp.o CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o CMakeFiles/lab1.dir/System/Map/Cell.cpp.o CMakeFiles/lab1.dir/System/Map/Map.cpp.o CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o CMakeFiles/lab1.dir/System/Game/Game.cpp.o CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o CMakeFiles/lab1.dir/System/ControlSettings/InputReader/InputReader.cpp.o CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o CMakeFiles/lab1.dir/System/Events/Exit/Exit_event.cpp.o CMakeFiles/lab1.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o CMakeFiles/lab1.dir/System/Utility/Random.cpp.o CMakeFiles/lab1.dir/System/Events/Shop/Shop.cpp.o CMakeFiles/lab1.dir/System/GameStates/ShopMenu.cpp.o CMakeFiles/lab1.dir/Entities/Inventory.cpp.o CMakeFiles/lab1.dir/System/Events/Souls/Souls.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libform.tbd
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   LINK_LIBRARIES = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libncurses.tbd  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libform.tbd
   OBJECT_DIR = CMakeFiles/lab1.dir

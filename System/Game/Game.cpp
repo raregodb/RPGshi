@@ -5,7 +5,9 @@ Game::Game() {
     GameState GS = MENU;
     mapSizeX = DEFAULTSIZEX;
     mapSizeY = DEFAULTSIZEY;
+
     exitFlag = false;
+    isFog = false;
 
     Player pPlayer; //создание игрока
     Map map(mapSizeX, mapSizeY); //создание карты
@@ -98,16 +100,17 @@ Game::Game() {
                 GS = GAME;
                 break;
             case GAME:
-                RenderGame(nav, pPlayer,map).printGame();
+                RenderGame(nav, pPlayer,map, isFog).printGame();
                 while (GS == GAME) {
                     InputReader basicInputReader;
                     ConfigReader basicKeyConfig;
                     basicKeyConfig.InputSettingsReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
                     if (pPlayer.getIsFinished()) {
-                        RenderGame(nav, pPlayer, map).printWin();
+                        RenderGame(nav, pPlayer, map, isFog).printWin();
                         pPlayer.setIsFinished(false);
                     }
                     while(GS == GAME) {
+
                         if (pPlayer.getIsFinished()) {
                             GS = NEXT_LEVEL;
                             break;
@@ -126,7 +129,11 @@ Game::Game() {
 
                         interlayer(input, nav, map, GS);
 
-                        RenderGame(nav, nav.getPlayer(), map).printGame();
+                        if (pPlayer.getInventory()->find(TORCH)){
+                            pPlayer.setFOV(5);
+                        }
+
+                        RenderGame(nav, nav.getPlayer(), map, isFog).printGame();
                     }
                 }
                 break;

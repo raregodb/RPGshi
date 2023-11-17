@@ -27,7 +27,7 @@ add_executable(lab1 main.cpp
         System/Events/Exit/Exit_event.cpp System/Events/Exit/Exit_event.h
         System/ControlSettings/CommandReader/ICommandReader.h System/ControlSettings/InputReader/I_InputReader.h
         System/ControlSettings/CommandReader/ConfigReader.cpp System/ControlSettings/CommandReader/ConfigReader.h
-        System/Events/Event_Types.h)
+        System/Events/Event_Types.h System/Utility/Random.cpp System/Utility/Random.h System/Events/Shop/Shop.cpp System/Events/Shop/Shop.h System/GameStates/ShopMenu.cpp System/GameStates/ShopMenu.h Entities/Items.h Entities/Inventory.cpp Entities/Inventory.h System/Events/Souls/Souls.cpp System/Events/Souls/Souls.h)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)

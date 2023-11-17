@@ -22,7 +22,7 @@ void Teleport::someEvent() {
             flag = false;
         }
     }
-    RenderGame(navigation1, player, map1).printEvent();
+    //RenderGame(navigation1, player, map1).printEvent();
     map1.getCellByCords(navigation1.getChPos()).setHavingEvent(false);
     navigation1.setChPos(destination);
 }

@@ -5,10 +5,10 @@
 #include "../../Events/Teleport/Teleport.h"
 #include "../../Events/HealPotion/HealPotion.h"
 #include "../../Events/Exit/Exit_event.h"
+#include "../../Events/Shop/Shop.h"
+#include "../../Events/Souls/Souls.h"
 #include "iostream"
-#include<cstdlib>
-#include<ctime>
-#include <random>
+#include "../../Utility/Random.h"
 
 
 class MapGenerator {
@@ -24,11 +24,14 @@ private:
     Navigation &nav;
 
     int maxTeleports;
+    int maxSouls;
     int countTeleports;
+    int countSouls;
 
     int percentageHeal;
     int percentageSpike;
     int percentageTeleport;
+    int percentageSouls;
 };
 
 

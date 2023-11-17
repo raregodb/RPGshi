@@ -9,6 +9,7 @@ damage(damage), score(score), lvl(level) {
     this->canBeDamaged = DEFAULT_CAN_BE_DAMAGED;
     this->isDead = DEFAULT_IS_DEAD;
     this->isFinished = DEFAULT_IS_FINISHED;
+    this->FOV = DEFAULT_FOV;
 }
 
 int Player::getHealth() const {
@@ -117,4 +118,41 @@ void Player::initialize(Player &player) {
     player.isFinished = DEFAULT_IS_FINISHED;
     player.score = DEFAULT_SCORE;
     player.damage = DEFAULT_DAMAGE;
+    player.FOV = DEFAULT_FOV;
+    player.inventory.clearInventory();
+}
+
+int Player::getFOV() const {
+    return FOV;
+}
+
+void Player::setFOV(int newFOV) {
+    FOV = newFOV;
+}
+
+Inventory* Player::getInventory() {
+    return &inventory;
+}
+
+int Player::getSouls() const {
+    return souls;
+}
+
+void Player::setSouls(int newSouls) {
+    if (newSouls < 0 || newSouls-souls<0)
+        std::cout<<"badHealth"<<std::endl; //Здесь выкидывать ошибку далее
+    else
+        souls = newSouls;
+}
+
+void Player::addSouls(int addSouls) {
+    setSouls(souls + addSouls);
+}
+
+bool Player::takeSouls(int takenSouls) {
+    if ((souls - takenSouls) >= 0) {
+        souls -= takenSouls;
+        return true;
+    }
+    return false;
 }
