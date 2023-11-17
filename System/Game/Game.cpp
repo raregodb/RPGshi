@@ -86,7 +86,6 @@ Game::Game() {
                 exitFlag = true;
                 break;
             case NEXT_LEVEL:
-                //pPlayer.setIsFinished(false);
                 map.cleanMap();
                 MapGenerator(map, nav); //генерация карты
                 Navigation::initialize(nav);
@@ -100,7 +99,9 @@ Game::Game() {
                 break;
             case GAME:
                 while (GS == GAME) {
-                    InputReader inputReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
+                    InputReader basicInputReader;
+                    ConfigReader basicKeyConfig;
+                    basicKeyConfig.InputSettingsReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
                     if (pPlayer.getIsFinished()) {
                         RenderGame(nav, pPlayer, map).printWin();
                         pPlayer.setIsFinished(false);
@@ -121,33 +122,10 @@ Game::Game() {
                         initscr(); //начало работы с curses.h
                         cbreak(); /* Line buffering disabled. pass on everything */
                         noecho(); //отключить отображение вводимых символов
-                        input_commands input = inputReader.ReadInput();
+                        input_commands input = basicInputReader.read(basicKeyConfig.getKeyList());
                         endwin();
 
-                        switch (input) {
-                            case Left:
-                                nav.move(Left);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Up:
-                                nav.move(Up);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Right:
-                                nav.move(Right);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Down:
-                                nav.move(Down);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Escape:
-                                GS = PAUSE;
-                                break;
-                            default:
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                        }
+                        interlayer(input, nav, map, GS);
                     }
                 }
                 break;
@@ -161,4 +139,21 @@ void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {
     oMap = Map(mapSizeX, mapSizeY);
     Navigation::initialize(oNavigation);
     MapGenerator(oMap, oNavigation);
+}
+
+void Game::interlayer(input_commands& input, Navigation& nav, Map& map, GameState& GS) {
+    if (input == Left || input == Up || input == Right || input == Down) {
+        nav.move(input);
+        RenderGame(nav, nav.getPlayer(), map).printGame();
+    }
+    else {
+        switch (input) {
+            case Escape:
+                GS = PAUSE;
+                break;
+            default:
+                RenderGame(nav, nav.getPlayer(), map).printGame();
+                break;
+        }
+    }
 }

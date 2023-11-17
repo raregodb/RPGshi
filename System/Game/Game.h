@@ -9,8 +9,9 @@
 #include "../Map/MapGenerator/MapGenerator.h"
 #include "Render/RenderGame.h"
 #include <cstdlib>
-#include "../InputReader/InputReader.h"
+#include "../ControlSettings/InputReader/InputReader.h"
 #include "../GameStates/GameState.h"
+#include "../ControlSettings/CommandReader/ConfigReader.h"
 
 
 class Game {
@@ -18,6 +19,7 @@ public:
     Game();
 
     void new_game(Player& player, Map& map, Navigation& navigation) const;
+    static void interlayer(input_commands& input, Navigation& nav, Map& map, GameState& GS);
 
 private:
     int mapSizeX;
