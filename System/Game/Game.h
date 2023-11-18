@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <string>
-#include "../../Entities/Player.h"
+#include "../../Entities/Player/Player.h"
 #include "../Navigation/Navigation.h"
 #include "../Map/Map.h"
 #include "../Map/MapGenerator/MapGenerator.h"
@@ -14,7 +14,7 @@
 #include "../ControlSettings/InputReader/InputReader.h"
 #include "../GameStates/GameState.h"
 #include "../ControlSettings/CommandReader/ConfigReader.h"
-#include "../../Entities/Items.h"
+#include "../../Entities/Player/Items.h"
 
 
 class Game {

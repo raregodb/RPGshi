@@ -44,6 +44,30 @@ void GameOver::open() {
                 else
                     ++highlight;
                 break;
+            case 119:
+                if(highlight == 1)
+                    highlight = n_choices;
+                else
+                    --highlight;
+                break;
+            case 87:
+                if(highlight == 1)
+                    highlight = n_choices;
+                else
+                    --highlight;
+                break;
+            case 83:
+                if(highlight == n_choices)
+                    highlight = 1;
+                else
+                    ++highlight;
+                break;
+            case 115:
+                if(highlight == n_choices)
+                    highlight = 1;
+                else
+                    ++highlight;
+                break;
             case 10:
                 choice = highlight;
                 break;

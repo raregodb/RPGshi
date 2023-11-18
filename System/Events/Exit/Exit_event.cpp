@@ -8,7 +8,12 @@ Exit_event::Exit_event(Navigation &nav) : player(nav.getPlayer()) {
 void Exit_event::someEvent() {
     player.setIsFinished(true);
     player.addScore(20);
-    player.setMaxHealth(player.getScore() * 5);
+    if (player.getMaxHealth() < 5000) {
+        if (player.getScore() * 5 >= 5000)
+            player.setMaxHealth(5000);
+        else
+            player.setMaxHealth(player.getScore() * 5);
+    }
     player.setLevel(player.getLevel() + 1);
 }
 

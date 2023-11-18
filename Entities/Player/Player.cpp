@@ -155,9 +155,14 @@ void Player::addSouls(int addSouls) {
     setSouls(souls + addSouls);
 }
 
-bool Player::takeSouls(int takenSouls) {
+void Player::takeSouls(int takenSouls) {
     if ((souls - takenSouls) >= 0) {
         souls -= takenSouls;
+    }
+}
+
+bool Player::canAfford(int afSouls) const {
+    if ((souls - afSouls) >= 0) {
         return true;
     }
     return false;
@@ -177,3 +182,4 @@ void Player::setArmor(int newArmor) {
 void Player::addArmor(int addArmor) {
     setArmor(armor + addArmor);
 }
+

@@ -2,7 +2,7 @@
 #define LAB1_PLAYER_H
 
 #include <string>
-#include "../System/Navigation/Navigation.h"
+#include "../../System/Navigation/Navigation.h"
 #include "Inventory.h"
 
 #define DEFAULT_MAX_HEALTH 100
@@ -14,7 +14,7 @@
 #define DEFAULT_IS_FINISHED 0
 #define DEFAULT_LEVEL 1
 #define DEFAULT_FOV 3
-#define DEFAULT_SOULS 100
+#define DEFAULT_SOULS 1
 #define DEFAULT_ARMOR 0
 
 class Player {
@@ -76,7 +76,8 @@ public:
     int getSouls() const;
     void setSouls(int newSouls);
     void addSouls(int addSouls);
-    bool takeSouls(int takenSouls);
+    void takeSouls(int takenSouls);
+    bool canAfford(int souls) const;
 
     Inventory* getInventory();
 

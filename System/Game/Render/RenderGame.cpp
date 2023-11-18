@@ -8,12 +8,16 @@ RenderGame::RenderGame(Navigation& nNavigation, Player& pPlayer, Map& mMap, bool
     this->lvl = player.getLevel();
     this->souls = player.getSouls();
     this->armor = player.getArmor();
+    if (isFog == true && player.getLevel() >= 10)
+        isFog = true;
+    else
+        isFog = false;
     some_cell = &map.getCellByCords(navigation.getChPos());
 }
 
 void RenderGame::printInterface() const {
     std::cout << termcolor::bold
-    << red << "ХП: " << hp
+    << red << "ОЗ: " << hp
     << "/" << player.getMaxHealth()
     << blue << " ОП: " << score
     << violet << " Урон: " << damage

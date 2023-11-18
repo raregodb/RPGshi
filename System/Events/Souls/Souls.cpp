@@ -6,7 +6,7 @@ Souls::Souls(Navigation &navigation) : player(navigation.getPlayer()) {
 }
 
 void Souls::someEvent() {
-    int randomSouls = Random::getRandomGen(1, 5);
+    int randomSouls = Random::getRandomGen(1, 10);
 
     player.addSouls(randomSouls);
     player.addScore(randomSouls);

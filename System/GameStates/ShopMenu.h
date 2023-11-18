@@ -7,12 +7,13 @@
 #include "../Navigation/Navigation.h"
 
 #define TORCH_PRICE 10
+#define TORCH_UPGRADE_PRICE 7
 #define EQUIPMENT_UPGRADE_PRICE 5
-#define MOUNTAIN_EQUIPMENT_PRICE 5
+#define MOUNTAIN_EQUIPMENT_PRICE 2
 
 class ShopMenu : public IWindow{
 public:
-    ShopMenu(Navigation& navigation);
+    explicit ShopMenu(Navigation& navigation);
     void open() override;
     void print_window(WINDOW* window, int highlight, std::string* choices, int n_choices) override;
 

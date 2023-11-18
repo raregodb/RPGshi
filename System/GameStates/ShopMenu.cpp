@@ -101,7 +101,7 @@ void ShopMenu::open() {
     }
     clrtoeol();
     refresh();
-    endwin();
+    //endwin();
 }
 
 void ShopMenu::print_window(WINDOW *window, int highlight, std::string *choices, int n_choices) {
@@ -116,10 +116,13 @@ void ShopMenu::print_window(WINDOW *window, int highlight, std::string *choices,
 
         if(highlight == i + 1) /* High light the present choice */
         {
-            if (nav.getPlayer().getInventory()->find(TORCH))
+            if (nav.getPlayer().getInventory()->find(TORCH)) {
                 this->shop_choices[0] = "Заменить пикси в фонаре на по-лучше";
+                this->price[0] = TORCH_UPGRADE_PRICE;
+            }
             if (i <= 2) {
                 mvwprintw(window, 0, 12, "Это будет стоить тебе %d душ", price[i]);
+                mvwprintw(window, 1, 15, "У тебя %d душ", nav.getPlayer().getSouls());
             }
 
             wattron(window, A_REVERSE);

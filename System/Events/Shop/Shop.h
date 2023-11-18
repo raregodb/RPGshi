@@ -4,7 +4,7 @@
 #include "../IEvent.h"
 #include "../../Navigation/Navigation.h"
 #include "../../GameStates/ShopMenu.h"
-#include "../../../Entities/Items.h"
+#include "../../../Entities/Player/Items.h"
 
 class Shop : public IEvent{
 public:

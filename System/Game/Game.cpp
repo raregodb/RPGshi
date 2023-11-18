@@ -105,7 +105,7 @@ Game::Game() {
                 while (GS == GAME) {
                     InputReader basicInputReader;
                     ConfigReader basicKeyConfig;
-                    basicKeyConfig.InputSettingsReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
+                    basicKeyConfig.InputSettingsReader("../System/config/InputConfig.txt");
                     if (pPlayer.getIsFinished()) {
                         RenderGame(nav, pPlayer, map, isFog).printWin();
                         pPlayer.setIsFinished(false);
@@ -129,10 +129,6 @@ Game::Game() {
                         endwin();
 
                         interlayer(input, nav, map, GS);
-
-//                        if (pPlayer.getInventory()->find(TORCH)){
-//                            pPlayer.setFOV(5);
-//                        }
 
                         RenderGame(nav, nav.getPlayer(), map, isFog).printGame();
                     }
