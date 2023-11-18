@@ -5,9 +5,10 @@ Game::Game() {
     GameState GS = MENU;
     mapSizeX = DEFAULTSIZEX;
     mapSizeY = DEFAULTSIZEY;
+    isFog = DEFAULT_FOG;
 
     exitFlag = false;
-    isFog = false;
+
 
     Player pPlayer; //создание игрока
     Map map(mapSizeX, mapSizeY); //создание карты
@@ -129,9 +130,9 @@ Game::Game() {
 
                         interlayer(input, nav, map, GS);
 
-                        if (pPlayer.getInventory()->find(TORCH)){
-                            pPlayer.setFOV(5);
-                        }
+//                        if (pPlayer.getInventory()->find(TORCH)){
+//                            pPlayer.setFOV(5);
+//                        }
 
                         RenderGame(nav, nav.getPlayer(), map, isFog).printGame();
                     }

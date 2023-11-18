@@ -7,6 +7,7 @@ RenderGame::RenderGame(Navigation& nNavigation, Player& pPlayer, Map& mMap, bool
     this->damage = player.getCharacterDamage();
     this->lvl = player.getLevel();
     this->souls = player.getSouls();
+    this->armor = player.getArmor();
     some_cell = &map.getCellByCords(navigation.getChPos());
 }
 
@@ -16,7 +17,10 @@ void RenderGame::printInterface() const {
     << "/" << player.getMaxHealth()
     << blue << " ОП: " << score
     << violet << " Урон: " << damage
-    << cyan << " Уровень: " << lvl
+    << violet << " Броня: " << armor;
+    if (player.getInventory()->find(MOUNTAIN_EQUIPMENT))
+        std::cout << violet << " Гор. снар.: " << player.getInventory()->countItem(MOUNTAIN_EQUIPMENT);
+    std::cout << cyan << " Уровень: " << lvl
     << termcolor::bright_cyan << " Души: " << souls
     << treset <<  std::endl;
 }
@@ -32,8 +36,12 @@ void RenderGame::printMap() {
             distanceBetweenPandCell.x = abs(pos.x - navigation.getChPos().x);
             distanceBetweenPandCell.y = abs(pos.y - navigation.getChPos().y);
 
-            if (navigation.getChPos() == pos) {
-                std::cout << termcolor::bold << on_grey << green << "⚉ " << treset; //P 👤
+
+            if (navigation.getChPos() == pos && !some_cell->getPassability()) {
+                std::cout << termcolor::bold << termcolor::on_color<240> << green << "P " << treset; //P 👤
+            }
+            else if (navigation.getChPos() == pos) {
+                std::cout << termcolor::bold << on_grey << green << "P " << treset; //P 👤
             }
             else if(isFog && (distanceBetweenPandCell.x >= navigation.getPlayer().getFOV() || distanceBetweenPandCell.y >= navigation.getPlayer().getFOV())) {
                 int random_n = Random::getRandomGen(1, 10);
@@ -99,7 +107,7 @@ void RenderGame::printEvent(Event_Type TYPE) {
             break;
         case E_SPIKES:
             std::cout << termcolor::bold
-                      << "Шипы. Было неприятно. Вы получили " << DEFAULT_SPIKE_DAMAGE << " урона. \n" << treset;
+                      << "Шипы. Было неприятно. Вы получили " << DEFAULT_SPIKE_DAMAGE - player.getArmor() << " урона. \n" << treset;
             break;
         case E_HEAL:
             std::cout << termcolor::bold

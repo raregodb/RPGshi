@@ -7,7 +7,6 @@ HealPotion::HealPotion(Navigation& nav) : player(nav.getPlayer()){
 
 void HealPotion::someEvent() {
     player.addHealth(DEFAULT_HEALPOTION_HEAL);
-    player.addScore(1);
 }
 
 Event_Type HealPotion::getType() {

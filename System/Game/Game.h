@@ -1,6 +1,8 @@
 #ifndef LAB1_GAME_H
 #define LAB1_GAME_H
 
+#define DEFAULT_FOG true
+
 #include <iostream>
 #include <string>
 #include "../../Entities/Player.h"

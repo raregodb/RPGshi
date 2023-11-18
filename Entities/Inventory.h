@@ -12,6 +12,7 @@ public:
     void decItem(items item);
     void clearInventory();
     bool find(items item);
+    int countItem(items item);
 
 private:
     std::map<items, int> Inventory;

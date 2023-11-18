@@ -24,7 +24,7 @@ public:
     void printInterface() const;
     void printMap();
     void printEvent();
-    static void printEvent(Event_Type TYPE);
+    void printEvent(Event_Type TYPE);
     void printGame();
     void printWin();
 
@@ -39,6 +39,7 @@ private:
     int damage;
     int lvl;
     int souls;
+    int armor;
     int isFog;
 };
 

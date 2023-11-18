@@ -12,6 +12,21 @@ damage(damage), score(score), lvl(level) {
     this->FOV = DEFAULT_FOV;
 }
 
+void Player::initialize(Player &player) {
+    player.health = DEFAULT_HEALTH;
+    player.lvl = DEFAULT_LEVEL;
+    player.maxHealth=DEFAULT_MAX_HEALTH;
+    player.canBeDamaged = DEFAULT_CAN_BE_DAMAGED;
+    player.isDead = DEFAULT_IS_DEAD;
+    player.isFinished = DEFAULT_IS_FINISHED;
+    player.score = DEFAULT_SCORE;
+    player.damage = DEFAULT_DAMAGE;
+    player.FOV = DEFAULT_FOV;
+    player.inventory.clearInventory();
+    player.souls = DEFAULT_SOULS;
+    player.armor = DEFAULT_ARMOR;
+}
+
 int Player::getHealth() const {
     return health;
 }
@@ -38,6 +53,10 @@ void Player::setCharacterDamage(int newDamage) {
         std::cout<<"badDamage"<<std::endl; //Здесь выкидывать ошибку далее
     else
         damage = newDamage;
+}
+
+void Player::addCharacterDamage(int addDamage) {
+    setCharacterDamage(damage + addDamage);
 }
 
 void Player::takeDamage(int Damage) {
@@ -109,19 +128,6 @@ void Player::setMaxHealth(int newMax) {
     maxHealth = newMax;
 }
 
-void Player::initialize(Player &player) {
-    player.health = DEFAULT_HEALTH;
-    player.lvl = DEFAULT_LEVEL;
-    player.maxHealth=DEFAULT_MAX_HEALTH;
-    player.canBeDamaged = DEFAULT_CAN_BE_DAMAGED;
-    player.isDead = DEFAULT_IS_DEAD;
-    player.isFinished = DEFAULT_IS_FINISHED;
-    player.score = DEFAULT_SCORE;
-    player.damage = DEFAULT_DAMAGE;
-    player.FOV = DEFAULT_FOV;
-    player.inventory.clearInventory();
-}
-
 int Player::getFOV() const {
     return FOV;
 }
@@ -155,4 +161,19 @@ bool Player::takeSouls(int takenSouls) {
         return true;
     }
     return false;
+}
+
+int Player::getArmor() {
+    return armor;
+}
+
+void Player::setArmor(int newArmor) {
+    if (newArmor < 0 || newArmor-armor<0)
+        std::cout<<"badArmor"<<std::endl; //Здесь выкидывать ошибку далее
+    else
+        armor = newArmor;
+}
+
+void Player::addArmor(int addArmor) {
+    setArmor(armor + addArmor);
 }

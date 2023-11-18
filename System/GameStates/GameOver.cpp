@@ -6,6 +6,7 @@ GameOver::GameOver() {
     this->n_choices = 2;
     this->menu_choices[0] = "START AGAIN";
     this->menu_choices[1] = "TO MAIN MENU";
+    this->HEIGHT = 7;
     startx = (80 - WIDTH) / 2;
     starty = (24 - HEIGHT) / 2;
 }
@@ -25,7 +26,6 @@ void GameOver::open() {
 
     menu_win = newwin(HEIGHT, WIDTH, starty, startx);
     keypad(menu_win, TRUE);
-    mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
     refresh();
     print_window(menu_win, highlight, menu_choices, n_choices);
     while(1)
@@ -83,7 +83,7 @@ void GameOver::print_death() {
                  "\t\t\t⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⠏⠀⠀⠀⠀⠹⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" << termcolor::reset;
 
     std::cout << termcolor::red << termcolor::bold <<"\n  \t\t\t\tВЫ УМЕРЛИ\n" << termcolor::reset;
-    std::cout << termcolor::bold <<"\n  \t\t\t\tнажмите любую клавишу\n" << termcolor::reset;
+    std::cout << termcolor::bold <<"\n  \t\t\t  нажмите любую клавишу\n" << termcolor::reset;
 
     endwin();
     noecho();

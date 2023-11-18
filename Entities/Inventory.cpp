@@ -29,3 +29,7 @@ bool Inventory::find(items item) {
     else
         return false;
 }
+
+int Inventory::countItem(items item) {
+    return Inventory.find(item)->second;
+}

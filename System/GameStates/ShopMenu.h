@@ -3,19 +3,29 @@
 
 #include "IWindow.h"
 #include "../Utility/Random.h"
+#include "../Events/Shop/Shop.h"
+#include "../Navigation/Navigation.h"
+
+#define TORCH_PRICE 10
+#define EQUIPMENT_UPGRADE_PRICE 5
+#define MOUNTAIN_EQUIPMENT_PRICE 5
 
 class ShopMenu : public IWindow{
 public:
-    ShopMenu();
+    ShopMenu(Navigation& navigation);
     void open() override;
+    void print_window(WINDOW* window, int highlight, std::string* choices, int n_choices) override;
 
     int getChoice() override;
     void setChoice(int newChoice) override;
 
 private:
-    std::string shop_choices[3];
+    std::string shop_choices[4];
     std::string phrases[5];
+    int price[3];
     int random_phrase;
+
+    Navigation& nav;
 };
 
 

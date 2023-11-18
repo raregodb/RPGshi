@@ -6,7 +6,7 @@ Spikes::Spikes(Navigation& nav) : player(nav.getPlayer()) {
 }
 
 void Spikes::someEvent() {
-    player.takeDamage(DEFAULT_SPIKE_DAMAGE);
+    player.takeDamage(DEFAULT_SPIKE_DAMAGE - player.getArmor());
     player.addScore(1);
 }
 

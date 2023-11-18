@@ -14,12 +14,15 @@
 #define DEFAULT_IS_FINISHED 0
 #define DEFAULT_LEVEL 1
 #define DEFAULT_FOV 3
+#define DEFAULT_SOULS 100
+#define DEFAULT_ARMOR 0
 
 class Player {
 private:
     int health;
     int maxHealth;
     int damage;
+    int armor;
     int score;
     bool canBeDamaged;
     bool isDead;
@@ -40,7 +43,13 @@ public:
 
     int getCharacterDamage() const;
     void setCharacterDamage(int newDamage);
+    void addCharacterDamage(int addDamage);
+
     void takeDamage(int Damage);
+
+    int getArmor();
+    void setArmor(int newArmor);
+    void addArmor(int addArmor);
 
     void addScore(int additionalScore);
     int getScore() const;
