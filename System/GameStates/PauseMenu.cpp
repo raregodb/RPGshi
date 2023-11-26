@@ -4,10 +4,10 @@ PauseMenu::PauseMenu() {
     this->highlight = 0;
     this->choice = 0;
     this->n_choices = 4;
-    this->pause_choices[0] = "START NEW GAME";
-    this->pause_choices[1] = "REGENERATE MAP";
-    this->pause_choices[2] = "EXIT TO MAIN MENU";
-    this->pause_choices[3] = "BACK";
+    this->pause_choices[0] = "НАЧАТЬ НОВУЮ ИГРУ";
+    this->pause_choices[1] = "ПЕРЕЗАГРУЗИТЬ УРОВЕНЬ";
+    this->pause_choices[2] = "ВЫХОД В ГЛАВНОЕ МЕНЮ";
+    this->pause_choices[3] = "НАЗАД В ИГРУ";
     startx = (80 - WIDTH) / 2;
     starty = (24 - HEIGHT) / 2;
 }
@@ -25,7 +25,7 @@ void PauseMenu::open() {
 
     menu_win = newwin(HEIGHT, WIDTH, starty, startx);
     keypad(menu_win, TRUE);
-    mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
+    mvprintw(0, 0, "По правилам перезагрузка уровня доступна только при технической невозможности играть дальше");
     refresh();
     print_window(menu_win, highlight, pause_choices, n_choices);
     while(1)
@@ -39,6 +39,30 @@ void PauseMenu::open() {
                     --highlight;
                 break;
             case KEY_DOWN:
+                if(highlight == n_choices)
+                    highlight = 1;
+                else
+                    ++highlight;
+                break;
+            case 119:
+                if(highlight == 1)
+                    highlight = n_choices;
+                else
+                    --highlight;
+                break;
+            case 87:
+                if(highlight == 1)
+                    highlight = n_choices;
+                else
+                    --highlight;
+                break;
+            case 83:
+                if(highlight == n_choices)
+                    highlight = 1;
+                else
+                    ++highlight;
+                break;
+            case 115:
                 if(highlight == n_choices)
                     highlight = 1;
                 else

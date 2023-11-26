@@ -4,7 +4,7 @@ project(lab1)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(lab1 main.cpp
-        Entities/Player.cpp Entities/Player.h
+        Entities/Player/Player.cpp Entities/Player/Player.h
         System/Navigation/Navigation.cpp System/Navigation/Navigation.h
         System/Map/Cell.cpp System/Map/Cell.h
         System/Map/Map.cpp System/Map/Map.h
@@ -17,14 +17,24 @@ add_executable(lab1 main.cpp
         System/Game/Game.cpp System/Game/Game.h
         System/GameStates/MainMenu.cpp System/GameStates/MainMenu.h
         System/Game/Render/RenderGame.cpp System/Game/Render/RenderGame.h
-        System/InputReader/InputReader.cpp System/InputReader/InputReader.h
+        System/ControlSettings/InputReader/InputReader.cpp System/ControlSettings/InputReader/InputReader.h
         System/config/Input_Commands_Dir.h
         System/GameStates/SettingsMenu.cpp System/GameStates/SettingsMenu.h
         System/GameStates/IWindow.cpp System/GameStates/IWindow.h
         System/GameStates/GameState.h
         System/GameStates/PauseMenu.cpp System/GameStates/PauseMenu.h
         System/GameStates/GameOver.cpp System/GameStates/GameOver.h
-        System/InputReader/InputList/InputList.cpp System/InputReader/InputList/InputList.h System/Events/Exit/Exit_event.cpp System/Events/Exit/Exit_event.h)
+        System/Events/Exit/Exit_event.cpp System/Events/Exit/Exit_event.h
+        System/ControlSettings/CommandReader/ICommandReader.h
+        System/ControlSettings/InputReader/I_InputReader.h
+        System/ControlSettings/CommandReader/ConfigReader.cpp System/ControlSettings/CommandReader/ConfigReader.h
+        System/Events/Event_Types.h
+        System/Utility/Random.cpp System/Utility/Random.h
+        System/Events/Shop/Shop.cpp System/Events/Shop/Shop.h
+        System/GameStates/ShopMenu.cpp System/GameStates/ShopMenu.h
+        Entities/Player/Items.h
+        Entities/Player/Inventory.cpp Entities/Player/Inventory.h
+        System/Events/Souls/Souls.cpp System/Events/Souls/Souls.h)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)

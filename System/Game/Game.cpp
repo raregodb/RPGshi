@@ -5,7 +5,10 @@ Game::Game() {
     GameState GS = MENU;
     mapSizeX = DEFAULTSIZEX;
     mapSizeY = DEFAULTSIZEY;
+    isFog = DEFAULT_FOG;
+
     exitFlag = false;
+
 
     Player pPlayer; //создание игрока
     Map map(mapSizeX, mapSizeY); //создание карты
@@ -86,7 +89,6 @@ Game::Game() {
                 exitFlag = true;
                 break;
             case NEXT_LEVEL:
-                //pPlayer.setIsFinished(false);
                 map.cleanMap();
                 MapGenerator(map, nav); //генерация карты
                 Navigation::initialize(nav);
@@ -99,15 +101,17 @@ Game::Game() {
                 GS = GAME;
                 break;
             case GAME:
+                RenderGame(nav, pPlayer,map, isFog).printGame();
                 while (GS == GAME) {
-                    InputReader inputReader("/Users/raregod/CLionProjects/lab1/System/config/InputConfig.txt");
+                    InputReader basicInputReader;
+                    ConfigReader basicKeyConfig;
+                    basicKeyConfig.InputSettingsReader("../System/config/InputConfig.txt");
                     if (pPlayer.getIsFinished()) {
-                        RenderGame(nav, pPlayer, map).printWin();
+                        RenderGame(nav, pPlayer, map, isFog).printWin();
                         pPlayer.setIsFinished(false);
                     }
-                    else
-                        RenderGame(nav, pPlayer,map).printGame();
                     while(GS == GAME) {
+
                         if (pPlayer.getIsFinished()) {
                             GS = NEXT_LEVEL;
                             break;
@@ -121,33 +125,12 @@ Game::Game() {
                         initscr(); //начало работы с curses.h
                         cbreak(); /* Line buffering disabled. pass on everything */
                         noecho(); //отключить отображение вводимых символов
-                        input_commands input = inputReader.ReadInput();
+                        input_commands input = basicInputReader.read(basicKeyConfig.getKeyList());
                         endwin();
 
-                        switch (input) {
-                            case Left:
-                                nav.move(Left);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Up:
-                                nav.move(Up);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Right:
-                                nav.move(Right);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Down:
-                                nav.move(Down);
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                            case Escape:
-                                GS = PAUSE;
-                                break;
-                            default:
-                                RenderGame(nav, pPlayer, map).printGame();
-                                break;
-                        }
+                        interlayer(input, nav, map, GS);
+
+                        RenderGame(nav, nav.getPlayer(), map, isFog).printGame();
                     }
                 }
                 break;
@@ -161,4 +144,19 @@ void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {
     oMap = Map(mapSizeX, mapSizeY);
     Navigation::initialize(oNavigation);
     MapGenerator(oMap, oNavigation);
+}
+
+void Game::interlayer(input_commands& input, Navigation& nav, Map& map, GameState& GS) {
+    if (input == Left || input == Up || input == Right || input == Down) {
+        nav.move(input);
+    }
+    else {
+        switch (input) {
+            case Escape:
+                GS = PAUSE;
+                break;
+            default:
+                break;
+        }
+    }
 }

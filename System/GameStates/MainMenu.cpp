@@ -4,9 +4,11 @@ MainMenu::MainMenu() {
     this->highlight = 0;
     this->choice = 0;
     this->n_choices = 3;
-    this->menu_choices[0] = "PLAY";
-    this->menu_choices[1] = "SETTINGS";
-    this->menu_choices[2] = "EXIT";
+    this->menu_choices[0] = "ИГРАТЬ";
+    this->menu_choices[1] = "НАСТРОЙКИ";
+    this->menu_choices[2] = "ВЫХОД";
+    this->WIDTH = 22;
+    this->HEIGHT = 9;
     startx = (80 - WIDTH) / 2;
     starty = (24 - HEIGHT) / 2;
 }
@@ -24,20 +26,45 @@ void MainMenu::open() {
 
     menu_win = newwin(HEIGHT, WIDTH, starty, startx);
     keypad(menu_win, TRUE);
-    mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
+    //mvprintw(0, 0, "Используйте стрелки для навигации в игровых меню");
     refresh();
     print_window(menu_win, highlight, menu_choices, n_choices);
     while(1)
     {
         c = wgetch(menu_win);
         switch(c)
-        {	case KEY_UP:
+        {
+            case KEY_UP:
                 if(highlight == 1)
                     highlight = n_choices;
                 else
                     --highlight;
                 break;
             case KEY_DOWN:
+                if(highlight == n_choices)
+                    highlight = 1;
+                else
+                    ++highlight;
+                break;
+            case 119:
+                if(highlight == 1)
+                    highlight = n_choices;
+                else
+                    --highlight;
+                break;
+            case 87:
+                if(highlight == 1)
+                    highlight = n_choices;
+                else
+                    --highlight;
+                break;
+            case 83:
+                if(highlight == n_choices)
+                    highlight = 1;
+                else
+                    ++highlight;
+                break;
+            case 115:
                 if(highlight == n_choices)
                     highlight = 1;
                 else

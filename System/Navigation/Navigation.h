@@ -1,7 +1,7 @@
 #ifndef LAB1_NAVIGATION_H
 #define LAB1_NAVIGATION_H
 
-#include "../../Entities/Player.h"
+#include "../../Entities/Player/Player.h"
 #include "../Map/Map.h"
 #include "Position.h"
 #include "../config/Input_Commands_Dir.h"

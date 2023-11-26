@@ -1,12 +1,13 @@
-#ifndef LAB1_SPIKES_H
-#define LAB1_SPIKES_H
+#ifndef LAB1_SOULS_H
+#define LAB1_SOULS_H
 
 #include "../IEvent.h"
 #include "../../Navigation/Navigation.h"
+#include "../../Utility/Random.h"
 
-class Spikes : public IEvent{
+class Souls : public IEvent{
 public:
-    Spikes(Navigation& navigation);
+    explicit Souls(Navigation& navigation);
 
     void someEvent() override;
     bool checkIsDesctructible() override;
@@ -17,4 +18,4 @@ private:
 };
 
 
-#endif //LAB1_SPIKES_H
+#endif //LAB1_SOULS_H

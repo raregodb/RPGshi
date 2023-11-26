@@ -5,8 +5,8 @@
 #include "string"
 #include "iostream"
 
-#define WIDTH 30
-#define HEIGHT 10
+//#define WIDTH 30
+//#define HEIGHT 10
 
 class IWindow {
 public:
@@ -15,6 +15,10 @@ public:
 
     virtual int getChoice() = 0;
     virtual void setChoice(int newChoice) = 0;
+
+protected:
+    int WIDTH = 30;
+    int HEIGHT = 10;
 
     int startx;
     int starty;

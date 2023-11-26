@@ -1,18 +1,19 @@
 #include "Spikes.h"
 
 Spikes::Spikes(Navigation& nav) : player(nav.getPlayer()) {
-    this->ID = 2;
+    this->Type = E_SPIKES;
+    this->isDestructible = false;
 }
 
 void Spikes::someEvent() {
-    player.takeDamage(DEFAULT_SPIKE_DAMAGE);
+    player.takeDamage(DEFAULT_SPIKE_DAMAGE - player.getArmor());
     player.addScore(1);
 }
 
-void Spikes::printSomeEvent() {
-    std::cout<<"Шипы. Было неприятно. Вы получили " << DEFAULT_SPIKE_DAMAGE << " урона. \n\n";
+Event_Type Spikes::getType() {
+    return Type;
 }
 
-int Spikes::getID() {
-    return ID;
+bool Spikes::checkIsDesctructible() {
+    return isDestructible;
 }

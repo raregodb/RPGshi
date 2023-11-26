@@ -1,20 +1,26 @@
 #include "Exit_event.h"
 
 Exit_event::Exit_event(Navigation &nav) : player(nav.getPlayer()) {
-    this->ID = 4;
+    this->Type = E_EXIT;
+    this->isDestructible = false;
 }
 
 void Exit_event::someEvent() {
     player.setIsFinished(true);
     player.addScore(20);
-    player.setMaxHealth(player.getScore() * 5);
+    if (player.getMaxHealth() < 5000) {
+        if (player.getScore() * 5 >= 5000)
+            player.setMaxHealth(5000);
+        else
+            player.setMaxHealth(player.getScore() * 5);
+    }
     player.setLevel(player.getLevel() + 1);
 }
 
-void Exit_event::printSomeEvent() {
-    std::cout<<"Вы прошли уровень!\nВы стали гораздо сильнее!\n";
+Event_Type Exit_event::getType() {
+    return Type;
 }
 
-int Exit_event::getID() {
-    return ID;
+bool Exit_event::checkIsDesctructible() {
+    return isDestructible;
 }

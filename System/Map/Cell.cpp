@@ -31,10 +31,6 @@ void Cell::activateEvent() {
     this->event->someEvent();
 }
 
-void Cell::printEvent() {
-    this->event->printSomeEvent();
-}
-
 Cell::~Cell() {
     delete event;
 }

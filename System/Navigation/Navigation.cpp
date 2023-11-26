@@ -20,7 +20,20 @@ void Navigation::chMove(Position pos) {
     Position propPos;
     propPos.x = chPos.x + pos.x;
     propPos.y = chPos.y + pos.y;
-    if (propPos.x < 0 || propPos.y < 0
+
+    if (player.getInventory()->find(MOUNTAIN_EQUIPMENT)
+            && (propPos.x > 0 && propPos.y > 0)
+             && (!map.getCellByCords(propPos).getPassability())
+             && (propPos.x < map.getMapSizeByX() - 1 && propPos.y < map.getMapSizeByY() - 1)) {
+        chPos.x = propPos.x;
+        chPos.y = propPos.y;
+        player.getInventory()->decItem(MOUNTAIN_EQUIPMENT);
+        Cell* some_cell = &map.getCellByCords(chPos);
+        if (some_cell->checkForEvent()) {
+            some_cell->activateEvent();
+        }
+    }
+    else if (propPos.x < 0 || propPos.y < 0
         || !map.getCellByCords(propPos).getPassability()
         || propPos.x > map.getMapSizeByX() || propPos.y > map.getMapSizeByY()) {
         //std::cout<<"badPosition\n"; //логгирование

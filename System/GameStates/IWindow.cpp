@@ -5,7 +5,7 @@ void IWindow::print_window(WINDOW *window, int highlight, std::string *choices, 
 
     x = 5;
     y = 2;
-    //box(menu_win, 0, 0); //обводка
+    box(window, 2, 2); //обводка
     for(i = 0; i < n_choices; ++i)
     {	if(highlight == i + 1) /* High light the present choice */
         {
