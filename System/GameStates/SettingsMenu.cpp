@@ -1,14 +1,16 @@
 #include "SettingsMenu.h"
 
 SettingsMenu::SettingsMenu() {
-    n_choices = 2;
+    this->Ltype = NoLog;
+    n_choices = 3;
     this->WIDTH = 22;
     this->HEIGHT = 7;
     startx = (80 - WIDTH) / 2;
     starty = (24 - HEIGHT) / 2;
     this->choice = 0;
     this->settings_choices[0] = "РАЗМЕР КАРТЫ";
-    this->settings_choices[1] = "НАЗАД";
+    this->settings_choices[1] = "ЛОГГИРОВАНИЕ";
+    this->settings_choices[2] = "НАЗАД";
 }
 
 void SettingsMenu::open() {
@@ -97,7 +99,7 @@ void SettingsMenu::changeMapSize(int &x, int &y) {
     int ptr_x;
     int ptr_y;
 
-    std::cout<<"\n\n\n\n\n\t\t\t Введите новый размер карты\n (ввод в виде: 'x y' с размером больше 5 и меньше 100 с любой стороны): \n";
+    std::cout<<"\n\n\n\n\n\t\t\t Введите новый размер карты\n (ввод в виде: 'x y' с размером от 5 до 33 с любой стороны): \n";
 
     while (true) {
         std::cout << "Введите первое число: ";
@@ -121,4 +123,44 @@ void SettingsMenu::changeMapSize(int &x, int &y) {
     }
     x = ptr_x;
     y = ptr_y;
+}
+
+LogType SettingsMenu::changeLoggerStream() {
+    endwin();
+    system("clear");
+
+    int input;
+
+    std::cout<<"\n\n\n\n\n\t\t\t Введите желаемый вывод логгера(номер желаемого потока). "
+               "\n\t\t\t 1) Никуда"
+               "\n\t\t\t 2) В файл"
+               "\n\t\t\t 3) В консоль"
+               "\n\t\t\t 4) В файл и консоль\n";
+
+    bool flag = true;
+    while (flag) {
+        std::cin >> input;
+        switch (input) {
+            case 1:
+                Ltype = NoLog;
+                flag = false;
+                break;
+            case 2:
+                Ltype = FileLog;
+                flag = false;
+                break;
+            case 3:
+                Ltype = ConsoleLog;
+                flag = false;
+                break;
+            case 4:
+                Ltype = BothLog;
+                flag = false;
+                break;
+            default:
+                Ltype = NoLog;
+                break;
+        }
+    }
+    return Ltype;
 }

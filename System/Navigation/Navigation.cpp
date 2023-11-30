@@ -99,3 +99,7 @@ void Navigation::setChPos(Position newChPos) {
 Player& Navigation::getPlayer() {
     return player;
 }
+
+Map &Navigation::getMap() {
+    return map;
+}

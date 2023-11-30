@@ -17,6 +17,7 @@ public:
     void setChPos(Position newChPos);
     void chMove(Position pos);
     void move(input_commands);
+    Map& getMap();
 
     Player& getPlayer();
 

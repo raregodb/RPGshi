@@ -34,7 +34,18 @@ add_executable(lab1 main.cpp
         System/GameStates/ShopMenu.cpp System/GameStates/ShopMenu.h
         Entities/Player/Items.h
         Entities/Player/Inventory.cpp Entities/Player/Inventory.h
-        System/Events/Souls/Souls.cpp System/Events/Souls/Souls.h)
+        System/Events/Souls/Souls.cpp System/Events/Souls/Souls.h
+        System/Game/Render/IRenderGame.h
+        System/Logger/Messages/IMesage.h
+        System/Logger/Messages/WinMessage.cpp System/Logger/Messages/WinMessage.h
+        System/Logger/Messages/LoseMessage.cpp System/Logger/Messages/LoseMessage.h
+        System/Logger/Messages/NewGameMessage.cpp System/Logger/Messages/NewGameMessage.h
+        System/Logger/Log/Log.cpp System/Logger/Log/Log.h
+        System/Logger/Messages/MoveMessage.cpp System/Logger/Messages/MoveMessage.h
+        System/Logger/Log/ILogger.h
+        System/Logger/Messages/NoMoveMessage.cpp System/Logger/Messages/NoMoveMessage.h
+        System/Logger/Log/LogFile.cpp System/Logger/Log/LogFile.h
+        System/Logger/Log/LogType.h System/Logger/Logger.cpp System/Logger/Logger.h System/Logger/printLog.cpp System/Logger/printLog.h)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)

@@ -2,6 +2,10 @@
 #define LAB1_SETTINGSMENU_H
 
 #include "IWindow.h"
+#include "../Logger/Log/ILogger.h"
+#include "../Logger/Log/LogFile.h"
+#include "../Logger/Log/Log.h"
+#include "../Logger/Log/LogType.h"
 
 class SettingsMenu : public IWindow {
 public:
@@ -13,10 +17,12 @@ public:
     void setChoice(int newChoice) override;
 
     static void changeMapSize(int& x, int& y);
+    LogType changeLoggerStream();
 
 
 private:
-    std::string settings_choices[2];
+    std::string settings_choices[3];
+    LogType Ltype;
 };
 
 
