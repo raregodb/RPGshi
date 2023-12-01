@@ -5,15 +5,12 @@
 
 class LoseMessage : public IMessage{
 public:
-    explicit LoseMessage(Navigation& nav, Player& player);
+    explicit LoseMessage(Navigation& nav);
 
     std::string getMessage() override;
 
-    Navigation& getNavigation();
-    Position getDeathCell();
 private:
     Navigation& navigation;
-    Player& player;
     Position DeathCell;
 };
 

@@ -9,8 +9,6 @@ public:
 
     std::string getMessage() override;
 
-    Map& getMap();
-    Position getStartCell();
 private:
     Map& map;
     Position StartCell;

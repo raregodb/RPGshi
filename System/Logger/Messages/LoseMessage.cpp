@@ -1,15 +1,7 @@
 #include "LoseMessage.h"
 
-LoseMessage::LoseMessage(Navigation &nav, Player& pPlayer) : navigation(nav), player(pPlayer){
+LoseMessage::LoseMessage(Navigation &nav) : navigation(nav){
     this->DeathCell = navigation.getChPos();
-}
-
-Navigation &LoseMessage::getNavigation() {
-    return navigation;
-}
-
-Position LoseMessage::getDeathCell() {
-    return DeathCell;
 }
 
 std::string LoseMessage::getMessage() {

@@ -9,14 +9,6 @@ public:
 
     std::string getMessage() override;
 
-
-    int getHealth();
-    int getExperience();
-    int getDamage();
-    int getArmor();
-    int getSouls();
-    int getLevel();
-
 private:
     Player& player;
 };

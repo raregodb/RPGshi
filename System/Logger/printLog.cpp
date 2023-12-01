@@ -1,8 +1,8 @@
 
 #include "printLog.h"
 
-printLog::printLog(LogType lt, IMessage& message, bool& firstrun) : message(message), consoleLogger(Logger(&logConsole)),
-                                                    fileLogger(Logger(&logFile)), firstRun(firstrun){
+printLog::printLog(LogType lt, IMessage& message, bool& firstrun) : message(message),
+consoleLogger(Logger(&logConsole)), fileLogger(Logger(&logFile)), firstRun(firstrun){
     this->logType = lt;
 }
 

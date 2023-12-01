@@ -26,7 +26,7 @@ Game::Game() {
     while (!exitFlag) {
 
         WinMessage Wmessage(pPlayer);
-        LoseMessage LMessage(nav, pPlayer);
+        LoseMessage LMessage(nav);
         NewGameMessage newGameMessage(map);
 
         switch (GS) {
