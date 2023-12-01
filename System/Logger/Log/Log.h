@@ -8,7 +8,7 @@ public:
     //explicit Log(std::ostream& stream);
     Log();
 
-    void log(IMessage&, bool& firstrun) override;
+    void log(IMessage&) override;
 
 private:
     std::ostream& output;

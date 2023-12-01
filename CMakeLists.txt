@@ -45,7 +45,7 @@ add_executable(lab1 main.cpp
         System/Logger/Log/ILogger.h
         System/Logger/Messages/NoMoveMessage.cpp System/Logger/Messages/NoMoveMessage.h
         System/Logger/Log/LogFile.cpp System/Logger/Log/LogFile.h
-        System/Logger/Log/LogType.h System/Logger/Logger.cpp System/Logger/Logger.h System/Logger/printLog.cpp System/Logger/printLog.h)
+        System/Logger/Log/LogType.h System/Logger/Logger.cpp System/Logger/Logger.h System/Logger/printLog.cpp System/Logger/printLog.h System/Logger/Messages/ExitMessage.cpp System/Logger/Messages/ExitMessage.h System/GameStates/LogMenu.cpp System/GameStates/LogMenu.h)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)

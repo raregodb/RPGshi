@@ -5,5 +5,5 @@ NoMoveMessage::NoMoveMessage(char Kkey) {
 }
 
 std::string NoMoveMessage::getMessage() {
-    return "Была нажата клавиша с ASCII кодом " + std::to_string(key) + ", но такой команды нет. ";
+    return "Недопустимый ввод клавиши (ASCII) " + std::to_string(key);
 }

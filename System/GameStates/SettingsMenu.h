@@ -6,6 +6,7 @@
 #include "../Logger/Log/LogFile.h"
 #include "../Logger/Log/Log.h"
 #include "../Logger/Log/LogType.h"
+#include "LogMenu.h"
 
 class SettingsMenu : public IWindow {
 public:

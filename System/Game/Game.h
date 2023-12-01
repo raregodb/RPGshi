@@ -27,8 +27,8 @@ public:
     Game();
 
     void new_game(Player& player, Map& map, Navigation& navigation) const;
-    static void interlayer(input_commands& input, Navigation& nav, Map& map, GameState& GS,
-                           std::map<int, std::string> keyList, char inputKey, LogType& LT, bool& first_run);
+    static void interlayer(input_commands& input, Navigation& nav, GameState& GS,
+                           std::map<int, std::string> keyList, char inputKey, LogType& LT);
 
     static void menu_logic(MainMenu& Menu, GameState& GS);
     static void gameOver_logic(GameOver& GameOver, GameState& GS);
@@ -42,7 +42,6 @@ private:
     bool exitFlag;
     LogType LogT;
     bool isFog;
-    bool firstRun;
 };
 
 

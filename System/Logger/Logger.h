@@ -9,7 +9,7 @@ class Logger {
 public:
     explicit Logger(ILogger* observer);
 
-    void send(IMessage& message, bool& firstrun);
+    void send(IMessage& message);
 
 private:
     ILogger* observer;

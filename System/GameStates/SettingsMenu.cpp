@@ -4,7 +4,7 @@ SettingsMenu::SettingsMenu() {
     this->Ltype = NoLog;
     n_choices = 3;
     this->WIDTH = 22;
-    this->HEIGHT = 7;
+    this->HEIGHT = 9;
     startx = (80 - WIDTH) / 2;
     starty = (24 - HEIGHT) / 2;
     this->choice = 0;
@@ -125,22 +125,58 @@ void SettingsMenu::changeMapSize(int &x, int &y) {
     y = ptr_y;
 }
 
+//LogType SettingsMenu::changeLoggerStream() {
+//    //endwin();
+//    system("clear");
+//
+//    char input;
+//
+//    printw("\n\n\n\n\n\t Введите желаемый вывод логгера(номер желаемого потока). "
+//           "\n\t\t\t 1) Никуда"
+//           "\n\t\t\t 2) В файл"
+//           "\n\t\t\t 3) В консоль"
+//           "\n\t\t\t 4) В файл и консоль\n");
+////    std::cout<<"\n\n\n\n\n\t Введите желаемый вывод логгера(номер желаемого потока). "
+////               "\n\t\t\t 1) Никуда"
+////               "\n\t\t\t 2) В файл"
+////               "\n\t\t\t 3) В консоль"
+////               "\n\t\t\t 4) В файл и консоль\n";
+//
+//    bool flag = true;
+//    while (flag) {
+//        input = getch();
+//        switch (input) {
+//            case '1':
+//                Ltype = NoLog;
+//                flag = false;
+//                break;
+//            case '2':
+//                Ltype = FileLog;
+//                flag = false;
+//                break;
+//            case '3':
+//                Ltype = ConsoleLog;
+//                flag = false;
+//                break;
+//            case '4':
+//                Ltype = BothLog;
+//                flag = false;
+//                break;
+//            default:
+//                Ltype = NoLog;
+//                break;
+//        }
+//    }
+//    return Ltype;
+//}
+
+
 LogType SettingsMenu::changeLoggerStream() {
-    endwin();
-    system("clear");
-
-    int input;
-
-    std::cout<<"\n\n\n\n\n\t\t\t Введите желаемый вывод логгера(номер желаемого потока). "
-               "\n\t\t\t 1) Никуда"
-               "\n\t\t\t 2) В файл"
-               "\n\t\t\t 3) В консоль"
-               "\n\t\t\t 4) В файл и консоль\n";
-
+    LogMenu logMenu;
     bool flag = true;
     while (flag) {
-        std::cin >> input;
-        switch (input) {
+        logMenu.open();
+        switch (logMenu.getChoice()) {
             case 1:
                 Ltype = NoLog;
                 flag = false;
@@ -158,7 +194,6 @@ LogType SettingsMenu::changeLoggerStream() {
                 flag = false;
                 break;
             default:
-                Ltype = NoLog;
                 break;
         }
     }

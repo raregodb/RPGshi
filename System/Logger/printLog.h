@@ -11,10 +11,11 @@
 #include "Messages/NoMoveMessage.h"
 #include "Messages/WinMessage.h"
 #include "Messages/LoseMessage.h"
+#include "Messages/ExitMessage.h"
 
 class printLog {
 public:
-    printLog(LogType lt, IMessage& message, bool& firstRun);
+    printLog(LogType lt, IMessage& message);
 
     void log();
 
@@ -25,7 +26,6 @@ private:
     IMessage& message;
     Logger consoleLogger;
     Logger fileLogger;
-    bool& firstRun;
 
 };
 

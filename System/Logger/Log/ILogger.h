@@ -9,7 +9,7 @@
 
 class ILogger {
 public:
-    virtual void log(IMessage& message, bool& firstrun) = 0;
+    virtual void log(IMessage& message) = 0;
 };
 
 

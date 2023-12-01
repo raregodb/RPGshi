@@ -5,7 +5,6 @@ Game::Game() {
     mapSizeX = DEFAULTSIZEX;
     mapSizeY = DEFAULTSIZEY;
     isFog = DEFAULT_FOG;
-    firstRun = true;
     exitFlag = false;
 
 
@@ -28,6 +27,7 @@ Game::Game() {
         WinMessage Wmessage(pPlayer);
         LoseMessage LMessage(nav);
         NewGameMessage newGameMessage(map);
+        ExitMessage exitMessage;
 
         switch (GS) {
 
@@ -45,27 +45,28 @@ Game::Game() {
 
             case GAME_OVER:
                 gameOver_logic(gameOver, GS);
-                printLog(LogT, LMessage, firstRun).log();
+                printLog(LogT, LMessage).log();
 
                 break;
 
             case EXIT:
                 system("clear");
                 exitFlag = true;
+                printLog(LogT, exitMessage).log();
                 break;
 
             case NEXT_LEVEL:
                 map.cleanMap();
                 MapGenerator(map, nav); //генерация карты
                 Navigation::initialize(nav);
-                printLog(LogT, Wmessage, firstRun).log();
+                printLog(LogT, Wmessage).log();
 
                 GS = GAME;
                 break;
 
             case NEW_GAME:
                 new_game(pPlayer, map, nav);
-                printLog(LogT, newGameMessage, firstRun).log();
+                printLog(LogT, newGameMessage).log();
 
                 GS = GAME;
                 break;
@@ -100,7 +101,7 @@ Game::Game() {
                         char inputKey = char(basicInputReader.getInput());
                         endwin();
 
-                        interlayer(input, nav, map, GS, pair, inputKey, LogT, firstRun);
+                        interlayer(input, nav, GS, pair, inputKey, LogT);
 
                         RenderGame(nav, nav.getPlayer(), map, isFog).printGame();
                     }
@@ -118,12 +119,12 @@ void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {
     MapGenerator(oMap, oNavigation);
 }
 
-void Game::interlayer(input_commands& input, Navigation& nav, Map& map, GameState& GS,
-                      std::map<int, std::string> keyList, char inputKey, LogType& LogT, bool& firstRun) {
+void Game::interlayer(input_commands& input, Navigation& nav, GameState& GS,
+                      std::map<int, std::string> keyList, char inputKey, LogType& LogT) {
     if (input == Left || input == Up || input == Right || input == Down) {
         nav.move(input);
         MoveMessage moveMessage(inputKey , keyList.find(inputKey)->second);
-        printLog(LogT, moveMessage, firstRun).log();
+        printLog(LogT, moveMessage).log();
     }
     else {
         NoMoveMessage noMoveMessage(inputKey);
@@ -132,7 +133,7 @@ void Game::interlayer(input_commands& input, Navigation& nav, Map& map, GameStat
                 GS = PAUSE;
                 break;
             case Default:
-                printLog(LogT, noMoveMessage, firstRun).log();
+                printLog(LogT, noMoveMessage).log();
             default:
                 break;
         }
