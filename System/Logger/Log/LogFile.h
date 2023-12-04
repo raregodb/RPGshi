@@ -6,6 +6,8 @@
 #include "fstream"
 #include "string"
 
+#define DEFAULT_LOG_TIME true
+
 class LogFile : public ILogger{
 public:
     LogFile();
@@ -17,6 +19,7 @@ public:
 private:
     std::ofstream outputFile;
     bool firstRun;
+    bool TIME;
 };
 
 

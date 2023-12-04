@@ -6,7 +6,7 @@
 #include "curses.h"
 #include "I_InputReader.h"
 #include "../../Logger/Log/Log.h"
-#include "../../Logger/printLog.h"
+#include "../../Logger/Logger.h"
 
 class InputReader : public I_InputReader {
 public:

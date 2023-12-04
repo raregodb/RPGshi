@@ -7,6 +7,7 @@ static std::ostream &operator<<(std::ostream &os, IMessage& _date) {
 
 LogFile::LogFile(){
     this->firstRun = false;
+    this->TIME = DEFAULT_LOG_TIME;
     std::ifstream file("../System/config/logFile.txt");
     std::string line;
 
@@ -26,7 +27,8 @@ void LogFile::log(IMessage &message) {
 
     if (!firstRun) {
         outputFile.open("../System/config/logFile.txt", std::ios::app); // ../System/config/logFile.txt
-        outputFile << "UPD AT " << std::ctime(&end_time);
+        if (TIME)
+            outputFile << "UPD AT " << std::ctime(&end_time);
     }
     else {
         outputFile.open("../System/config/logFile.txt", std::ios::out); // ../System/config/logFile.txt

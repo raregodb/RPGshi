@@ -5,14 +5,12 @@
 
 class Log : public ILogger{
 public:
-    //explicit Log(std::ostream& stream);
     Log();
 
     void log(IMessage&) override;
 
 private:
     std::ostream& output;
-    //std::ofstream outputfile;
 };
 
 

@@ -1,18 +1,21 @@
-
 #ifndef LAB1_LOGGER_H
 #define LAB1_LOGGER_H
 
-#include "Log/ILogger.h"
-
+#include "Log/LogType.h"
+#include "Log/Log.h"
+#include "Log/LogFile.h"
 
 class Logger {
 public:
-    explicit Logger(ILogger* observer);
+    Logger(LogType lt, IMessage& message);
 
-    void send(IMessage& message);
+    void log();
 
 private:
-    ILogger* observer;
+    LogType logType;
+    Log logConsole;
+    LogFile logFile;
+    IMessage& message;
 };
 
 

@@ -5,7 +5,7 @@
 
 class NewGameMessage : public IMessage{
 public:
-    explicit NewGameMessage(Map& nav);
+    explicit NewGameMessage(Map&);
 
     std::string getMessage() override;
 

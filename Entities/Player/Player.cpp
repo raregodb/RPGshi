@@ -10,6 +10,8 @@ damage(damage), score(score), lvl(level) {
     this->isDead = DEFAULT_IS_DEAD;
     this->isFinished = DEFAULT_IS_FINISHED;
     this->FOV = DEFAULT_FOV;
+    this->souls = DEFAULT_SOULS;
+    this->armor = DEFAULT_ARMOR;
 }
 
 void Player::initialize(Player &player) {

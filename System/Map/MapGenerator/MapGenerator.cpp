@@ -3,6 +3,8 @@
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
     this->countTeleports = 0;
     this->countSouls = 0;
+    this->maxEnemeis = 1;
+    this->percentageEnemy = 67;
 
     this->maxSouls = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/8;
     this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/6;
@@ -80,12 +82,18 @@ void MapGenerator::RandomGeneration() {
                     map1.getCellByCords(position).setPassability(false);
                 }
                 else {
+
                     if ((random_n <= percentageTeleport) && (countTeleports < maxTeleports)) {
                         auto *teleport = new Teleport(nav, map1);
                         map1.getCellByCords(position).spawnEvent(teleport);
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
                         countTeleports++;
+                    }
+                    else if ((random_n <= percentageEnemy) && (countEnemies <= maxEnemeis)) {
+                        Enemy<WGNavigation> enemy(100, 1, true);
+                        enemy.setPosition(position);
+                        map1.getCellByCords(position).setPassability(true);
                     }
                     else if ((random_n <= percentageSouls) && (countSouls < maxSouls) &&
                     random_souls <= 8 && random_n > percentageTeleport && nav.getPlayer().getLevel() > 3) {
@@ -107,6 +115,7 @@ void MapGenerator::RandomGeneration() {
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
                     }
+
                     else
                         map1.getCellByCords(position).setPassability(true);
                 }
@@ -153,4 +162,9 @@ bool MapGenerator::isPath() {
             }
 
     return (arr[row - 1][col - 1] == 1);
+}
+
+void MapGenerator::spawnEnemies() {
+
+
 }

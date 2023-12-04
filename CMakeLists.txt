@@ -45,7 +45,12 @@ add_executable(lab1 main.cpp
         System/Logger/Log/ILogger.h
         System/Logger/Messages/NoMoveMessage.cpp System/Logger/Messages/NoMoveMessage.h
         System/Logger/Log/LogFile.cpp System/Logger/Log/LogFile.h
-        System/Logger/Log/LogType.h System/Logger/Logger.cpp System/Logger/Logger.h System/Logger/printLog.cpp System/Logger/printLog.h System/Logger/Messages/ExitMessage.cpp System/Logger/Messages/ExitMessage.h System/GameStates/LogMenu.cpp System/GameStates/LogMenu.h)
+        System/Logger/Log/LogType.h
+        System/Logger/Logger.cpp System/Logger/Logger.h
+        System/Logger/Messages/ExitMessage.cpp System/Logger/Messages/ExitMessage.h
+        System/GameStates/LogMenu.cpp System/GameStates/LogMenu.h
+        Entities/Enemy/Enemy.cpp Entities/Enemy/Enemy.h
+        Entities/Enemy/IEnemyInteract.h Entities/Enemy/SoulHunter/SHNavigation.cpp Entities/Enemy/SoulHunter/SHNavigation.h Entities/Enemy/WanderingGhost/WGNavigation.cpp Entities/Enemy/WanderingGhost/WGNavigation.h)
 
 set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)

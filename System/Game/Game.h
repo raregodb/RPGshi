@@ -18,7 +18,7 @@
 #include "../Logger/Log/Log.h"
 #include "../Logger/Log/LogFile.h"
 #include "../Logger/Logger.h"
-#include "../Logger/printLog.h"
+//#include "../../Entities/Enemy/Enemy.h"
 
 
 
@@ -42,6 +42,9 @@ private:
     bool exitFlag;
     LogType LogT;
     bool isFog;
+
+
+
 };
 
 

@@ -5,6 +5,7 @@
 #include "../Map/Map.h"
 #include "Position.h"
 #include "../config/Input_Commands_Dir.h"
+#include "../../Entities/Enemy/Enemy.h"
 
 class Player;
 

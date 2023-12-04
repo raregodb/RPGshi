@@ -13,8 +13,3 @@ std::string WinMessage::getMessage() {
     + " Души: " + std::to_string(player.getSouls());
 
 }
-
-
-
-
-

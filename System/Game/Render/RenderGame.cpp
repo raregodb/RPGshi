@@ -8,7 +8,7 @@ RenderGame::RenderGame(Navigation& nNavigation, Player& pPlayer, Map& mMap, bool
     this->lvl = player.getLevel();
     this->souls = player.getSouls();
     this->armor = player.getArmor();
-    if (isFog == true && player.getLevel() >= 2)
+    if (isFog == true && player.getLevel() >= 5)
         isFog = true;
     else
         isFog = false;

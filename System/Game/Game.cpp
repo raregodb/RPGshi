@@ -12,6 +12,7 @@ Game::Game() {
     Map map(mapSizeX, mapSizeY); //создание карты
     Navigation nav(pPlayer, map); //создание навигации
 
+    //Enemy<WGNavigation> WanderingGhost(100, 1, true);
 
     LogT = NoLog;
 
@@ -45,28 +46,28 @@ Game::Game() {
 
             case GAME_OVER:
                 gameOver_logic(gameOver, GS);
-                printLog(LogT, LMessage).log();
+                Logger(LogT, LMessage).log();
 
                 break;
 
             case EXIT:
                 system("clear");
                 exitFlag = true;
-                printLog(LogT, exitMessage).log();
+                Logger(LogT, exitMessage).log();
                 break;
 
             case NEXT_LEVEL:
                 map.cleanMap();
                 MapGenerator(map, nav); //генерация карты
                 Navigation::initialize(nav);
-                printLog(LogT, Wmessage).log();
+                Logger(LogT, Wmessage).log();
 
                 GS = GAME;
                 break;
 
             case NEW_GAME:
                 new_game(pPlayer, map, nav);
-                printLog(LogT, newGameMessage).log();
+                Logger(LogT, newGameMessage).log();
 
                 GS = GAME;
                 break;
@@ -103,6 +104,8 @@ Game::Game() {
 
                         interlayer(input, nav, GS, pair, inputKey, LogT);
 
+                        //WanderingGhost.move();
+
                         RenderGame(nav, nav.getPlayer(), map, isFog).printGame();
                     }
                 }
@@ -124,7 +127,7 @@ void Game::interlayer(input_commands& input, Navigation& nav, GameState& GS,
     if (input == Left || input == Up || input == Right || input == Down) {
         nav.move(input);
         MoveMessage moveMessage(inputKey , keyList.find(inputKey)->second);
-        printLog(LogT, moveMessage).log();
+        Logger(LogT, moveMessage).log();
     }
     else {
         NoMoveMessage noMoveMessage(inputKey);
@@ -133,7 +136,7 @@ void Game::interlayer(input_commands& input, Navigation& nav, GameState& GS,
                 GS = PAUSE;
                 break;
             case Default:
-                printLog(LogT, noMoveMessage).log();
+                Logger(LogT, noMoveMessage).log();
             default:
                 break;
         }

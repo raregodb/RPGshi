@@ -6,6 +6,7 @@
 #include "../../../termcolor/termcolor.hpp"
 #include "../../Events/Event_Types.h"
 #include "../../Utility/Random.h"
+#include "../../../Entities/Enemy/Enemy.h"
 
 #define treset termcolor::reset
 #define red termcolor::color<196>

@@ -6,6 +6,7 @@
 #include "../Messages/WinMessage.h"
 #include "../Messages/MoveMessage.h"
 #include "../Messages/NoMoveMessage.h"
+#include "../Messages/ExitMessage.h"
 
 class ILogger {
 public:
