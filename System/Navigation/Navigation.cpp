@@ -14,6 +14,7 @@ void Navigation::initialize(Navigation& navigation) {
     navigation.chPos.y=navigation.map.getPlayerStart().y;
     navigation.deltaMove.x=0;
     navigation.deltaMove.y=0;
+    //navigation.destroyEnemies();
 }
 
 void Navigation::chMove(Position pos) {
@@ -77,7 +78,7 @@ void Navigation::move(input_commands dir = input_commands()) {
     }
 }
 
-Position Navigation::getChPos() {
+Position& Navigation::getChPos() {
     return chPos;
 }
 
@@ -102,4 +103,39 @@ Player& Navigation::getPlayer() {
 
 Map &Navigation::getMap() {
     return map;
+}
+
+std::vector<std::shared_ptr<Enemy<WGNavigation, WGInteraction>>>& Navigation::getWGEnemies() {
+    return WGenemies;
+}
+
+void Navigation::updateEnemy() {
+    for (auto & WGenemy : WGenemies) {
+        WGenemy->setPlayerKnownPos(chPos);
+    }
+    for (int i = 0; i < WGenemies.size(); ++i) {
+        if (WGenemies.at(i)->getIsDead()) {
+            auto it = WGenemies.cbegin() + i;
+            WGenemies.erase(it);
+        }
+    }
+    for (auto & SHenemy : SHenemies) {
+        SHenemy->setPlayerKnownPos(chPos);
+    }
+    for (int i = 0; i < SHenemies.size(); ++i) {
+        if (SHenemies.at(i)->getIsDead()) {
+            auto it = SHenemies.cbegin() + i;
+            SHenemies.erase(it);
+        }
+    }
+}
+
+
+void Navigation::destroyEnemies() {
+    WGenemies.clear();
+    SHenemies.clear();
+}
+
+std::vector<std::shared_ptr<Enemy<SHNavigation, SHInteraction>>> &Navigation::getSHEnemies() {
+    return SHenemies;
 }

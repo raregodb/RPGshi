@@ -137,7 +137,6 @@ void Map::cleanMap() {
     for (int x = 0; x < sizeX; x++) {
         for (int y = 0; y < sizeY; y++) {
             if (map[x][y].checkForEvent()) {
-                //delete map[x][y].getEvent();
                 map[x][y].setHavingEvent(false);
                 map[x][y].setPassability(true);
             }

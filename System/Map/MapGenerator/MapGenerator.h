@@ -22,15 +22,18 @@ public:
     void RandomGeneration();
     bool isPath();
     void spawnEnemies();
+    bool isSurroundedByWalls(Position);
+
 
 private:
     Map &map1;
     Navigation &nav;
 
 
-    int maxEnemeis;
+    int maxEnemies;
     int countEnemies;
-    int percentageEnemy;
+    int percentageWGEnemy;
+    int percentageSHEnemy;
     int maxTeleports;
     int maxSouls;
     int countTeleports;

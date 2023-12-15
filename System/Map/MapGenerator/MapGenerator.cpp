@@ -3,8 +3,11 @@
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
     this->countTeleports = 0;
     this->countSouls = 0;
-    this->maxEnemeis = 1;
-    this->percentageEnemy = 67;
+    this->countEnemies = 0;
+    this->maxEnemies = 2;
+
+    this->percentageWGEnemy = 1;
+    this->percentageSHEnemy = 5;
 
     this->maxSouls = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/8;
     this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/6;
@@ -22,10 +25,14 @@ MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(na
 
     GenerateWalls();
     map1.cleanMap();
+    navigation.destroyEnemies();
     RandomGeneration();
+    spawnEnemies();
     while (!isPath()) {
         map1.cleanMap();
+        navigation.destroyEnemies();
         RandomGeneration();
+        spawnEnemies();
     }
 
 }
@@ -82,18 +89,12 @@ void MapGenerator::RandomGeneration() {
                     map1.getCellByCords(position).setPassability(false);
                 }
                 else {
-
                     if ((random_n <= percentageTeleport) && (countTeleports < maxTeleports)) {
                         auto *teleport = new Teleport(nav, map1);
                         map1.getCellByCords(position).spawnEvent(teleport);
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
                         countTeleports++;
-                    }
-                    else if ((random_n <= percentageEnemy) && (countEnemies <= maxEnemeis)) {
-                        Enemy<WGNavigation> enemy(100, 1, true);
-                        enemy.setPosition(position);
-                        map1.getCellByCords(position).setPassability(true);
                     }
                     else if ((random_n <= percentageSouls) && (countSouls < maxSouls) &&
                     random_souls <= 8 && random_n > percentageTeleport && nav.getPlayer().getLevel() > 3) {
@@ -115,7 +116,6 @@ void MapGenerator::RandomGeneration() {
                         map1.getCellByCords(position).setHavingEvent(true);
                         map1.getCellByCords(position).setPassability(true);
                     }
-
                     else
                         map1.getCellByCords(position).setPassability(true);
                 }
@@ -165,6 +165,67 @@ bool MapGenerator::isPath() {
 }
 
 void MapGenerator::spawnEnemies() {
+    countEnemies = 0;
+    for (int x = 1; x < map1.getMapSizeByX()-1; x++) {
+        for (int y = 1; y < map1.getMapSizeByY()-1; y++) {
+            Position position;
+            position.x = x;
+            position.y = y;
+            int random_n = Random::getRandomGen(1, 100);
+            if (map1.getCellByCords(position).getPassability() &&
+            map1.getPlayerStart() != position &&
+                    !isSurroundedByWalls(position)) {
+                if ((random_n <= percentageWGEnemy) && (countEnemies < maxEnemies)) {
 
-
+                    nav.getWGEnemies().push_back(std::make_shared<Enemy < WGNavigation, WGInteraction>>(
+                            1,
+                            1,
+                            true,
+                            WANDERING_GHOST,
+                            position,
+                            map1,
+                            nav.getPlayer(),
+                            nav.getChPos()));
+                    countEnemies++;
+                }
+                else if ((random_n <= percentageSHEnemy) && (countEnemies < maxEnemies)) {
+                    nav.getSHEnemies().push_back(std::make_shared<Enemy<SHNavigation, SHInteraction>>(
+                            10,
+                            10,
+                            true,
+                            SOUL_HUNTER,
+                            position,
+                            map1,
+                            nav.getPlayer(),
+                            nav.getChPos()));
+                    countEnemies++;
+                }
+            }
+        }
+    }
 }
+
+bool MapGenerator::isSurroundedByWalls(Position position) {
+    Position tryPosition = position;
+    int countUnaccessableDirections = 0;
+    tryPosition.x++;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    tryPosition = position;
+    tryPosition.y++;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    tryPosition = position;
+    tryPosition.y--;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    tryPosition = position;
+    tryPosition.x--;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    if (countUnaccessableDirections == 4)
+        return true;
+    return false;
+}
+
+

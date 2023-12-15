@@ -2,12 +2,12 @@
 #define LAB1_PLAYER_H
 
 #include <string>
-#include "../../System/Navigation/Navigation.h"
+//#include "../../System/Navigation/Navigation.h"
 #include "Inventory.h"
 
 #define DEFAULT_MAX_HEALTH 100
 #define DEFAULT_HEALTH 100
-#define DEFAULT_DAMAGE 1
+#define DEFAULT_DAMAGE 1000
 #define DEFAULT_SCORE 0
 #define DEFAULT_CAN_BE_DAMAGED 1
 #define DEFAULT_IS_DEAD 0

@@ -12,8 +12,6 @@ Game::Game() {
     Map map(mapSizeX, mapSizeY); //создание карты
     Navigation nav(pPlayer, map); //создание навигации
 
-    //Enemy<WGNavigation> WanderingGhost(100, 1, true);
-
     LogT = NoLog;
 
     MainMenu Menu;
@@ -104,9 +102,21 @@ Game::Game() {
 
                         interlayer(input, nav, GS, pair, inputKey, LogT);
 
-                        //WanderingGhost.move();
 
+                        for (int i = 0; i < nav.getWGEnemies().size(); ++i) {
+                            nav.getWGEnemies().at(i)->move();
+                            if (nav.getWGEnemies().at(i)->getPos() == nav.getChPos())
+                                nav.getWGEnemies().at(i)->interact();
+                        }
+                        for (int i = 0; i < nav.getSHEnemies().size(); ++i) {
+                            nav.getSHEnemies().at(i)->move();
+                            if (nav.getSHEnemies().at(i)->getPos() == nav.getChPos())
+                                nav.getSHEnemies().at(i)->interact();
+                        }
+                        nav.updateEnemy();
                         RenderGame(nav, nav.getPlayer(), map, isFog).printGame();
+
+
                     }
                 }
                 break;
@@ -116,7 +126,7 @@ Game::Game() {
 
 void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {
     Player::initialize(oPlayer); //создание нового игрока
-    oMap.cleanMap();
+    //oMap.cleanMap();
     oMap = Map(mapSizeX, mapSizeY);
     Navigation::initialize(oNavigation);
     MapGenerator(oMap, oNavigation);
@@ -184,8 +194,8 @@ void Game::pause_logic(PauseMenu &Pause, GameState &GS, Navigation &nav, Map& ma
                 GS = NEW_GAME;
                 break;
             case 2:
+                Navigation::initialize(nav);
                 MapGenerator(map, nav);
-                nav.setChPos(map.getPlayerStart());
                 GS = GAME;
                 break;
             case 3:

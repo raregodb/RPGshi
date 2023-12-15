@@ -1,0 +1,9 @@
+#ifndef LAB1_ENEMYTYPE_H
+#define LAB1_ENEMYTYPE_H
+
+enum EnemyType {
+    WANDERING_GHOST,
+    SOUL_HUNTER
+};
+
+#endif //LAB1_ENEMYTYPE_H

@@ -2,12 +2,17 @@
 #define LAB1_WGNAVIGATION_H
 
 #include "../../../System/Utility/Random.h"
-#include "../../../System/Navigation/Position.h"
+#include "../../../System/Map/Map.h"
+#include "../Enemy.h"
 #include "iostream"
 
-class WGNavigation {
+template <class T1, class T2>
+class Enemy;
+
+class WGNavigation{
 public:
-    static void navigate(Position&);
+    static void navigate(Position&, Position& playerPosition, Map&);
+
 };
 
 

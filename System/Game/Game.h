@@ -19,6 +19,7 @@
 #include "../Logger/Log/LogFile.h"
 #include "../Logger/Logger.h"
 //#include "../../Entities/Enemy/Enemy.h"
+#include "../Utility/A*/Pathfinder.h"
 
 
 

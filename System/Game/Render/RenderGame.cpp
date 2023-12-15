@@ -40,13 +40,44 @@ void RenderGame::printMap() {
             distanceBetweenPandCell.x = abs(pos.x - navigation.getChPos().x);
             distanceBetweenPandCell.y = abs(pos.y - navigation.getChPos().y);
 
+            bool enemyIsHere = false;
+            for (int i = 0; i < navigation.getWGEnemies().size(); ++i) {
+                if (navigation.getChPos() == navigation.getWGEnemies().at(i)->getPos()
+                && navigation.getWGEnemies().at(i)->getPos() == pos) {
+                    std::cout << termcolor::bold << on_grey << red << "F " << treset;
+                    enemyIsHere = true;
+                    break;
+                }
+                else if (navigation.getWGEnemies().at(i)->getPos() == pos){
+                    std::cout << termcolor::bold << on_grey << red << "ඩ " << treset;
+                    enemyIsHere = true;
+                    break;
+                }
+            }
 
-            if (navigation.getChPos() == pos && !some_cell->getPassability()) {
+            for (int i = 0; i < navigation.getSHEnemies().size(); ++i) {
+                if (navigation.getChPos() == navigation.getSHEnemies().at(i)->getPos()
+                && navigation.getSHEnemies().at(i)->getPos()==pos) {
+                    std::cout << termcolor::bold << on_grey << red << "F " << treset;
+                    enemyIsHere = true;
+                    break;
+                }
+                else if (navigation.getSHEnemies().at(i)->getPos() == pos){
+                    std::cout << termcolor::bold << on_grey << red << "ƛ " << treset;
+                    enemyIsHere = true;
+                    break;
+                }
+            }
+
+
+
+            if (navigation.getChPos() == pos && !some_cell->getPassability() && !enemyIsHere) {
                 std::cout << termcolor::bold << termcolor::on_color<240> << green << "P " << treset; //P 👤
             }
-            else if (navigation.getChPos() == pos) {
+            else if (navigation.getChPos() == pos && !enemyIsHere) {
                 std::cout << termcolor::bold << on_grey << green << "P " << treset; //P 👤
             }
+
             else if(isFog && (distanceBetweenPandCell.x >= navigation.getPlayer().getFOV() || distanceBetweenPandCell.y >= navigation.getPlayer().getFOV())) {
                 int random_n = Random::getRandomGen(1, 10);
 
@@ -57,7 +88,7 @@ void RenderGame::printMap() {
                 else
                     std::cout << termcolor::bold << termcolor::on_color<237> << termcolor::color<245> <<"  " << treset;
             }
-            else if (map.getCellByCords(pos).getPassability()) {
+            else if (map.getCellByCords(pos).getPassability() && !enemyIsHere) {
 
                 if(map.getCellByCords(pos).checkForEvent() ) {
                     Event_Type TYPE = map.getCellByCords(pos).getEvent()->getType();
