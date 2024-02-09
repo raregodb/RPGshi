@@ -14,20 +14,21 @@ void Shop::someEvent() {
         ShopMenu.open();
         switch (ShopMenu.getChoice()) {
             case 1:
-                if (player.canAfford(TORCH_PRICE) && !player.getInventory()->find(TORCH)) {
+                if (player.canAfford(TORCH_PRICE) && !(player.getInventory()->find(TORCH))) {
                     player.takeSouls(TORCH_PRICE);
                     player.getInventory()->addItem(TORCH);
                     player.setFOV(5);
                 }
-                else if (player.canAfford(TORCH_UPGRADE_PRICE))
+                else if (player.canAfford(TORCH_UPGRADE_PRICE) && (player.getInventory()->find(TORCH))) {
                     player.takeSouls(TORCH_UPGRADE_PRICE);
                     player.setFOV(player.getFOV() + 1);
+                }
                 break;
             case 2:
                 if (player.canAfford(EQUIPMENT_UPGRADE_PRICE)) {
                     player.takeSouls(EQUIPMENT_UPGRADE_PRICE);
-                    player.addCharacterDamage(1);
-                    player.addArmor(1);
+                    player.addCharacterDamage(5);
+                    player.addArmor(5);
                 }
                 break;
             case 3:

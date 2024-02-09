@@ -8,7 +8,7 @@
 #define DEFAULTSIZEY 12
 #define STARTPOSITIONX 1
 #define STARTPOSITIONY 1
-#define MAXMAPSIZE 100
+#define MAXMAPSIZE 32
 #define MINMAPSIZE 5
 
 class Map {

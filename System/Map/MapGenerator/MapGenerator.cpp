@@ -3,9 +3,19 @@
 MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(navigation){
     this->countTeleports = 0;
     this->countSouls = 0;
+    this->countEnemies = 0;
 
+    this->percentageWGEnemy = 1;
+    this->percentageSHEnemy = 5;
+
+    if (nav.getPlayer().getLevel() >= 10)
+        this->maxEnemies = nav.getPlayer().getLevel()/10;
+
+    else
+        this->maxEnemies = 0;
     this->maxSouls = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/8;
     this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/6;
+
     this->percentageTeleport = 28;
     this->percentageSouls = 29;
     if (nav.getPlayer().getLevel() >= 20) {
@@ -20,10 +30,14 @@ MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(na
 
     GenerateWalls();
     map1.cleanMap();
+    navigation.destroyEnemies();
     RandomGeneration();
+    spawnEnemies();
     while (!isPath()) {
         map1.cleanMap();
+        navigation.destroyEnemies();
         RandomGeneration();
+        spawnEnemies();
     }
 
 }
@@ -154,3 +168,69 @@ bool MapGenerator::isPath() {
 
     return (arr[row - 1][col - 1] == 1);
 }
+
+void MapGenerator::spawnEnemies() {
+    countEnemies = 0;
+    for (int x = 1; x < map1.getMapSizeByX()-1; x++) {
+        for (int y = 1; y < map1.getMapSizeByY()-1; y++) {
+            Position position;
+            position.x = x;
+            position.y = y;
+            int random_n = Random::getRandomGen(1, 100);
+            if (map1.getCellByCords(position).getPassability() &&
+            map1.getPlayerStart() != position &&
+                    !isSurroundedByWalls(position)) {
+                if ((random_n <= percentageWGEnemy) && (countEnemies < maxEnemies)) {
+
+                    nav.getWGEnemies().push_back(std::make_shared<Enemy < WGNavigation, WGInteraction>>(
+                            100,
+                            1,
+                            true,
+                            WANDERING_GHOST,
+                            position,
+                            map1,
+                            nav.getPlayer(),
+                            nav.getChPos()));
+                    countEnemies++;
+                }
+                else if ((random_n <= percentageSHEnemy) && (countEnemies < maxEnemies)) {
+                    nav.getSHEnemies().push_back(std::make_shared<Enemy<SHNavigation, SHInteraction>>(
+                            50,
+                            100,
+                            true,
+                            SOUL_HUNTER,
+                            position,
+                            map1,
+                            nav.getPlayer(),
+                            nav.getChPos()));
+                    countEnemies++;
+                }
+            }
+        }
+    }
+}
+
+bool MapGenerator::isSurroundedByWalls(Position position) {
+    Position tryPosition = position;
+    int countUnaccessableDirections = 0;
+    tryPosition.x++;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    tryPosition = position;
+    tryPosition.y++;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    tryPosition = position;
+    tryPosition.y--;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    tryPosition = position;
+    tryPosition.x--;
+    if (!map1.getCellByCords(tryPosition).getPassability())
+        countUnaccessableDirections++;
+    if (countUnaccessableDirections == 4)
+        return true;
+    return false;
+}
+
+

@@ -10,6 +10,8 @@ damage(damage), score(score), lvl(level) {
     this->isDead = DEFAULT_IS_DEAD;
     this->isFinished = DEFAULT_IS_FINISHED;
     this->FOV = DEFAULT_FOV;
+    this->souls = DEFAULT_SOULS;
+    this->armor = DEFAULT_ARMOR;
 }
 
 void Player::initialize(Player &player) {
@@ -60,12 +62,23 @@ void Player::addCharacterDamage(int addDamage) {
 }
 
 void Player::takeDamage(int Damage) {
-    if ((health - Damage) <= 0) {
-        health = 0;
-        isDead = true;
+    if ((Damage - getArmor() <= 0)) {
+        if (health - Damage <= 0) {
+            health = 0;
+            isDead = true;
+        }
+        else
+            health -= Damage;
     }
-    else
-        health -= Damage;
+    else {
+        if ((health - (Damage - getArmor())) <= 0) {
+            health = 0;
+            isDead = true;
+        }
+        else
+            health -= (Damage - getArmor());
+    }
+
 }
 
 
@@ -146,7 +159,7 @@ int Player::getSouls() const {
 
 void Player::setSouls(int newSouls) {
     if (newSouls < 0 || newSouls-souls<0)
-        std::cout<<"badHealth"<<std::endl; //Здесь выкидывать ошибку далее
+        souls = 0;
     else
         souls = newSouls;
 }

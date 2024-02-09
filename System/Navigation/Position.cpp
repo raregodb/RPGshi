@@ -21,3 +21,27 @@ bool Position::operator!=(const Position &p) const {
     else
         return false;
 }
+
+bool Position::operator>(const Position &p) const {
+    if (this->x > p.x && this->y > p.y)
+        return true;
+    return false;
+}
+
+bool Position::operator>=(const Position &p) const {
+    if (this->x >= p.x && this->y >= p.y)
+        return true;
+    return false;
+}
+
+bool Position::operator<(const Position &p) const {
+    if (this->x < p.x && this->y < p.y)
+        return true;
+    return false;
+}
+
+bool Position::operator<=(const Position &p) const {
+    if (this->x <= p.x && this->y <= p.y)
+        return true;
+    return false;
+}

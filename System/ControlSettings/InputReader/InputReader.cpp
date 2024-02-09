@@ -1,8 +1,7 @@
 #include "InputReader.h"
 
 input_commands InputReader::read(std::map<int, std::string>* KeyConfig) {
-    int input;
-    input = getch();
+    this->input = getch();
     if (!KeyConfig->find(input)->second.empty()) {
         if (KeyConfig->find(input)->second == "move_forward")
             return Up;
@@ -15,6 +14,9 @@ input_commands InputReader::read(std::map<int, std::string>* KeyConfig) {
         if (KeyConfig->find(input)->second == "menu")
             return Escape;
     }
-
     return Default; // Если команда не найдена
+}
+
+int InputReader::getInput() {
+    return input;
 }

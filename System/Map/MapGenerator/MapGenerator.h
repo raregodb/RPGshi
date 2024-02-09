@@ -9,6 +9,9 @@
 #include "../../Events/Souls/Souls.h"
 #include "iostream"
 #include "../../Utility/Random.h"
+#include "vector"
+#include "../../../Entities/Enemy/Enemy.h"
+
 
 
 class MapGenerator {
@@ -18,11 +21,19 @@ public:
     void GenerateWalls();
     void RandomGeneration();
     bool isPath();
+    void spawnEnemies();
+    bool isSurroundedByWalls(Position);
+
 
 private:
     Map &map1;
     Navigation &nav;
 
+
+    int maxEnemies;
+    int countEnemies;
+    int percentageWGEnemy;
+    int percentageSHEnemy;
     int maxTeleports;
     int maxSouls;
     int countTeleports;
@@ -32,6 +43,7 @@ private:
     int percentageSpike;
     int percentageTeleport;
     int percentageSouls;
+
 };
 
 
