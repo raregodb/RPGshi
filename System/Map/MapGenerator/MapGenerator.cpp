@@ -4,13 +4,18 @@ MapGenerator::MapGenerator(Map &map, Navigation &navigation) : map1(map), nav(na
     this->countTeleports = 0;
     this->countSouls = 0;
     this->countEnemies = 0;
-    this->maxEnemies = 2;
 
     this->percentageWGEnemy = 1;
     this->percentageSHEnemy = 5;
 
+    if (nav.getPlayer().getLevel() >= 10)
+        this->maxEnemies = nav.getPlayer().getLevel()/10;
+
+    else
+        this->maxEnemies = 0;
     this->maxSouls = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/8;
     this->maxTeleports = (sqrt(map1.getMapSizeByX() * map1.getMapSizeByY()))/6;
+
     this->percentageTeleport = 28;
     this->percentageSouls = 29;
     if (nav.getPlayer().getLevel() >= 20) {
@@ -178,7 +183,7 @@ void MapGenerator::spawnEnemies() {
                 if ((random_n <= percentageWGEnemy) && (countEnemies < maxEnemies)) {
 
                     nav.getWGEnemies().push_back(std::make_shared<Enemy < WGNavigation, WGInteraction>>(
-                            1,
+                            100,
                             1,
                             true,
                             WANDERING_GHOST,
@@ -190,8 +195,8 @@ void MapGenerator::spawnEnemies() {
                 }
                 else if ((random_n <= percentageSHEnemy) && (countEnemies < maxEnemies)) {
                     nav.getSHEnemies().push_back(std::make_shared<Enemy<SHNavigation, SHInteraction>>(
-                            10,
-                            10,
+                            50,
+                            100,
                             true,
                             SOUL_HUNTER,
                             position,

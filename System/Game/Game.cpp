@@ -94,7 +94,7 @@ Game::Game() {
 
                         initscr(); //начало работы с curses.h
                         cbreak(); /* Line buffering disabled. pass on everything */
-                        noecho(); //отключить отображение вводимых символов
+                        //noecho(); //отключить отображение вводимых символов
                         input_commands input = basicInputReader.read(basicKeyConfig.getKeyList());
                         std::map<int, std::string> pair = *basicKeyConfig.getKeyList();
                         char inputKey = char(basicInputReader.getInput());
@@ -126,7 +126,6 @@ Game::Game() {
 
 void Game::new_game(Player &oPlayer, Map &oMap, Navigation &oNavigation) const {
     Player::initialize(oPlayer); //создание нового игрока
-    //oMap.cleanMap();
     oMap = Map(mapSizeX, mapSizeY);
     Navigation::initialize(oNavigation);
     MapGenerator(oMap, oNavigation);

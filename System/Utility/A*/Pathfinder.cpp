@@ -12,7 +12,9 @@ std::vector<Position> Pathfinder::findPath(Position start, Position goal) {
     Node* startNode = new Node{start, 0, heuristic(start, goal), nullptr};
     openSet.push(startNode);
 
-    while (!openSet.empty()) {
+    int maxIterations = map.getMapSizeByX() * map.getMapSizeByY();  // Максимальное количество итераций
+
+    while (!openSet.empty() && maxIterations > 0) {
         Node* current = openSet.top();
         openSet.pop();
 
@@ -33,7 +35,7 @@ std::vector<Position> Pathfinder::findPath(Position start, Position goal) {
                 continue;
             }
 
-            int tentativeG = current->g + 1; // В вашем случае, возможно, потребуется другая стоимость
+            int tentativeG = current->g + 1;
 
             Node* neighborNode = findNode(neighbor, openSet);
             if (neighborNode == nullptr || tentativeG < neighborNode->g) {
@@ -49,6 +51,8 @@ std::vector<Position> Pathfinder::findPath(Position start, Position goal) {
                 }
             }
         }
+
+        maxIterations--;  // Уменьшаем количество оставшихся итераций
     }
 
     // Очистка памяти
@@ -58,6 +62,7 @@ std::vector<Position> Pathfinder::findPath(Position start, Position goal) {
 
     return path;
 }
+
 
 std::vector<Position> Pathfinder::getNeighbors(const Position &pos) {
     // Получение соседей, например, соседи сверху, снизу, слева и справа

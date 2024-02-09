@@ -4,5 +4,6 @@ void SHInteraction::interact(Player &player, Position& playerPosition, Enemy<SHN
 
     player.takeDamage(enemy.getDamage());
     enemy.takeDamage(player.getCharacterDamage());
+    player.setSouls(player.getSouls() - 5);
 
 }

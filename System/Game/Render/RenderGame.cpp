@@ -36,19 +36,20 @@ void RenderGame::printMap() {
             pos.x = x;
             pos.y = y;
 
-            Position distanceBetweenPandCell;
             distanceBetweenPandCell.x = abs(pos.x - navigation.getChPos().x);
             distanceBetweenPandCell.y = abs(pos.y - navigation.getChPos().y);
 
             bool enemyIsHere = false;
             for (int i = 0; i < navigation.getWGEnemies().size(); ++i) {
                 if (navigation.getChPos() == navigation.getWGEnemies().at(i)->getPos()
-                && navigation.getWGEnemies().at(i)->getPos() == pos) {
+                && navigation.getWGEnemies().at(i)->getPos() == pos
+                && !isInFog()) {
                     std::cout << termcolor::bold << on_grey << red << "F " << treset;
                     enemyIsHere = true;
                     break;
                 }
-                else if (navigation.getWGEnemies().at(i)->getPos() == pos){
+                else if (navigation.getWGEnemies().at(i)->getPos() == pos
+                         && !isInFog()){
                     std::cout << termcolor::bold << on_grey << red << "ඩ " << treset;
                     enemyIsHere = true;
                     break;
@@ -57,12 +58,14 @@ void RenderGame::printMap() {
 
             for (int i = 0; i < navigation.getSHEnemies().size(); ++i) {
                 if (navigation.getChPos() == navigation.getSHEnemies().at(i)->getPos()
-                && navigation.getSHEnemies().at(i)->getPos()==pos) {
+                && navigation.getSHEnemies().at(i)->getPos()==pos
+                   && !isInFog()) {
                     std::cout << termcolor::bold << on_grey << red << "F " << treset;
                     enemyIsHere = true;
                     break;
                 }
-                else if (navigation.getSHEnemies().at(i)->getPos() == pos){
+                else if (navigation.getSHEnemies().at(i)->getPos() == pos
+                         && !isInFog()){
                     std::cout << termcolor::bold << on_grey << red << "ƛ " << treset;
                     enemyIsHere = true;
                     break;
@@ -78,7 +81,7 @@ void RenderGame::printMap() {
                 std::cout << termcolor::bold << on_grey << green << "P " << treset; //P 👤
             }
 
-            else if(isFog && (distanceBetweenPandCell.x >= navigation.getPlayer().getFOV() || distanceBetweenPandCell.y >= navigation.getPlayer().getFOV())) {
+            else if(isInFog()) {
                 int random_n = Random::getRandomGen(1, 10);
 
                 if (random_n <= 3)
@@ -185,4 +188,9 @@ void RenderGame::printWin() {
     printEvent(E_EXIT);
     printMap();
     endwin();
+}
+
+bool RenderGame::isInFog() {
+    return isFog && (distanceBetweenPandCell.x >= navigation.getPlayer().getFOV() ||
+    distanceBetweenPandCell.y >= navigation.getPlayer().getFOV());
 }

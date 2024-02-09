@@ -27,8 +27,8 @@ void Shop::someEvent() {
             case 2:
                 if (player.canAfford(EQUIPMENT_UPGRADE_PRICE)) {
                     player.takeSouls(EQUIPMENT_UPGRADE_PRICE);
-                    player.addCharacterDamage(1);
-                    player.addArmor(1);
+                    player.addCharacterDamage(5);
+                    player.addArmor(5);
                 }
                 break;
             case 3:

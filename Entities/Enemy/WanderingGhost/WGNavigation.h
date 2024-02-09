@@ -15,8 +15,4 @@ public:
 
 };
 
-
-
-
-
 #endif //LAB1_WGNAVIGATION_H

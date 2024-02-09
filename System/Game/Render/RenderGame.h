@@ -15,6 +15,8 @@ public:
     void printGame() override;
     void printWin() override;
 
+    bool isInFog();
+
 
 private:
     Navigation& navigation;
@@ -28,6 +30,7 @@ private:
     int souls;
     int armor;
     int isFog;
+    Position distanceBetweenPandCell;
 };
 
 

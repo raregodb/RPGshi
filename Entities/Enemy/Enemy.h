@@ -1,9 +1,7 @@
 #ifndef LAB1_ENEMY_H
 #define LAB1_ENEMY_H
 
-//#include "../Player/Player.h"
 #include "EnemyType.h"
-//#include "../../System/Map/Map.h"
 #include "../Enemy/WanderingGhost/WGNavigation.h"
 #include "../Enemy/WanderingGhost/WGInteraction.h"
 #include "../Enemy/SoulHunter/SHNavigation.h"
@@ -43,6 +41,9 @@ public:
     void setPosition(Position& newPos);
     Position& getPos();
 
+    Map& getMap();
+    Player& getPlayer();
+
     void move();
     void interact();
 
@@ -59,6 +60,16 @@ private:
     Map& map;
     Player& player;
 };
+
+template<class T1, class T2>
+Player &Enemy<T1, T2>::getPlayer() {
+    return player;
+}
+
+template<class T1, class T2>
+Map &Enemy<T1, T2>::getMap() {
+    return map;
+}
 
 
 template <class T1, class T2>

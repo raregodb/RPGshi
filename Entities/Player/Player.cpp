@@ -62,12 +62,23 @@ void Player::addCharacterDamage(int addDamage) {
 }
 
 void Player::takeDamage(int Damage) {
-    if ((health - Damage) <= 0) {
-        health = 0;
-        isDead = true;
+    if ((Damage - getArmor() <= 0)) {
+        if (health - Damage <= 0) {
+            health = 0;
+            isDead = true;
+        }
+        else
+            health -= Damage;
     }
-    else
-        health -= Damage;
+    else {
+        if ((health - (Damage - getArmor())) <= 0) {
+            health = 0;
+            isDead = true;
+        }
+        else
+            health -= (Damage - getArmor());
+    }
+
 }
 
 
@@ -148,7 +159,7 @@ int Player::getSouls() const {
 
 void Player::setSouls(int newSouls) {
     if (newSouls < 0 || newSouls-souls<0)
-        std::cout<<"badHealth"<<std::endl; //Здесь выкидывать ошибку далее
+        souls = 0;
     else
         souls = newSouls;
 }
