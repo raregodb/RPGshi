@@ -3,7 +3,7 @@ project(lab1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(lab1 main.cpp
+add_executable(RPGshi.exe main.cpp
         Entities/Player/Player.cpp Entities/Player/Player.h
         System/Navigation/Navigation.cpp System/Navigation/Navigation.h
         System/Map/Cell.cpp System/Map/Cell.h
@@ -56,5 +56,5 @@ set(CURSES_NEED_NCURSES TRUE)
 find_package(Curses REQUIRED)
 if (CURSES_FOUND AND CURSES_HAVE_NCURSES_H)
     include_directories(${CURSES_INCLUDE_DIR})
-    target_link_libraries (lab1 ${CURSES_LIBRARIES})
+    target_link_libraries (RPGshi.exe ${CURSES_LIBRARIES})
 endif()
