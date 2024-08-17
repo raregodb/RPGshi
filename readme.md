@@ -1,0 +1,1 @@
+ЗАПУСК В [cmake-build-release](cmake-build-release): [RPGshi](cmake-build-release%2Flab1)

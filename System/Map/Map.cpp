@@ -103,7 +103,7 @@ Map& Map::operator=(Map &&movedMap)  noexcept {
 Cell  &Map::getCellByCords(Position cords) {
     if (0 > cords.x >= sizeX || 0 > cords.y >= sizeY){
         std::cout<<"bad cords\n";
-        assert(0);
+        //assert(0);
     }
     else
         return map[cords.x][cords.y];
