@@ -23,7 +23,7 @@
 1240	1572	1723908071170902078	CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost/WGInteraction.cpp.o	12bd5a01744d0f97
 7	504	1723906809103531514	CMakeFiles/lab1.dir/System/Utility/Random.cpp.o	c98c107b07d1c536
 2	459	1723906789098171732	CMakeFiles/lab1.dir/Entities/Player/Player.cpp.o	e8c86ae30db8efa0
-1	64	1723908579214442221	build.ninja	1f7bbe7f08f1d129
+1	64	1723909454940766539	build.ninja	1f7bbe7f08f1d129
 480	859	1723908070456775769	CMakeFiles/lab1.dir/System/Events/Shop/Shop.cpp.o	2e5fe174de6d2925
 458	893	1723908070488964574	CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o	af265bc9416b61ee
 8	573	1723908070169053197	CMakeFiles/lab1.dir/System/Game/Game.cpp.o	8c45691b80e68b59

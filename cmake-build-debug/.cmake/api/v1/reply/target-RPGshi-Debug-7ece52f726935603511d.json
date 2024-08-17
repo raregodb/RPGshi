@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "RPGshi.exe"
+			"path" : "RPGshi"
 		}
 	],
 	"backtrace" : 1,
@@ -42,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics"
+					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics"
 				}
 			],
 			"language" : "CXX",
@@ -100,13 +100,13 @@
 			]
 		}
 	],
-	"id" : "RPGshi.exe::@6890427a1f51a3e7e1df",
+	"id" : "RPGshi::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-O3 -DNDEBUG",
+				"fragment" : "-g",
 				"role" : "flags"
 			},
 			{
@@ -126,8 +126,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "RPGshi.exe",
-	"nameOnDisk" : "RPGshi.exe",
+	"name" : "RPGshi",
+	"nameOnDisk" : "RPGshi",
 	"paths" : 
 	{
 		"build" : ".",
