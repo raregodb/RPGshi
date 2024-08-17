@@ -41,359 +41,276 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/raregod/CLionProjects/lab1/cmake-build-release/
 # =============================================================================
-# Object build statements for EXECUTABLE target lab1
+# Object build statements for EXECUTABLE target RPGshi.exe
 
 
 #############################################
-# Order-only phony target for lab1
+# Order-only phony target for RPGshi.exe
 
-build cmake_object_order_depends_target_lab1: phony || CMakeFiles/lab1.dir
+build cmake_object_order_depends_target_RPGshi.exe: phony || CMakeFiles/RPGshi.exe.dir
 
-build CMakeFiles/lab1.dir/main.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/main.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/main.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/main.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/main.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir
 
-build CMakeFiles/lab1.dir/Entities/Player/Player.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Player/Player.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Entities/Player/Player.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/Entities/Player/Player.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Player/Player.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/Entities/Player/Player.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities/Player
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/Entities/Player
 
-build CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Navigation/Navigation.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Navigation/Navigation.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Navigation/Navigation.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Navigation/Navigation.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Navigation
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Navigation
 
-build CMakeFiles/lab1.dir/System/Map/Cell.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Map/Cell.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Map/Cell.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Map/Cell.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Map/Cell.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Map/Cell.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Map
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Map
 
-build CMakeFiles/lab1.dir/System/Map/Map.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Map/Map.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Map/Map.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Map/Map.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Map/Map.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Map/Map.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Map
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Map
 
-build CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Navigation/Position.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Navigation/Position.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Navigation/Position.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Navigation/Position.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Navigation
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Navigation
 
-build CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Spikes/Spikes.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Events/Spikes/Spikes.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Spikes/Spikes.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Events/Spikes/Spikes.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Spikes
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Events/Spikes
 
-build CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/HealPotion/HealPotion.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Events/HealPotion/HealPotion.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/HealPotion/HealPotion.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Events/HealPotion/HealPotion.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/HealPotion
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Events/HealPotion
 
-build CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Teleport/Teleport.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Events/Teleport/Teleport.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Teleport/Teleport.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Events/Teleport/Teleport.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Teleport
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Events/Teleport
 
-build CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Map/MapGenerator/MapGenerator.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Map/MapGenerator/MapGenerator.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Map/MapGenerator/MapGenerator.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Map/MapGenerator/MapGenerator.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Map/MapGenerator
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Map/MapGenerator
 
-build CMakeFiles/lab1.dir/System/Game/Game.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Game/Game.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Game/Game.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Game/Game.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Game/Game.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Game/Game.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Game
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Game
 
-build CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/MainMenu.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/GameStates/MainMenu.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/MainMenu.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/GameStates/MainMenu.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Game/Render/RenderGame.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Game/Render/RenderGame.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Game/Render/RenderGame.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Game/Render/RenderGame.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Game/Render
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Game/Render
 
-build CMakeFiles/lab1.dir/System/ControlSettings/InputReader/InputReader.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/ControlSettings/InputReader/InputReader.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/ControlSettings/InputReader/InputReader.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/ControlSettings/InputReader/InputReader.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/ControlSettings/InputReader/InputReader.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/ControlSettings/InputReader/InputReader.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/ControlSettings/InputReader
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/ControlSettings/InputReader
 
-build CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/SettingsMenu.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/GameStates/SettingsMenu.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/SettingsMenu.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/GameStates/SettingsMenu.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/IWindow.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/GameStates/IWindow.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/IWindow.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/GameStates/IWindow.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/PauseMenu.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/GameStates/PauseMenu.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/PauseMenu.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/GameStates/PauseMenu.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/GameOver.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/GameStates/GameOver.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/GameOver.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/GameStates/GameOver.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/System/Events/Exit/Exit_event.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Exit/Exit_event.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Exit/Exit_event.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Events/Exit/Exit_event.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Exit/Exit_event.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Events/Exit/Exit_event.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Exit
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Events/Exit
 
-build CMakeFiles/lab1.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/ControlSettings/CommandReader/ConfigReader.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/ControlSettings/CommandReader/ConfigReader.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/ControlSettings/CommandReader
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/ControlSettings/CommandReader
 
-build CMakeFiles/lab1.dir/System/Utility/Random.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Utility/Random.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Utility/Random.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Utility/Random.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Utility/Random.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Utility/Random.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Utility
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Utility
 
-build CMakeFiles/lab1.dir/System/Events/Shop/Shop.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Shop/Shop.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Shop/Shop.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Events/Shop/Shop.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Shop/Shop.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Events/Shop/Shop.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Shop
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Events/Shop
 
-build CMakeFiles/lab1.dir/System/GameStates/ShopMenu.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/ShopMenu.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/ShopMenu.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/GameStates/ShopMenu.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/ShopMenu.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/GameStates/ShopMenu.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/Entities/Player/Inventory.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Player/Inventory.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Entities/Player/Inventory.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/Entities/Player/Inventory.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Player/Inventory.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/Entities/Player/Inventory.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities/Player
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/Entities/Player
 
-build CMakeFiles/lab1.dir/System/Events/Souls/Souls.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Souls/Souls.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Events/Souls/Souls.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Events/Souls/Souls.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Events/Souls/Souls.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Events/Souls/Souls.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Events/Souls
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Events/Souls
 
-build CMakeFiles/lab1.dir/System/Logger/Messages/WinMessage.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/WinMessage.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Messages/WinMessage.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/WinMessage.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/WinMessage.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/WinMessage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Messages
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages
 
-build CMakeFiles/lab1.dir/System/Logger/Messages/LoseMessage.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/LoseMessage.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Messages/LoseMessage.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/LoseMessage.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/LoseMessage.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/LoseMessage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Messages
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages
 
-build CMakeFiles/lab1.dir/System/Logger/Messages/NewGameMessage.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/NewGameMessage.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Messages/NewGameMessage.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/NewGameMessage.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/NewGameMessage.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/NewGameMessage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Messages
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages
 
-build CMakeFiles/lab1.dir/System/Logger/Log/Log.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Log/Log.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Log/Log.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Log/Log.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Log/Log.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Log/Log.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Log
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Log
 
-build CMakeFiles/lab1.dir/System/Logger/Messages/MoveMessage.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/MoveMessage.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Messages/MoveMessage.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/MoveMessage.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/MoveMessage.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/MoveMessage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Messages
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages
 
-build CMakeFiles/lab1.dir/System/Logger/Messages/NoMoveMessage.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/NoMoveMessage.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Messages/NoMoveMessage.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/NoMoveMessage.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/NoMoveMessage.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/NoMoveMessage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Messages
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages
 
-build CMakeFiles/lab1.dir/System/Logger/Log/LogFile.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Log/LogFile.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Log/LogFile.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Log/LogFile.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Log/LogFile.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Log/LogFile.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Log
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Log
 
-build CMakeFiles/lab1.dir/System/Logger/Logger.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Logger.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Logger.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Logger.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Logger.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Logger.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger
 
-build CMakeFiles/lab1.dir/System/Logger/Messages/ExitMessage.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/ExitMessage.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/Logger/Messages/ExitMessage.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/ExitMessage.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Logger/Messages/ExitMessage.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/ExitMessage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/Logger/Messages
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/Logger/Messages
 
-build CMakeFiles/lab1.dir/System/GameStates/LogMenu.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/LogMenu.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/System/GameStates/LogMenu.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/System/GameStates/LogMenu.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/GameStates/LogMenu.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/System/GameStates/LogMenu.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/System/GameStates
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/System/GameStates
 
-build CMakeFiles/lab1.dir/Entities/Enemy/Enemy.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/Enemy.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Entities/Enemy/Enemy.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/Entities/Enemy/Enemy.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/Enemy.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/Enemy.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities/Enemy
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/Entities/Enemy
 
-build CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter/SHNavigation.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/SoulHunter/SHNavigation.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter/SHNavigation.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter/SHNavigation.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/SoulHunter/SHNavigation.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter/SHNavigation.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter
 
-build CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost/WGNavigation.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/WanderingGhost/WGNavigation.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost/WGNavigation.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost/WGNavigation.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/WanderingGhost/WGNavigation.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost/WGNavigation.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost
 
-build CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost/WGInteraction.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/WanderingGhost/WGInteraction.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost/WGInteraction.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost/WGInteraction.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/WanderingGhost/WGInteraction.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost/WGInteraction.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost
 
-build CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter/SHInteraction.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/SoulHunter/SHInteraction.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter/SHInteraction.cpp.o.d
+build CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter/SHInteraction.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/Entities/Enemy/SoulHunter/SHInteraction.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter/SHInteraction.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter
 
-build CMakeFiles/lab1.dir/System/Utility/A*/Pathfinder.cpp.o: CXX_COMPILER__lab1_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Utility/A*/Pathfinder.cpp || cmake_object_order_depends_target_lab1
-  DEP_FILE = "CMakeFiles/lab1.dir/System/Utility/A*/Pathfinder.cpp.o.d"
+build CMakeFiles/RPGshi.exe.dir/System/Utility/A*/Pathfinder.cpp.o: CXX_COMPILER__RPGshi.2eexe_unscanned_Release /Users/raregod/CLionProjects/lab1/System/Utility/A*/Pathfinder.cpp || cmake_object_order_depends_target_RPGshi.exe
+  DEP_FILE = "CMakeFiles/RPGshi.exe.dir/System/Utility/A*/Pathfinder.cpp.o.d"
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = "CMakeFiles/lab1.dir/System/Utility/A*"
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_PDB = lab1.pdb
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
+  OBJECT_FILE_DIR = "CMakeFiles/RPGshi.exe.dir/System/Utility/A*"
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target lab1
+# Link build statements for EXECUTABLE target RPGshi.exe
 
 
 #############################################
-# Link the executable lab1
+# Link the executable RPGshi.exe
 
-build lab1: CXX_EXECUTABLE_LINKER__lab1_Release CMakeFiles/lab1.dir/main.cpp.o CMakeFiles/lab1.dir/Entities/Player/Player.cpp.o CMakeFiles/lab1.dir/System/Navigation/Navigation.cpp.o CMakeFiles/lab1.dir/System/Map/Cell.cpp.o CMakeFiles/lab1.dir/System/Map/Map.cpp.o CMakeFiles/lab1.dir/System/Navigation/Position.cpp.o CMakeFiles/lab1.dir/System/Events/Spikes/Spikes.cpp.o CMakeFiles/lab1.dir/System/Events/HealPotion/HealPotion.cpp.o CMakeFiles/lab1.dir/System/Events/Teleport/Teleport.cpp.o CMakeFiles/lab1.dir/System/Map/MapGenerator/MapGenerator.cpp.o CMakeFiles/lab1.dir/System/Game/Game.cpp.o CMakeFiles/lab1.dir/System/GameStates/MainMenu.cpp.o CMakeFiles/lab1.dir/System/Game/Render/RenderGame.cpp.o CMakeFiles/lab1.dir/System/ControlSettings/InputReader/InputReader.cpp.o CMakeFiles/lab1.dir/System/GameStates/SettingsMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/IWindow.cpp.o CMakeFiles/lab1.dir/System/GameStates/PauseMenu.cpp.o CMakeFiles/lab1.dir/System/GameStates/GameOver.cpp.o CMakeFiles/lab1.dir/System/Events/Exit/Exit_event.cpp.o CMakeFiles/lab1.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o CMakeFiles/lab1.dir/System/Utility/Random.cpp.o CMakeFiles/lab1.dir/System/Events/Shop/Shop.cpp.o CMakeFiles/lab1.dir/System/GameStates/ShopMenu.cpp.o CMakeFiles/lab1.dir/Entities/Player/Inventory.cpp.o CMakeFiles/lab1.dir/System/Events/Souls/Souls.cpp.o CMakeFiles/lab1.dir/System/Logger/Messages/WinMessage.cpp.o CMakeFiles/lab1.dir/System/Logger/Messages/LoseMessage.cpp.o CMakeFiles/lab1.dir/System/Logger/Messages/NewGameMessage.cpp.o CMakeFiles/lab1.dir/System/Logger/Log/Log.cpp.o CMakeFiles/lab1.dir/System/Logger/Messages/MoveMessage.cpp.o CMakeFiles/lab1.dir/System/Logger/Messages/NoMoveMessage.cpp.o CMakeFiles/lab1.dir/System/Logger/Log/LogFile.cpp.o CMakeFiles/lab1.dir/System/Logger/Logger.cpp.o CMakeFiles/lab1.dir/System/Logger/Messages/ExitMessage.cpp.o CMakeFiles/lab1.dir/System/GameStates/LogMenu.cpp.o CMakeFiles/lab1.dir/Entities/Enemy/Enemy.cpp.o CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter/SHNavigation.cpp.o CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost/WGNavigation.cpp.o CMakeFiles/lab1.dir/Entities/Enemy/WanderingGhost/WGInteraction.cpp.o CMakeFiles/lab1.dir/Entities/Enemy/SoulHunter/SHInteraction.cpp.o CMakeFiles/lab1.dir/System/Utility/A*/Pathfinder.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libncurses.tbd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libform.tbd
+build RPGshi.exe: CXX_EXECUTABLE_LINKER__RPGshi.2eexe_Release CMakeFiles/RPGshi.exe.dir/main.cpp.o CMakeFiles/RPGshi.exe.dir/Entities/Player/Player.cpp.o CMakeFiles/RPGshi.exe.dir/System/Navigation/Navigation.cpp.o CMakeFiles/RPGshi.exe.dir/System/Map/Cell.cpp.o CMakeFiles/RPGshi.exe.dir/System/Map/Map.cpp.o CMakeFiles/RPGshi.exe.dir/System/Navigation/Position.cpp.o CMakeFiles/RPGshi.exe.dir/System/Events/Spikes/Spikes.cpp.o CMakeFiles/RPGshi.exe.dir/System/Events/HealPotion/HealPotion.cpp.o CMakeFiles/RPGshi.exe.dir/System/Events/Teleport/Teleport.cpp.o CMakeFiles/RPGshi.exe.dir/System/Map/MapGenerator/MapGenerator.cpp.o CMakeFiles/RPGshi.exe.dir/System/Game/Game.cpp.o CMakeFiles/RPGshi.exe.dir/System/GameStates/MainMenu.cpp.o CMakeFiles/RPGshi.exe.dir/System/Game/Render/RenderGame.cpp.o CMakeFiles/RPGshi.exe.dir/System/ControlSettings/InputReader/InputReader.cpp.o CMakeFiles/RPGshi.exe.dir/System/GameStates/SettingsMenu.cpp.o CMakeFiles/RPGshi.exe.dir/System/GameStates/IWindow.cpp.o CMakeFiles/RPGshi.exe.dir/System/GameStates/PauseMenu.cpp.o CMakeFiles/RPGshi.exe.dir/System/GameStates/GameOver.cpp.o CMakeFiles/RPGshi.exe.dir/System/Events/Exit/Exit_event.cpp.o CMakeFiles/RPGshi.exe.dir/System/ControlSettings/CommandReader/ConfigReader.cpp.o CMakeFiles/RPGshi.exe.dir/System/Utility/Random.cpp.o CMakeFiles/RPGshi.exe.dir/System/Events/Shop/Shop.cpp.o CMakeFiles/RPGshi.exe.dir/System/GameStates/ShopMenu.cpp.o CMakeFiles/RPGshi.exe.dir/Entities/Player/Inventory.cpp.o CMakeFiles/RPGshi.exe.dir/System/Events/Souls/Souls.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/WinMessage.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/LoseMessage.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/NewGameMessage.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Log/Log.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/MoveMessage.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/NoMoveMessage.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Log/LogFile.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Logger.cpp.o CMakeFiles/RPGshi.exe.dir/System/Logger/Messages/ExitMessage.cpp.o CMakeFiles/RPGshi.exe.dir/System/GameStates/LogMenu.cpp.o CMakeFiles/RPGshi.exe.dir/Entities/Enemy/Enemy.cpp.o CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter/SHNavigation.cpp.o CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost/WGNavigation.cpp.o CMakeFiles/RPGshi.exe.dir/Entities/Enemy/WanderingGhost/WGInteraction.cpp.o CMakeFiles/RPGshi.exe.dir/Entities/Enemy/SoulHunter/SHInteraction.cpp.o CMakeFiles/RPGshi.exe.dir/System/Utility/A*/Pathfinder.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libncurses.tbd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libform.tbd
   FLAGS = -O3 -DNDEBUG -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
   LINK_LIBRARIES = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libncurses.tbd  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libform.tbd
-  OBJECT_DIR = CMakeFiles/lab1.dir
+  OBJECT_DIR = CMakeFiles/RPGshi.exe.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/lab1.dir/
-  TARGET_FILE = lab1
-  TARGET_PDB = lab1.pdb
+  TARGET_FILE = RPGshi.exe
+  TARGET_PDB = RPGshi.exe.dbg
 
 
 #############################################
@@ -429,7 +346,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/raregod/CLionProjects/lab1/cmake-build-release
 
-build all: phony lab1
+build all: phony RPGshi.exe
 
 # =============================================================================
 # Built-in targets
@@ -438,14 +355,14 @@ build all: phony lab1
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePushCheckState.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindCurses.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPkgConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/raregod/CLionProjects/lab1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePushCheckState.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindCurses.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPkgConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/raregod/CLionProjects/lab1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePushCheckState.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindCurses.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPkgConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/raregod/CLionProjects/lab1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePushCheckState.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindCurses.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPkgConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/raregod/CLionProjects/lab1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################
