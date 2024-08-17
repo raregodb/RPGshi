@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "RPGshi.exe::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-RPGshi.exe-Release-e0e328705de0f6704390.json",
-					"name" : "RPGshi.exe",
+					"id" : "RPGshi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RPGshi-Release-2ffd498e6382a0575da9.json",
+					"name" : "RPGshi",
 					"projectIndex" : 0
 				}
 			]
