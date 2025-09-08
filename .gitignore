@@ -92,3 +92,5 @@ http-client.private.env.json
 .idea/.cache/.Apifox_Helper
 .idea/ApifoxUploaderProjectSetting.xml
 cmake-build-*
+
+.DS_Store
