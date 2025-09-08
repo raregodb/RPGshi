@@ -1,3 +1,0 @@
-/Users/raregod/CLionProjects/lab1/cmake-build-leaks/CMakeFiles/lab1.dir
-/Users/raregod/CLionProjects/lab1/cmake-build-leaks/CMakeFiles/edit_cache.dir
-/Users/raregod/CLionProjects/lab1/cmake-build-leaks/CMakeFiles/rebuild_cache.dir
